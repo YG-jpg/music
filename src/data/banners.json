@@ -1,0 +1,53 @@
+[
+  {
+    "id": "top-free-shipping",
+    "placement": "top-strip",
+    "title": "Free shipping over €149",
+    "subtitle": "Applies to parcel-size orders across Bulgaria.",
+    "image": "/images/banners/top-free-shipping.jpg",
+    "cta": {
+      "label": "See shipping details",
+      "href": "/support/shipping"
+    },
+    "active": true,
+    "startAt": "2026-03-01T00:00:00.000Z",
+    "endAt": null,
+    "seoTitle": "Free Shipping Banner",
+    "seoDescription": "Shipping promotion banner for homepage and header surfaces.",
+    "metaImage": "/images/seo/banners/free-shipping-meta.jpg"
+  },
+  {
+    "id": "studio-finance",
+    "placement": "homepage-inline",
+    "title": "Build your home studio in one upgrade",
+    "subtitle": "Interfaces, microphones and monitor bundles curated for modern production.",
+    "image": "/images/banners/studio-finance.jpg",
+    "cta": {
+      "label": "Explore studio bundles",
+      "href": "/collections/studio-bundles"
+    },
+    "active": true,
+    "startAt": "2026-03-05T00:00:00.000Z",
+    "endAt": null,
+    "seoTitle": "Studio Bundle Banner",
+    "seoDescription": "Homepage promo banner for studio bundles and starter kits.",
+    "metaImage": "/images/seo/banners/studio-bundle-meta.jpg"
+  },
+  {
+    "id": "guitar-deals",
+    "placement": "category-highlight",
+    "title": "Electric guitar deals this month",
+    "subtitle": "Selected Fender, Ibanez and Gibson models with limited stock pricing.",
+    "image": "/images/banners/guitar-deals.jpg",
+    "cta": {
+      "label": "Shop deals",
+      "href": "/deals"
+    },
+    "active": true,
+    "startAt": "2026-03-01T00:00:00.000Z",
+    "endAt": "2026-03-31T23:59:59.000Z",
+    "seoTitle": "Guitar Deals Banner",
+    "seoDescription": "Category banner for monthly guitar promotions.",
+    "metaImage": "/images/seo/banners/guitar-deals-meta.jpg"
+  }
+]
