@@ -1,0 +1,98 @@
+[
+  {
+    "id": "fender",
+    "slug": "fender",
+    "name": "Fender",
+    "logo": "/images/brands/fender.svg",
+    "description": "Electric guitars, basses and amplifiers with iconic California heritage.",
+    "featured": true
+  },
+  {
+    "id": "gibson",
+    "slug": "gibson",
+    "name": "Gibson",
+    "logo": "/images/brands/gibson.svg",
+    "description": "Premium American guitars, basses and classic single-cut designs.",
+    "featured": true
+  },
+  {
+    "id": "ibanez",
+    "slug": "ibanez",
+    "name": "Ibanez",
+    "logo": "/images/brands/ibanez.svg",
+    "description": "Modern guitars, basses and artist lines for technical players.",
+    "featured": true
+  },
+  {
+    "id": "yamaha",
+    "slug": "yamaha",
+    "name": "Yamaha",
+    "logo": "/images/brands/yamaha.svg",
+    "description": "Full-range musical instruments from pianos and drums to live sound.",
+    "featured": true
+  },
+  {
+    "id": "roland",
+    "slug": "roland",
+    "name": "Roland",
+    "logo": "/images/brands/roland.svg",
+    "description": "Digital pianos, synthesizers, drum technology and music production tools.",
+    "featured": true
+  },
+  {
+    "id": "korg",
+    "slug": "korg",
+    "name": "Korg",
+    "logo": "/images/brands/korg.svg",
+    "description": "Synths, stage pianos and creative electronic instruments.",
+    "featured": true
+  },
+  {
+    "id": "shure",
+    "slug": "shure",
+    "name": "Shure",
+    "logo": "/images/brands/shure.svg",
+    "description": "Microphones, wireless systems and professional audio staples.",
+    "featured": true
+  },
+  {
+    "id": "sennheiser",
+    "slug": "sennheiser",
+    "name": "Sennheiser",
+    "logo": "/images/brands/sennheiser.svg",
+    "description": "Headphones, wireless systems and sound capture solutions.",
+    "featured": true
+  },
+  {
+    "id": "pioneer-dj",
+    "slug": "pioneer-dj",
+    "name": "Pioneer DJ",
+    "logo": "/images/brands/pioneer-dj.svg",
+    "description": "Club-standard DJ controllers, mixers and performance hardware.",
+    "featured": true
+  },
+  {
+    "id": "universal-audio",
+    "slug": "universal-audio",
+    "name": "Universal Audio",
+    "logo": "/images/brands/universal-audio.svg",
+    "description": "Audio interfaces and studio hardware with premium signal path focus.",
+    "featured": true
+  },
+  {
+    "id": "focusrite",
+    "slug": "focusrite",
+    "name": "Focusrite",
+    "logo": "/images/brands/focusrite.svg",
+    "description": "Accessible recording interfaces and studio workflow tools.",
+    "featured": false
+  },
+  {
+    "id": "pearl",
+    "slug": "pearl",
+    "name": "Pearl",
+    "logo": "/images/brands/pearl.svg",
+    "description": "Drum kits and hardware for rehearsal, studio and touring drummers.",
+    "featured": false
+  }
+]

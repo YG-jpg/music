@@ -3,15 +3,12 @@
 import { startTransition, useDeferredValue, useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
-import { BadgeCheck, ChevronRight, Headphones, Mail, Truck } from "lucide-react";
-import { ShopHeader } from "@/components/shop-header";
-import { buttonStyles } from "@/lib/button-styles";
+import { ChevronRight } from "lucide-react";
+import { HomeFooter, HomeHeader } from "@/components/home-shell";
 import siteSettingsData from "@/data/site-settings.json";
 import {
   categoryShowcases,
-  socialLinks,
   storefrontCopy,
-  storefrontFooterGroups,
   type Locale,
 } from "@/lib/storefront-data";
 
@@ -61,9 +58,8 @@ export default function CategoriesPage() {
 
   return (
     <div className="min-h-screen bg-[var(--gray-50)] text-[var(--gray-900)]">
-      <ShopHeader
+      <HomeHeader
         locale={locale}
-        sectionLabel="categories"
         searchValue={search}
         searchPlaceholder={
           locale === "bg"
@@ -74,31 +70,17 @@ export default function CategoriesPage() {
         onLocaleToggle={() =>
           startTransition(() => setLocale((current) => (current === "bg" ? "en" : "bg")))
         }
-        browsingCta={{
-          label: locale === "bg" ? "Powered Mixers" : "Powered Mixers",
-          href: "/categories/powered-mixers",
-        }}
       />
 
       <main className="mx-auto max-w-7xl px-4 py-12 sm:px-6 lg:px-8">
-        <section className="mb-10 rounded-[28px] bg-[linear-gradient(135deg,#102844,#18385c)] px-6 py-10 text-white md:px-10">
-          <p className="text-xs font-semibold uppercase tracking-[0.24em] text-[var(--blue-200)]">
-            Store departments
-          </p>
-          <h1 className="mt-4 text-4xl font-black tracking-tight md:text-5xl">
-            {copy.showcaseTitle}
-          </h1>
-          <p className="mt-4 max-w-3xl text-base leading-7 text-gray-200 md:text-lg">
-            {copy.showcaseText}
-          </p>
-          <div className="mt-6 flex flex-wrap gap-2 text-sm text-white/85">
-            <span className="rounded-full border border-white/12 bg-white/10 px-4 py-2">
+        <section className="mb-8 rounded-[20px] border border-[var(--border)] bg-white px-6 py-6 shadow-[var(--shadow-card)]">
+          <h1 className="text-3xl font-black tracking-tight md:text-4xl">{copy.showcaseTitle}</h1>
+          <p className="mt-3 max-w-3xl text-sm leading-6 text-[var(--gray-600)]">{copy.showcaseText}</p>
+          <div className="mt-4 flex flex-wrap gap-2 text-xs font-semibold text-[var(--gray-600)]">
+            <span className="rounded-full border border-[var(--border)] bg-[var(--gray-50)] px-3 py-1.5">
               {visibleShowcases.length} working departments
             </span>
-            <span className="rounded-full border border-white/12 bg-white/10 px-4 py-2">
-              Real product links and EUR pricing
-            </span>
-            <span className="rounded-full border border-white/12 bg-white/10 px-4 py-2">
+            <span className="rounded-full border border-[var(--border)] bg-[var(--gray-50)] px-3 py-1.5">
               Free shipping over {formatCurrency(siteSettingsData.shipping.freeShippingThreshold, locale)}
             </span>
           </div>
@@ -308,118 +290,7 @@ export default function CategoriesPage() {
           ) : null}
         </div>
       </main>
-
-      <footer className="bg-[var(--gray-900)] text-white">
-        <div className="mx-auto max-w-7xl px-4 py-12 sm:px-6 lg:px-8">
-          <div className="mb-8 grid gap-3 rounded-3xl border border-white/10 bg-white/5 p-4 md:grid-cols-3">
-            <div className="flex items-start gap-3 rounded-2xl border border-white/10 bg-black/10 p-4">
-              <div className="rounded-full bg-white/10 p-2 text-[var(--blue-200)]">
-                <Truck className="h-5 w-5" />
-              </div>
-              <div>
-                <p className="text-sm font-semibold text-white">Shipping and dispatch</p>
-                <p className="mt-1 text-sm text-[var(--gray-300)]">
-                  {locale === "bg"
-                    ? `Безплатна доставка над ${formatCurrency(siteSettingsData.shipping.freeShippingThreshold, locale)}`
-                    : `Free shipping over ${formatCurrency(siteSettingsData.shipping.freeShippingThreshold, locale)}`}
-                </p>
-              </div>
-            </div>
-            <div className="flex items-start gap-3 rounded-2xl border border-white/10 bg-black/10 p-4">
-              <div className="rounded-full bg-white/10 p-2 text-[var(--blue-200)]">
-                <Headphones className="h-5 w-5" />
-              </div>
-              <div>
-                <p className="text-sm font-semibold text-white">Advisor and support</p>
-                <p className="mt-1 text-sm text-[var(--gray-300)]">
-                  {siteSettingsData.contact.phone} • {siteSettingsData.contact.supportHours}
-                </p>
-              </div>
-            </div>
-            <div className="flex items-start gap-3 rounded-2xl border border-white/10 bg-black/10 p-4">
-              <div className="rounded-full bg-white/10 p-2 text-[var(--blue-200)]">
-                <BadgeCheck className="h-5 w-5" />
-              </div>
-              <div>
-                <p className="text-sm font-semibold text-white">Trusted category racks</p>
-                <p className="mt-1 text-sm text-[var(--gray-300)]">
-                  {locale === "bg"
-                    ? "Реални продукти, source линкове и по-структуриран retail преглед."
-                    : "Real products, source links and a more structured retail overview."}
-                </p>
-              </div>
-            </div>
-          </div>
-
-          <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-4">
-            {storefrontFooterGroups.map((group) => (
-              <div key={group.title.en}>
-                <h4 className="mb-4 font-semibold">{group.title[locale]}</h4>
-                <ul className="space-y-2">
-                  {group.links.map((item) => (
-                    <li key={item.label.en}>
-                      <a href={item.href} className="text-sm text-[var(--gray-400)]">
-                        {item.label[locale]}
-                      </a>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            ))}
-          </div>
-
-          <div className="mt-8 flex flex-wrap items-center gap-3">
-            {socialLinks.map((link) => (
-              <a
-                key={link.platform}
-                href={link.href}
-                target="_blank"
-                rel="noreferrer"
-                className="inline-flex h-10 w-10 items-center justify-center rounded-full bg-[var(--gray-800)]"
-              >
-                {link.platform === "facebook" ? (
-                  <span>f</span>
-                ) : link.platform === "instagram" ? (
-                  <span>i</span>
-                ) : link.platform === "youtube" ? (
-                  <span>y</span>
-                ) : (
-                  <span>t</span>
-                )}
-              </a>
-            ))}
-          </div>
-
-          <form className="mt-8 flex max-w-md gap-2" onSubmit={(event) => event.preventDefault()}>
-            <input
-              type="email"
-              placeholder={copy.newsletterPlaceholder}
-              className="min-w-0 flex-1 rounded-lg border border-[var(--gray-700)] bg-[var(--gray-800)] px-3 py-2 text-sm text-white"
-            />
-            <button type="submit" className={buttonStyles.primary}>
-              <Mail className="h-5 w-5" />
-            </button>
-          </form>
-          <div className="mt-4 space-y-2 text-sm text-[var(--gray-400)]">
-            <p>{siteSettingsData.contact.email}</p>
-            <p>
-              {locale === "bg"
-                ? "Цени с ДДС, експедиция според наличността и съдействие при стандартни поръчки."
-                : "VAT-inclusive pricing, stock-led dispatch and support on standard orders."}
-            </p>
-          </div>
-          <div className="mt-8 border-t border-white/10 pt-6 text-sm text-[var(--gray-400)]">
-            <div className="flex flex-col gap-2 md:flex-row md:items-center md:justify-between">
-              <p>
-                {locale === "bg"
-                  ? "Категориите използват реален feed, но presentation layer-ът остава frontend-driven."
-                  : "The categories use a real feed, while the presentation layer stays frontend-driven."}
-              </p>
-              <p>{copy.copyright}</p>
-            </div>
-          </div>
-        </div>
-      </footer>
+      <HomeFooter locale={locale} />
     </div>
   );
 }

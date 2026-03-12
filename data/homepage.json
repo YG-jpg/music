@@ -1,0 +1,141 @@
+{
+  "hero": {
+    "id": "homepage-hero",
+    "eyebrow": "Original music retail UX with a commerce-ready data model",
+    "headline": "Pro gear for players, producers and live crews",
+    "subheadline": "Shop instruments, studio equipment and stage setups with a catalog structure ready for ERP and translation API integration.",
+    "backgroundImage": "/images/home/hero-band-stage.jpg",
+    "primaryCta": {
+      "label": "Shop categories",
+      "href": "/categories/guitars"
+    },
+    "secondaryCta": {
+      "label": "See featured deals",
+      "href": "/deals"
+    },
+    "seoTitle": "MusicWorld Homepage Hero",
+    "seoDescription": "Homepage hero block for the music store front page.",
+    "metaImage": "/images/seo/home/hero-meta.jpg"
+  },
+  "featuredCategories": {
+    "id": "home-featured-categories",
+    "title": "Shop by category",
+    "subtitle": "Core entry points for instruments, production and live sound.",
+    "categoryIds": ["electric-guitars", "digital-pianos", "audio-interfaces", "dj-controllers"],
+    "cta": {
+      "label": "Browse all categories",
+      "href": "/categories"
+    },
+    "seoTitle": "Featured Categories",
+    "seoDescription": "Homepage featured categories section.",
+    "metaImage": "/images/seo/home/featured-categories-meta.jpg"
+  },
+  "topDeals": {
+    "id": "home-top-deals",
+    "title": "Top deals this week",
+    "subtitle": "High-demand SKUs with pricing pressure and strong review history.",
+    "productIds": ["fender-player-ii-strat-hss", "focusrite-scarlett-2i2-4th-gen", "pioneer-ddj-flx10", "roland-fp-30x"],
+    "cta": {
+      "label": "View all deals",
+      "href": "/deals"
+    },
+    "seoTitle": "Top Deals Section",
+    "seoDescription": "Homepage top deals section referencing active discounted products.",
+    "metaImage": "/images/seo/home/top-deals-meta.jpg"
+  },
+  "featuredProducts": {
+    "id": "home-featured-products",
+    "title": "Featured products",
+    "subtitle": "Balanced across instruments, production and stage use cases.",
+    "productIds": ["gibson-les-paul-standard-50s", "yamaha-stage-custom-birch-kit", "universal-audio-apollo-twin-x-duo", "yamaha-mg12xu"],
+    "cta": {
+      "label": "See all featured products",
+      "href": "/featured"
+    },
+    "seoTitle": "Featured Products Section",
+    "seoDescription": "Homepage featured products section for hero items and best-sellers.",
+    "metaImage": "/images/seo/home/featured-products-meta.jpg"
+  },
+  "brandsStrip": {
+    "id": "home-brands-strip",
+    "title": "Trusted brands in stock",
+    "subtitle": "Catalog anchors with high customer demand and solid replacement support.",
+    "brandIds": ["fender", "yamaha", "roland", "shure", "pioneer-dj", "universal-audio"],
+    "seoTitle": "Brands Strip",
+    "seoDescription": "Homepage strip for featured brands.",
+    "metaImage": "/images/seo/home/brands-strip-meta.jpg"
+  },
+  "editorialSections": [
+    {
+      "id": "home-editorial-guitars",
+      "title": "Electric guitar rigs without dead-end upgrades",
+      "description": "A practical path from first amp to a proper pedalboard and recording-ready setup.",
+      "image": "/images/home/editorial-guitar-rig.jpg",
+      "cta": {
+        "label": "Read the guide",
+        "href": "/guides/electric-guitar-rig"
+      },
+      "seoTitle": "Electric Guitar Rig Guide",
+      "seoDescription": "Editorial block for electric guitar buying guidance.",
+      "metaImage": "/images/seo/home/editorial-guitar-rig-meta.jpg"
+    },
+    {
+      "id": "home-editorial-studio",
+      "title": "Build a small studio that records cleanly from day one",
+      "description": "Interface, microphone and monitor combinations with sensible upgrade paths.",
+      "image": "/images/home/editorial-studio.jpg",
+      "cta": {
+        "label": "See studio picks",
+        "href": "/guides/home-studio-starter"
+      },
+      "seoTitle": "Home Studio Editorial",
+      "seoDescription": "Homepage editorial section for home studio starter paths.",
+      "metaImage": "/images/seo/home/editorial-studio-meta.jpg"
+    }
+  ],
+  "guides": [
+    {
+      "id": "guide-first-guitar",
+      "title": "First electric guitar: what matters and what does not",
+      "description": "Focus on scale length, pickup layout and amp pairing before getting lost in specs.",
+      "image": "/images/home/guides/first-electric-guitar.jpg",
+      "href": "/guides/first-electric-guitar",
+      "category": "Guitars",
+      "seoTitle": "First Electric Guitar Guide",
+      "seoDescription": "Guide article for choosing a first electric guitar.",
+      "metaImage": "/images/seo/home/guides/first-electric-guitar-meta.jpg"
+    },
+    {
+      "id": "guide-home-studio",
+      "title": "Home studio starter chain for vocals and guitars",
+      "description": "The fastest way to get clean recordings with the fewest bad purchases.",
+      "image": "/images/home/guides/home-studio-starter.jpg",
+      "href": "/guides/home-studio-starter",
+      "category": "Studio",
+      "seoTitle": "Home Studio Starter Guide",
+      "seoDescription": "Guide article for building a starter home studio.",
+      "metaImage": "/images/seo/home/guides/home-studio-starter-meta.jpg"
+    },
+    {
+      "id": "guide-first-dj-controller",
+      "title": "First DJ controller for clubs, streams and events",
+      "description": "What to prioritize when you want one rig that covers practice and paid gigs.",
+      "image": "/images/home/guides/first-dj-controller.jpg",
+      "href": "/guides/first-dj-controller",
+      "category": "DJ",
+      "seoTitle": "First DJ Controller Guide",
+      "seoDescription": "Guide article for choosing a first DJ controller.",
+      "metaImage": "/images/seo/home/guides/first-dj-controller-meta.jpg"
+    }
+  ],
+  "newsletterBlock": {
+    "id": "home-newsletter",
+    "title": "Get launch drops, buying guides and quiet discounts first",
+    "description": "Use this block for editorial, early access and deal-driven subscriber growth.",
+    "placeholder": "Enter your email address",
+    "buttonLabel": "Subscribe",
+    "seoTitle": "Homepage Newsletter Block",
+    "seoDescription": "Newsletter block for homepage signups.",
+    "metaImage": "/images/seo/home/newsletter-meta.jpg"
+  }
+}

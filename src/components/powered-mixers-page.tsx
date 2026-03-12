@@ -12,13 +12,12 @@ import {
   SearchX,
   ShoppingBag,
   Star,
-  Truck,
   X,
 } from "lucide-react";
 import { useDeferredValue, useState, type ReactNode } from "react";
 
 import { useCart } from "@/components/cart-provider";
-import { ShopHeader } from "@/components/shop-header";
+import { HomeFooter, HomeHeader } from "@/components/home-shell";
 import siteSettingsData from "@/data/site-settings.json";
 import {
   formatCount,
@@ -30,6 +29,7 @@ import {
   getSavingsPercent,
   humanizeBadge,
 } from "@/lib/commerce-ui";
+import type { Locale } from "@/lib/storefront-data";
 import type { Brand, FilterConfig, Product, SortOptionId } from "@/types/ecommerce";
 
 interface PoweredMixersPageProps {
@@ -93,6 +93,7 @@ export default function PoweredMixersPage({
   brands,
   filterConfig,
 }: PoweredMixersPageProps) {
+  const [locale, setLocale] = useState<Locale>("bg");
   const [search, setSearch] = useState("");
   const [sortBy, setSortBy] = useState<SortOptionId>("most-popular");
   const [selectedBrandIds, setSelectedBrandIds] = useState<string[]>([]);
@@ -117,7 +118,6 @@ export default function PoweredMixersPage({
   const inStockCount = products.filter((product) =>
     ["in_stock", "low_stock"].includes(product.availability),
   ).length;
-  const freeShippingCount = products.filter((product) => product.shipping.freeShippingEligible).length;
   const bestsellingCount = products.filter((product) => product.bestseller).length;
   const topBrands = [...relevantBrands]
     .sort(
@@ -240,69 +240,46 @@ export default function PoweredMixersPage({
 
   return (
     <div className="min-h-screen bg-[var(--gray-50)] text-[var(--gray-900)]">
-      <ShopHeader
-        locale="bg"
-        sectionLabel="powered mixers"
+      <HomeHeader
+        locale={locale}
         searchValue={search}
-        searchPlaceholder="Търси модел, марка или спецификация"
         onSearchChange={setSearch}
-        activeCategorySlug="pa-live-sound"
-        browsingCta={{
-          label: "Всички категории",
-          href: "/categories",
-        }}
+        onLocaleToggle={() => setLocale((current) => (current === "bg" ? "en" : "bg"))}
+        searchPlaceholder="Search model, brand or specification"
       />
 
       <main>
-        <section className="relative overflow-hidden border-b border-[var(--border)] bg-[var(--gray-900)] text-white">
-          <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_left,rgba(230,120,23,0.3),transparent_34%),radial-gradient(circle_at_bottom_right,rgba(116,53,0,0.24),transparent_28%)]" />
-          <div className="relative mx-auto grid max-w-7xl gap-10 px-4 py-12 sm:px-6 lg:grid-cols-[1.1fr_0.9fr] lg:px-8 lg:py-16">
-            <div className="max-w-3xl">
-              <nav className="mb-5 flex flex-wrap items-center gap-2 text-sm text-white/65">
-                <Link href="/" className="transition hover:text-white">
-                  Начало
-                </Link>
-                <ChevronRight className="h-4 w-4 text-white/35" />
-                <Link href="/categories" className="transition hover:text-white">
-                  Категории
-                </Link>
-                <ChevronRight className="h-4 w-4 text-white/35" />
-                <span className="text-white">Powered Mixers</span>
-              </nav>
-              <div className="text-xs font-semibold uppercase tracking-[0.24em] text-[#8dcbff]">
-                PA &amp; live sound department
-              </div>
-              <h1 className="mt-4 text-4xl font-black tracking-tight md:text-6xl">
-                Powered mixers за мобилни PA системи, клубове и училища
-              </h1>
-              <p className="mt-5 text-base leading-7 text-white/80 md:text-lg">
-                Компактни all-in-one миксери за репетиционни, малки сцени и преносими
-                озвучителни системи. Подборът е подреден като реална търговска категория:
-                бързо търсене, ясни филтри и четливи продуктови карти.
-              </p>
-              <div className="mt-6 flex flex-wrap gap-3">
-                <TrustChip
-                  icon={<Truck className="h-4 w-4" />}
-                  label={`Безплатна доставка над ${formatEuro(freeShippingThreshold)}`}
-                />
-                <TrustChip
-                  icon={<ShoppingBag className="h-4 w-4" />}
-                  label={`${formatCount(inStockCount)} модела в наличност`}
-                />
-                <TrustChip icon={<Filter className="h-4 w-4" />} label="Филтри по марка, цена и рейтинг" />
-                <TrustChip
-                  icon={<RotateCcw className="h-4 w-4" />}
-                  label="Съдействие и стандартно връщане"
-                />
-              </div>
-            </div>
+                <section className="mx-auto max-w-7xl px-4 pt-6 sm:px-6 lg:px-8">
+          <nav className="flex flex-wrap items-center gap-2 text-sm text-[var(--gray-500)]">
+            <Link href="/" className="transition hover:text-[var(--gray-900)]">
+              Home
+            </Link>
+            <ChevronRight className="h-4 w-4 text-[var(--gray-400)]" />
+            <Link href="/categories" className="transition hover:text-[var(--gray-900)]">
+              Categories
+            </Link>
+            <ChevronRight className="h-4 w-4 text-[var(--gray-400)]" />
+            <span className="text-[var(--gray-900)]">Powered Mixers</span>
+          </nav>
 
-            <div className="rounded-[32px] border border-white/10 bg-white/8 p-5 backdrop-blur">
-              <div className="grid gap-4 min-[520px]:grid-cols-3 lg:grid-cols-1">
-                <Metric label="Артикули" value={formatCount(products.length)} />
-                <Metric label="Марки" value={formatCount(relevantBrands.length)} />
-                <Metric label="С безплатна доставка" value={formatCount(freeShippingCount)} />
-              </div>
+          <div className="mt-3 rounded-[20px] border border-[var(--border)] bg-white p-5 shadow-[var(--shadow-card)] sm:p-6">
+            <h1 className="text-3xl font-black tracking-tight md:text-4xl">Powered Mixers</h1>
+            <p className="mt-3 max-w-4xl text-sm leading-6 text-[var(--gray-600)]">
+              Compact all-in-one powered mixers for rehearsal rooms, schools and small live setups.
+            </p>
+            <div className="mt-4 flex flex-wrap gap-2 text-xs font-semibold text-[var(--gray-600)]">
+              <span className="rounded-full border border-[var(--border)] bg-[var(--gray-50)] px-3 py-1.5">
+                {formatCount(products.length)} products
+              </span>
+              <span className="rounded-full border border-[var(--border)] bg-[var(--gray-50)] px-3 py-1.5">
+                {formatCount(relevantBrands.length)} brands
+              </span>
+              <span className="rounded-full border border-[var(--border)] bg-[var(--gray-50)] px-3 py-1.5">
+                {formatCount(inStockCount)} in stock
+              </span>
+              <span className="rounded-full border border-[var(--border)] bg-[var(--gray-50)] px-3 py-1.5">
+                Free shipping over {formatEuro(freeShippingThreshold)}
+              </span>
             </div>
           </div>
         </section>
@@ -558,6 +535,7 @@ export default function PoweredMixersPage({
           </div>
         </section>
       </main>
+      <HomeFooter locale={locale} />
 
       <MobileFilterDrawer
         isOpen={isMobileFiltersOpen}
@@ -990,38 +968,6 @@ function MobileFilterDrawer({
         {children}
       </div>
     </>
-  );
-}
-
-function TrustChip({
-  icon,
-  label,
-}: {
-  icon: ReactNode;
-  label: string;
-}) {
-  return (
-    <span className="inline-flex items-center gap-2 rounded-full border border-white/12 bg-white/8 px-4 py-2 text-sm font-semibold text-white/90">
-      {icon}
-      {label}
-    </span>
-  );
-}
-
-function Metric({
-  label,
-  value,
-}: {
-  label: string;
-  value: string;
-}) {
-  return (
-    <div className="rounded-2xl border border-white/10 bg-white/10 px-4 py-4">
-      <div className="text-xs font-semibold uppercase tracking-[0.18em] text-white/60">
-        {label}
-      </div>
-      <div className="mt-2 text-3xl font-black tracking-tight">{value}</div>
-    </div>
   );
 }
 

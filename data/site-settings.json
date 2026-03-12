@@ -1,0 +1,26 @@
+{
+  "siteName": "MusicWorld",
+  "siteUrl": "https://www.musicworld.local",
+  "defaultLocale": "bg-BG",
+  "supportedLocales": ["bg-BG", "en-GB"],
+  "defaultCurrency": "EUR",
+  "supportedCurrencies": ["EUR"],
+  "contact": {
+    "phone": "+359 2 123 4567",
+    "email": "support@musicworld.local",
+    "supportHours": "Mon-Fri 09:00-18:00"
+  },
+  "shipping": {
+    "freeShippingThreshold": 149,
+    "freeShippingMessage": "Free shipping over €149 for parcel-size orders.",
+    "dispatchMessage": "Most in-stock items dispatch within 24 hours."
+  },
+  "socialLinks": [
+    { "platform": "facebook", "href": "https://facebook.com/musicworld" },
+    { "platform": "instagram", "href": "https://instagram.com/musicworld" },
+    { "platform": "youtube", "href": "https://youtube.com/musicworld" }
+  ],
+  "seoTitle": "MusicWorld | Instruments, Pro Audio and Stage Gear",
+  "seoDescription": "Frontend-ready ecommerce catalog for instruments, studio gear, live sound and DJ equipment.",
+  "metaImage": "/images/seo/site-default.jpg"
+}

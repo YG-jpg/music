@@ -3,6 +3,7 @@ import brandsData from "@/data/brands.json";
 import categoriesData from "@/data/categories.json";
 import filtersData from "@/data/filters.json";
 import homepageData from "@/data/homepage.json";
+import mockProductsData from "@/data/mock-products.json";
 import navigationData from "@/data/navigation.json";
 import productsData from "@/data/products.json";
 import siteSettingsData from "@/data/site-settings.json";
@@ -28,7 +29,10 @@ function cloneJson<T>(value: T): T {
 // Later this file can be replaced with fetch-based ERP/CMS adapters.
 export const localCommerceCatalogSource: CommerceCatalogSource = {
   async getProducts() {
-    return cloneJson(productsData as Product[]);
+    const baseProducts = productsData as Product[];
+    const mockProducts = mockProductsData as Product[];
+
+    return cloneJson([...baseProducts, ...mockProducts]);
   },
   async getCategories() {
     return cloneJson(categoriesData as Category[]);

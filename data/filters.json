@@ -1,0 +1,37 @@
+{
+  "priceRanges": [
+    { "id": "under-100", "label": "Under €100", "min": 0, "max": 100 },
+    { "id": "100-300", "label": "€100 to €300", "min": 100, "max": 300 },
+    { "id": "300-800", "label": "€300 to €800", "min": 300, "max": 800 },
+    { "id": "800-1500", "label": "€800 to €1,500", "min": 800, "max": 1500 },
+    { "id": "1500-plus", "label": "€1,500+", "min": 1500, "max": null }
+  ],
+  "brands": [
+    { "brandId": "fender", "label": "Fender" },
+    { "brandId": "gibson", "label": "Gibson" },
+    { "brandId": "ibanez", "label": "Ibanez" },
+    { "brandId": "yamaha", "label": "Yamaha" },
+    { "brandId": "roland", "label": "Roland" },
+    { "brandId": "korg", "label": "Korg" },
+    { "brandId": "shure", "label": "Shure" },
+    { "brandId": "sennheiser", "label": "Sennheiser" },
+    { "brandId": "pioneer-dj", "label": "Pioneer DJ" },
+    { "brandId": "universal-audio", "label": "Universal Audio" }
+  ],
+  "rating": [
+    { "id": "4-up", "label": "4 stars & up", "minRating": 4 },
+    { "id": "4-5-up", "label": "4.5 stars & up", "minRating": 4.5 }
+  ],
+  "availability": [
+    { "id": "in-stock", "label": "In stock", "values": ["in_stock", "low_stock"] },
+    { "id": "preorder", "label": "Pre-order", "values": ["preorder"] },
+    { "id": "out-of-stock", "label": "Out of stock", "values": ["out_of_stock"] }
+  ],
+  "sortOptions": [
+    { "id": "most-popular", "label": "Most popular" },
+    { "id": "newest", "label": "Newest" },
+    { "id": "price-low-to-high", "label": "Price low to high" },
+    { "id": "price-high-to-low", "label": "Price high to low" },
+    { "id": "best-rated", "label": "Best rated" }
+  ]
+}

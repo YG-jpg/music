@@ -3,10 +3,9 @@
 import { startTransition, useDeferredValue, useState, type ReactNode } from "react";
 import Image from "next/image";
 import Link from "next/link";
-import logoMain from "../../logo_main.png";
-import { CartButton, useCart } from "@/components/cart-provider";
+import { useCart } from "@/components/cart-provider";
+import { HomeFooter, HomeHeader } from "@/components/home-shell";
 import {
-  Globe,
   Heart,
   Home,
   Mail,
@@ -23,7 +22,6 @@ import {
   content,
   dealProducts,
   featuredProducts,
-  footerGroups,
   type Locale,
   type Product,
 } from "@/lib/storefront-data";
@@ -74,91 +72,14 @@ export default function Storefront() {
 
   return (
     <div className="home-page min-h-screen bg-[var(--gray-50)] text-[var(--gray-900)]">
-      <header className="sticky top-0 z-40 border-b border-[var(--border)] bg-white/95 backdrop-blur">
-        <div className="hidden bg-[var(--gray-900)] py-2 text-white md:block">
-          <div className="mx-auto flex max-w-7xl items-center justify-between px-4 sm:px-6 lg:px-8">
-            <div className="flex items-center gap-2 text-sm">
-              <Truck className="h-4 w-4" />
-              <span>{copy.shippingMessage}</span>
-            </div>
-            <div className="flex items-center gap-4 text-sm">
-              <div className="flex items-center gap-1">
-                <Globe className="h-4 w-4" />
-                <span>EUR</span>
-              </div>
-              <button
-                type="button"
-                onClick={() =>
-                  startTransition(() =>
-                    setLocale((current) => (current === "bg" ? "en" : "bg")),
-                  )
-                }
-                className="rounded-md border border-white/20 px-3 py-1 text-xs font-semibold transition hover:bg-white/10"
-              >
-                {copy.localeSwitch}
-              </button>
-            </div>
-          </div>
-        </div>
-
-        <div className="mx-auto max-w-7xl px-4 py-4 sm:px-6 lg:px-8">
-          <div className="flex items-center justify-between gap-4">
-            <Link href="/" className="flex items-center">
-              <Image
-                src={logoMain}
-                alt="Music World"
-                priority
-                className="h-12 w-auto sm:h-14"
-              />
-            </Link>
-
-            <div className="hidden max-w-2xl flex-1 md:block">
-              <SearchBar
-                value={search}
-                onChange={setSearch}
-                placeholder={copy.searchPlaceholder}
-              />
-            </div>
-
-            <div className="flex items-center gap-1 sm:gap-2">
-              <button
-                type="button"
-                onClick={() =>
-                  startTransition(() =>
-                    setLocale((current) => (current === "bg" ? "en" : "bg")),
-                  )
-                }
-                className="rounded-full border border-[var(--border-strong)] px-3 py-2 text-xs font-semibold md:hidden"
-              >
-                {copy.localeSwitch}
-              </button>
-              <HeaderIcon icon={<Heart className="h-5 w-5" />} />
-              <HeaderIcon icon={<User className="h-5 w-5" />} />
-              <CartButton />
-            </div>
-          </div>
-
-          <div className="mt-4 md:hidden">
-            <SearchBar
-              value={search}
-              onChange={setSearch}
-              placeholder={copy.searchPlaceholder}
-            />
-          </div>
-
-          <nav className="mt-4 hidden flex-wrap items-center justify-center gap-3 border-t border-[var(--border)] pt-4 md:flex">
-            {categories.map((category) => (
-              <Link
-                key={category.id}
-                href={categoryHrefById[category.id] ?? "/categories"}
-                className="rounded-full px-3 py-1.5 text-sm font-medium text-[var(--gray-700)] transition hover:text-[var(--primary)]"
-              >
-                {category.label[locale]}
-              </Link>
-            ))}
-          </nav>
-        </div>
-      </header>
+      <HomeHeader
+        locale={locale}
+        onLocaleToggle={() =>
+          startTransition(() => setLocale((current) => (current === "bg" ? "en" : "bg")))
+        }
+        searchValue={search}
+        onSearchChange={setSearch}
+      />
 
       <main>
         <section className="relative overflow-hidden">
@@ -343,39 +264,7 @@ export default function Storefront() {
         </section>
       </main>
 
-      <footer id="footer" className="bg-[var(--gray-900)] text-white">
-        <div className="mx-auto max-w-7xl px-4 py-12 sm:px-6 lg:px-8">
-          <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-5">
-            {footerGroups.map((group) => (
-              <div key={group.title.bg}>
-                <h4 className="mb-4 font-semibold">{group.title[locale]}</h4>
-                <ul className="space-y-2">
-                  {group.links.map((item) => (
-                    <li key={item.bg} className="text-sm text-[var(--gray-400)]">
-                      {item[locale]}
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            ))}
-
-            <div>
-              <h4 className="mb-4 font-semibold">{locale === "bg" ? "Бюлетин" : "Newsletter"}</h4>
-              <p className="mb-4 text-sm text-[var(--gray-400)]">{copy.newsletterText}</p>
-              <form className="flex gap-2" onSubmit={(event) => event.preventDefault()}>
-                <input
-                  type="email"
-                  placeholder={copy.newsletterPlaceholder}
-                  className="flex-1 rounded-lg border border-[var(--gray-700)] bg-[var(--gray-800)] px-3 py-2 text-sm text-white"
-                />
-                <button type="submit" className="rounded-lg bg-[var(--primary)] px-3 text-white">
-                  <Mail className="h-5 w-5" />
-                </button>
-              </form>
-            </div>
-          </div>
-        </div>
-      </footer>
+      <HomeFooter locale={locale} />
 
       <div className="fixed bottom-0 left-0 right-0 z-40 border-t border-[var(--border)] bg-white md:hidden">
         <nav className="grid h-16 grid-cols-4">
@@ -385,29 +274,6 @@ export default function Storefront() {
           <BottomIcon icon={<User className="h-5 w-5" />} label={copy.mobileNav.profile} />
         </nav>
       </div>
-    </div>
-  );
-}
-
-function SearchBar({
-  value,
-  onChange,
-  placeholder,
-}: {
-  value: string;
-  onChange: (value: string) => void;
-  placeholder: string;
-}) {
-  return (
-    <div className="relative w-full">
-      <input
-        type="text"
-        value={value}
-        onChange={(event) => onChange(event.target.value)}
-        placeholder={placeholder}
-        className="w-full rounded-xl border border-[var(--border)] bg-white px-4 py-3 pl-11 text-sm outline-none focus:ring-2 focus:ring-[var(--primary)]"
-      />
-      <Search className="absolute left-4 top-1/2 h-4 w-4 -translate-y-1/2 text-[var(--gray-400)]" />
     </div>
   );
 }
@@ -501,17 +367,6 @@ function ProductCard({
         </div>
       </div>
     </div>
-  );
-}
-
-function HeaderIcon({ icon }: { icon: ReactNode }) {
-  return (
-    <button
-      type="button"
-      className="inline-flex h-10 w-10 items-center justify-center rounded-full text-[var(--gray-700)] transition hover:bg-[var(--gray-100)]"
-    >
-      {icon}
-    </button>
   );
 }
 

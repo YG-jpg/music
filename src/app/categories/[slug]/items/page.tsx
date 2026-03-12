@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { notFound, redirect } from "next/navigation";
+import { notFound } from "next/navigation";
 
 import CategoryCatalogPage from "@/components/category-catalog-page";
 import { getAllCategories } from "@/lib/data";
@@ -26,17 +26,17 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   }
 
   return {
-    title: data.category.seoTitle,
+    title: `${data.category.seoTitle} - Items`,
     description: data.category.seoDescription,
     openGraph: {
-      title: data.category.seoTitle,
+      title: `${data.category.seoTitle} - Items`,
       description: data.category.seoDescription,
       images: [data.category.metaImage],
     },
   };
 }
 
-export default async function CategorySlugPage({ params }: PageProps) {
+export default async function CategoryItemsPage({ params }: PageProps) {
   const { slug } = await params;
   const data = await getCategoryCatalogPageData(slug);
 
@@ -44,9 +44,5 @@ export default async function CategorySlugPage({ params }: PageProps) {
     notFound();
   }
 
-  if (data.childCategories.length === 0) {
-    redirect(`/categories/${slug}/items`);
-  }
-
-  return <CategoryCatalogPage {...data} view="department" />;
+  return <CategoryCatalogPage {...data} view="items" />;
 }

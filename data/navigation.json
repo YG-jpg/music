@@ -1,0 +1,186 @@
+{
+  "mainMenu": [
+    {
+      "id": "nav-guitars",
+      "label": "Guitars",
+      "href": "/categories/guitars",
+      "categorySlug": "guitars",
+      "megaMenuGroupId": "mega-guitars"
+    },
+    {
+      "id": "nav-bass",
+      "label": "Bass",
+      "href": "/categories/bass",
+      "categorySlug": "bass"
+    },
+    {
+      "id": "nav-drums",
+      "label": "Drums",
+      "href": "/categories/drums",
+      "categorySlug": "drums"
+    },
+    {
+      "id": "nav-keyboards",
+      "label": "Keyboards",
+      "href": "/categories/keyboards",
+      "categorySlug": "keyboards",
+      "megaMenuGroupId": "mega-keyboards"
+    },
+    {
+      "id": "nav-studio",
+      "label": "Studio & Recording",
+      "href": "/categories/studio-recording",
+      "categorySlug": "studio-recording",
+      "megaMenuGroupId": "mega-studio"
+    },
+    {
+      "id": "nav-dj",
+      "label": "DJ Equipment",
+      "href": "/categories/dj-equipment",
+      "categorySlug": "dj-equipment"
+    },
+    {
+      "id": "nav-pa",
+      "label": "PA & Live Sound",
+      "href": "/categories/pa-live-sound",
+      "categorySlug": "pa-live-sound"
+    },
+    {
+      "id": "nav-accessories",
+      "label": "Accessories",
+      "href": "/categories/accessories",
+      "categorySlug": "accessories"
+    },
+    {
+      "id": "nav-deals",
+      "label": "Deals",
+      "href": "/deals"
+    }
+  ],
+  "megaMenuGroups": [
+    {
+      "id": "mega-guitars",
+      "title": "Guitars",
+      "columns": [
+        {
+          "id": "mega-guitars-shop",
+          "title": "Shop by type",
+          "items": [
+            { "id": "electric-guitars", "label": "Electric Guitars", "href": "/categories/electric-guitars", "categorySlug": "electric-guitars" },
+            { "id": "acoustic-guitars", "label": "Acoustic Guitars", "href": "/categories/acoustic-guitars", "categorySlug": "acoustic-guitars" },
+            { "id": "guitar-amps", "label": "Guitar Amps", "href": "/categories/guitar-amps", "categorySlug": "guitar-amps" },
+            { "id": "pedals-effects", "label": "Pedals & Effects", "href": "/categories/pedals-effects", "categorySlug": "pedals-effects" }
+          ]
+        },
+        {
+          "id": "mega-guitars-brands",
+          "title": "Popular brands",
+          "items": [
+            { "id": "brand-fender", "label": "Fender", "href": "/brands/fender" },
+            { "id": "brand-gibson", "label": "Gibson", "href": "/brands/gibson" },
+            { "id": "brand-ibanez", "label": "Ibanez", "href": "/brands/ibanez" }
+          ]
+        }
+      ],
+      "featuredCard": {
+        "title": "Fender Player II spotlight",
+        "description": "Best-selling electric guitars with stage-ready hardware and modern neck profiles.",
+        "href": "/collections/fender-player-series",
+        "image": "/images/navigation/mega-guitars-player-series.jpg"
+      }
+    },
+    {
+      "id": "mega-keyboards",
+      "title": "Keyboards",
+      "columns": [
+        {
+          "id": "mega-keys-shop",
+          "title": "Player setups",
+          "items": [
+            { "id": "digital-pianos", "label": "Digital Pianos", "href": "/categories/digital-pianos", "categorySlug": "digital-pianos" },
+            { "id": "synthesizers", "label": "Synthesizers", "href": "/categories/synthesizers", "categorySlug": "synthesizers" },
+            { "id": "midi-keyboards", "label": "MIDI Keyboards", "href": "/categories/midi-keyboards", "categorySlug": "midi-keyboards" }
+          ]
+        },
+        {
+          "id": "mega-keys-brands",
+          "title": "Brand highlights",
+          "items": [
+            { "id": "brand-yamaha", "label": "Yamaha", "href": "/brands/yamaha" },
+            { "id": "brand-roland", "label": "Roland", "href": "/brands/roland" },
+            { "id": "brand-korg", "label": "Korg", "href": "/brands/korg" }
+          ]
+        }
+      ],
+      "featuredCard": {
+        "title": "Compact keys for modern studios",
+        "description": "Weighted pianos, desktop synths and controller keyboards for hybrid workflows.",
+        "href": "/collections/keyboard-studio-picks",
+        "image": "/images/navigation/mega-keyboards-studio-picks.jpg"
+      }
+    },
+    {
+      "id": "mega-studio",
+      "title": "Studio & Recording",
+      "columns": [
+        {
+          "id": "mega-studio-core",
+          "title": "Core studio gear",
+          "items": [
+            { "id": "audio-interfaces", "label": "Audio Interfaces", "href": "/categories/audio-interfaces", "categorySlug": "audio-interfaces" },
+            { "id": "studio-microphones", "label": "Studio Microphones", "href": "/categories/studio-microphones", "categorySlug": "studio-microphones" },
+            { "id": "studio-monitors", "label": "Studio Monitors", "href": "/categories/studio-monitors", "categorySlug": "studio-monitors" },
+            { "id": "studio-headphones", "label": "Studio Headphones", "href": "/categories/studio-headphones", "categorySlug": "studio-headphones" }
+          ]
+        },
+        {
+          "id": "mega-studio-brands",
+          "title": "Trusted brands",
+          "items": [
+            { "id": "brand-universal-audio", "label": "Universal Audio", "href": "/brands/universal-audio" },
+            { "id": "brand-focusrite", "label": "Focusrite", "href": "/brands/focusrite" },
+            { "id": "brand-shure", "label": "Shure", "href": "/brands/shure" }
+          ]
+        }
+      ],
+      "featuredCard": {
+        "title": "Apollo, Focusrite and Shure essentials",
+        "description": "A practical path from starter interface to premium signal chain.",
+        "href": "/collections/studio-starter-to-pro",
+        "image": "/images/navigation/mega-studio-essentials.jpg"
+      }
+    }
+  ],
+  "footerColumns": [
+    {
+      "id": "footer-shop",
+      "title": "Shop",
+      "items": [
+        { "id": "footer-guitars", "label": "Guitars", "href": "/categories/guitars", "categorySlug": "guitars" },
+        { "id": "footer-drums", "label": "Drums", "href": "/categories/drums", "categorySlug": "drums" },
+        { "id": "footer-keys", "label": "Keyboards", "href": "/categories/keyboards", "categorySlug": "keyboards" },
+        { "id": "footer-studio", "label": "Studio & Recording", "href": "/categories/studio-recording", "categorySlug": "studio-recording" }
+      ]
+    },
+    {
+      "id": "footer-support",
+      "title": "Support",
+      "items": [
+        { "id": "footer-shipping", "label": "Shipping", "href": "/support/shipping" },
+        { "id": "footer-returns", "label": "Returns", "href": "/support/returns" },
+        { "id": "footer-payments", "label": "Payments", "href": "/support/payments" },
+        { "id": "footer-contact", "label": "Contact", "href": "/support/contact" }
+      ]
+    },
+    {
+      "id": "footer-guides",
+      "title": "Guides",
+      "items": [
+        { "id": "footer-buyer-guides", "label": "Buying Guides", "href": "/guides" },
+        { "id": "footer-reviews", "label": "Reviews", "href": "/reviews" },
+        { "id": "footer-studio-setup", "label": "Studio Setup Help", "href": "/guides/studio-setup" },
+        { "id": "footer-dj-beginners", "label": "DJ Beginner Guides", "href": "/guides/dj-beginner" }
+      ]
+    }
+  ]
+}

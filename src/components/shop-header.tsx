@@ -51,6 +51,10 @@ const navigation = navigationData as NavigationData;
 const siteSettings = siteSettingsData;
 const catalogCategories = categoriesData as Category[];
 const liveCategorySlugs = new Set(catalogCategories.map((category) => category.slug));
+const categoryBySlug = new Map(catalogCategories.map((category) => [category.slug, category] as const));
+const categoryIdsWithChildren = new Set(
+  catalogCategories.map((category) => category.parentId).filter((id): id is string => Boolean(id)),
+);
 
 const fallbackMegaImages: Record<string, string> = {
   "mega-guitars": categoryImageFallbacks.guitars,
@@ -147,7 +151,17 @@ function getFeaturedCopy(groupId: string, locale: HeaderLocale) {
 
 function resolveNavHref(link: Pick<NavigationLink, "href" | "categorySlug">) {
   if (link.categorySlug && liveCategorySlugs.has(link.categorySlug)) {
-    return `/categories/${link.categorySlug}`;
+    const category = categoryBySlug.get(link.categorySlug);
+
+    if (!category) {
+      return "/categories";
+    }
+
+    const hasChildren = categoryIdsWithChildren.has(category.id);
+
+    return hasChildren
+      ? `/categories/${link.categorySlug}`
+      : `/categories/${link.categorySlug}/items`;
   }
 
   if (link.href === "/deals") {
@@ -206,15 +220,15 @@ export function ShopHeader({
   const quickSearchLinks = [
     {
       label: locale === "bg" ? "Powered Mixers" : "Powered Mixers",
-      href: "/categories/powered-mixers",
+      href: "/categories/powered-mixers/items",
     },
     {
       label: locale === "bg" ? "Дигитални пиана" : "Digital Pianos",
-      href: "/categories/digital-pianos",
+      href: "/categories/digital-pianos/items",
     },
     {
       label: locale === "bg" ? "Аудио интерфейси" : "Audio Interfaces",
-      href: "/categories/audio-interfaces",
+      href: "/categories/audio-interfaces/items",
     },
   ];
 

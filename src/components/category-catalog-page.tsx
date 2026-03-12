@@ -17,19 +17,15 @@ import {
   ShoppingBag,
   ShoppingCart,
   Star,
-  Truck,
   X,
 } from "lucide-react";
 import { useDeferredValue, useMemo, useState, type ReactNode } from "react";
 
 import { useCart } from "@/components/cart-provider";
-import { ShopHeader } from "@/components/shop-header";
+import { HomeFooter, HomeHeader } from "@/components/home-shell";
 import siteSettingsData from "@/data/site-settings.json";
 import { buttonStyles, cx } from "@/lib/button-styles";
-import {
-  getCategoryFallbackImage,
-  getProductFallbackImage,
-} from "@/lib/catalog-image-fallbacks";
+import { getProductFallbackImage } from "@/lib/catalog-image-fallbacks";
 import {
   formatCount,
   formatEuro,
@@ -41,6 +37,7 @@ import {
   humanizeBadge,
 } from "@/lib/commerce-ui";
 import type { CategoryBrowseItem } from "@/lib/category-page-data";
+import type { Locale } from "@/lib/storefront-data";
 import type {
   Brand,
   Category,
@@ -57,9 +54,8 @@ interface CategoryCatalogPageProps {
   products: Product[];
   brands: Brand[];
   filterConfig: FilterConfig;
+  view?: "department" | "items";
 }
-
-const freeShippingThreshold = siteSettingsData.shipping.freeShippingThreshold;
 
 function formatRangeLabel(min: number, max: number | null) {
   if (max === null) {
@@ -189,14 +185,6 @@ function sortProducts(products: Product[], sortBy: SortOptionId) {
   });
 }
 
-function resolveCategoryImage(category: Category, parentCategory: Category | null) {
-  if (category.image.startsWith("http")) {
-    return category.image;
-  }
-
-  return getCategoryFallbackImage(category.slug, parentCategory?.slug, "pa-live-sound");
-}
-
 function resolveProductImage(product: Product) {
   const directImage = product.images[0]?.src;
 
@@ -231,6 +219,199 @@ function getSeoCopy(category: Category, parentCategory: Category | null) {
   return `В отдела ${category.name} държим ясен каталог с подкатегории, филтри по марка, цена и рейтинг, както и по-видими сигнали за наличност, доставка и промоции.`;
 }
 
+interface GuitarsCategoryTile {
+  id: string;
+  label: string;
+  href: string;
+  imageSrc: string;
+  highlighted?: boolean;
+  tone?: "blue" | "green";
+}
+
+const GUITARS_CATEGORY_TILES: GuitarsCategoryTile[] = [
+  {
+    id: "guitar-fender-promo",
+    label: "Fender Peak Season Promo",
+    href: "/categories/guitars/items",
+    imageSrc: "https://thumbs.static-thomann.de/thumb/thumb250x250/pics/prod/124838.jpg",
+  },
+  {
+    id: "guitar-electric-guitars",
+    label: "Електрически китари",
+    href: "/categories/electric-guitars/items",
+    imageSrc: "https://thumbs.static-thomann.de/thumb/thumb250x250/pics/prod/124838.jpg",
+  },
+  {
+    id: "guitar-ukulele",
+    label: "Укулеле",
+    href: "/categories/guitars/items",
+    imageSrc: "https://thumbs.static-thomann.de/thumb/thumb250x250/pics/prod/187303.jpg",
+    highlighted: true,
+  },
+  {
+    id: "guitar-acoustic-guitars",
+    label: "Акустични китари",
+    href: "/categories/acoustic-guitars/items",
+    imageSrc: "https://thumbs.static-thomann.de/thumb/thumb250x250/pics/prod/333967.jpg",
+  },
+  {
+    id: "guitar-classical-guitars",
+    label: "Класически китари",
+    href: "/categories/acoustic-guitars/items",
+    imageSrc: "https://thumbs.static-thomann.de/thumb/thumb250x250/pics/prod/130179.jpg",
+  },
+  {
+    id: "guitar-electric-basses",
+    label: "Електрически баскитари",
+    href: "/categories/bass-guitars/items",
+    imageSrc: "https://thumbs.static-thomann.de/thumb/thumb250x250/pics/prod/264956.jpg",
+  },
+  {
+    id: "guitar-electric-amps",
+    label: "Усилватели за ел. китари",
+    href: "/categories/guitar-amps/items",
+    imageSrc: "https://thumbs.static-thomann.de/thumb/thumb250x250/pics/prod/429320.jpg",
+  },
+  {
+    id: "guitar-effects",
+    label: "Ефекти за китара и бас",
+    href: "/categories/pedals-effects/items",
+    imageSrc: "https://thumbs.static-thomann.de/thumb/thumb250x250/pics/prod/170627.jpg",
+  },
+  {
+    id: "guitar-bass-amps",
+    label: "Усилватели за бас",
+    href: "/categories/bass-amps/items",
+    imageSrc: "https://thumbs.static-thomann.de/thumb/thumb250x250/pics/prod/357682.jpg",
+  },
+  {
+    id: "guitar-acoustic-amp-preamp",
+    label: "Acoustic Guitar Amps & Preamps",
+    href: "/categories/guitar-amps/items",
+    imageSrc: "https://thumbs.static-thomann.de/thumb/thumb250x250/pics/prod/445374.jpg",
+  },
+  {
+    id: "guitar-strings",
+    label: "Струни",
+    href: "/categories/accessories/items",
+    imageSrc: "https://thumbs.static-thomann.de/thumb/thumb250x250/pics/prod/104554.jpg",
+  },
+  {
+    id: "guitar-synth",
+    label: "Guitar and Bass Synth.",
+    href: "/categories/guitars/items",
+    imageSrc: "https://img.musicworld.bg/th/5/6/7/94765.png",
+  },
+  {
+    id: "guitar-vacuum-tubes",
+    label: "Vacuum Tubes for Amplifiers",
+    href: "/categories/guitar-amps/items",
+    imageSrc: "https://thumbs.static-thomann.de/thumb/thumb250x250/pics/prod/178790.jpg",
+  },
+  {
+    id: "guitar-trainers-recorders",
+    label: "Трейнъри и рекордери",
+    href: "/categories/guitars/items",
+    imageSrc: "https://img.musicworld.bg/th/8/9/2/17298.png",
+  },
+  {
+    id: "guitar-adapters",
+    label: "GTR/Bass Адаптери",
+    href: "/categories/accessories/items",
+    imageSrc: "https://thumbs.static-thomann.de/thumb/thumb250x250/pics/prod/132927.jpg",
+  },
+  {
+    id: "guitar-spare-parts",
+    label: "Резервни части",
+    href: "/categories/accessories/items",
+    imageSrc: "https://thumbs.static-thomann.de/thumb/thumb250x250/pics/prod/178790.jpg",
+  },
+  {
+    id: "guitar-cases-bags",
+    label: "Куфари и чанти за китари и бас китари",
+    href: "/categories/cases-bags/items",
+    imageSrc: "https://thumbs.static-thomann.de/thumb/thumb250x250/pics/prod/283516.jpg",
+  },
+  {
+    id: "guitar-interfaces",
+    label: "Китарни Интерфейси",
+    href: "/categories/studio-recording/items",
+    imageSrc: "https://img.musicworld.bg/th/8/0/2/78208.png",
+  },
+  {
+    id: "guitar-accessories",
+    label: "Аксесоари за китара",
+    href: "/categories/accessories/items",
+    imageSrc: "https://thumbs.static-thomann.de/thumb/thumb250x250/pics/prod/283516.jpg",
+  },
+  {
+    id: "guitar-wireless",
+    label: "Guitar and Bass Wireless",
+    href: "/categories/accessories/items",
+    imageSrc: "https://thumbs.static-thomann.de/thumb/thumb250x250/pics/prod/425040.jpg",
+  },
+  {
+    id: "guitar-cables",
+    label: "Guitar Cables",
+    href: "/categories/cables/items",
+    imageSrc: "https://thumbs.static-thomann.de/thumb/thumb250x250/pics/prod/107277.jpg",
+  },
+  {
+    id: "guitar-straps",
+    label: "Колани за китара и бас",
+    href: "/categories/accessories/items",
+    imageSrc: "https://thumbs.static-thomann.de/thumb/thumb250x250/pics/prod/104554.jpg",
+  },
+  {
+    id: "guitar-picks",
+    label: "Перца",
+    href: "/categories/accessories/items",
+    imageSrc: "https://thumbs.static-thomann.de/thumb/thumb250x250/pics/prod/170627.jpg",
+  },
+  {
+    id: "guitar-accessories-general",
+    label: "Аксесоари",
+    href: "/categories/accessories/items",
+    imageSrc: "https://thumbs.static-thomann.de/thumb/thumb250x250/pics/prod/283516.jpg",
+  },
+  {
+    id: "guitar-stands",
+    label: "Стойки за китара и бас",
+    href: "/categories/stands/items",
+    imageSrc: "https://thumbs.static-thomann.de/thumb/thumb250x250/pics/prod/178790.jpg",
+  },
+  {
+    id: "guitar-battery",
+    label: "Батерии и зарядни устройства",
+    href: "/categories/accessories/items",
+    imageSrc: "https://img.musicworld.bg/th/1/0/4/93401.png",
+  },
+  {
+    id: "guitar-tuners",
+    label: "Тунери",
+    href: "/categories/accessories/items",
+    imageSrc: "https://thumbs.static-thomann.de/thumb/thumb250x250/pics/prod/132927.jpg",
+  },
+  {
+    id: "guitar-connectors",
+    label: "Конектори",
+    href: "/categories/cables/items",
+    imageSrc: "https://img.musicworld.bg/th/8/9/2/17298.png",
+  },
+  {
+    id: "guitar-instrument-cables",
+    label: "Кабели за музикални инструменти",
+    href: "/categories/cables/items",
+    imageSrc: "https://thumbs.static-thomann.de/thumb/thumb250x250/pics/prod/107277.jpg",
+  },
+  {
+    id: "guitar-meter-cables",
+    label: "Кабели за инструменти на метър",
+    href: "/categories/cables/items",
+    imageSrc: "https://thumbs.static-thomann.de/thumb/thumb250x250/pics/prod/107277.jpg",
+  },
+];
+
 export default function CategoryCatalogPage({
   category,
   parentCategory,
@@ -239,7 +420,9 @@ export default function CategoryCatalogPage({
   products,
   brands,
   filterConfig,
+  view = "items",
 }: CategoryCatalogPageProps) {
+  const [locale, setLocale] = useState<Locale>("bg");
   const [search, setSearch] = useState("");
   const [sortBy, setSortBy] = useState<SortOptionId>("most-popular");
   const [selectedBrandIds, setSelectedBrandIds] = useState<string[]>([]);
@@ -257,7 +440,6 @@ export default function CategoryCatalogPage({
   const [isMobileFiltersOpen, setIsMobileFiltersOpen] = useState(false);
   const deferredSearch = useDeferredValue(search);
 
-  const activeCategorySlug = parentCategory?.slug ?? category.slug;
   const browseItems = childCategories.length > 0 ? childCategories : siblingCategories;
   const brandById = useMemo(() => new Map(brands.map((brand) => [brand.id, brand])), [brands]);
   const derivedFacetSections = useMemo(() => buildDerivedFacetSections(products), [products]);
@@ -287,6 +469,7 @@ export default function CategoryCatalogPage({
       product.badges.includes("deal") ||
       (typeof product.oldPrice === "number" && product.oldPrice > product.price),
   ).length;
+  const isGuitarsDepartment = view === "department" && category.slug === "guitars";
   const topBrands = [...relevantBrands]
     .sort(
       (left, right) =>
@@ -294,6 +477,36 @@ export default function CategoryCatalogPage({
         products.filter((product) => product.brandId === left.id).length,
     )
     .slice(0, 4);
+  const isDepartmentPage = childCategories.length > 0;
+  const departmentSubcategories = childCategories.slice(0, 12);
+  const departmentTopSellers = useMemo(
+    () =>
+      sortProducts(
+        products.filter((product) => product.bestseller || product.featured),
+        "most-popular",
+      ).slice(0, 6),
+    [products],
+  );
+  const departmentNewArrivals = useMemo(
+    () =>
+      sortProducts(
+        products.filter((product) => product.newArrival || product.featured),
+        "newest",
+      ).slice(0, 6),
+    [products],
+  );
+  const departmentDeals = useMemo(
+    () =>
+      sortProducts(
+        products.filter(
+          (product) =>
+            product.badges.includes("deal") ||
+            (typeof product.oldPrice === "number" && product.oldPrice > product.price),
+        ),
+        "most-popular",
+      ).slice(0, 6),
+    [products],
+  );
   const effectivePriceMin = selectedPriceMin ?? priceBounds.min;
   const effectivePriceMax = selectedPriceMax ?? priceBounds.max;
 
@@ -422,95 +635,92 @@ export default function CategoryCatalogPage({
 
   return (
     <div className="min-h-screen bg-[var(--gray-50)] text-[var(--gray-900)]">
-      <ShopHeader
-        locale="bg"
-        sectionLabel={category.slug}
+      <HomeHeader
+        locale={locale}
         searchValue={search}
-        searchPlaceholder="Търси модел, марка или спецификация"
         onSearchChange={setSearch}
-        activeCategorySlug={activeCategorySlug}
-        browsingCta={{
-          label: "Всички категории",
-          href: "/categories",
-        }}
+        onLocaleToggle={() => setLocale((current) => (current === "bg" ? "en" : "bg"))}
+        searchPlaceholder="Search model, brand or specification"
       />
 
       <main>
-        <section className="relative overflow-hidden border-b border-[var(--border)] bg-[var(--gray-900)] text-white">
-          <div className="absolute inset-0">
-            <Image
-              src={resolveCategoryImage(category, parentCategory)}
-              alt={category.name}
-              fill
-              sizes="100vw"
-              className="object-cover opacity-25"
+        {!isGuitarsDepartment ? (
+          <section className="mx-auto max-w-7xl px-4 pt-6 sm:px-6 lg:px-8">
+          <nav className="flex flex-wrap items-center gap-2 text-sm text-[var(--gray-500)]">
+            <Link href="/" className="transition hover:text-[var(--gray-900)]">
+              Home
+            </Link>
+            <ChevronRight className="h-4 w-4 text-[var(--gray-400)]" />
+            <Link href="/categories" className="transition hover:text-[var(--gray-900)]">
+              Categories
+            </Link>
+            {parentCategory ? (
+              <>
+                <ChevronRight className="h-4 w-4 text-[var(--gray-400)]" />
+                <Link
+                  href={`/categories/${parentCategory.slug}`}
+                  className="transition hover:text-[var(--gray-900)]"
+                >
+                  {parentCategory.name}
+                </Link>
+              </>
+            ) : null}
+            <ChevronRight className="h-4 w-4 text-[var(--gray-400)]" />
+            <span className="text-[var(--gray-900)]">{category.name}</span>
+          </nav>
+
+          <div className="mt-3 rounded-[20px] border border-[var(--border)] bg-white p-5 shadow-[var(--shadow-card)] sm:p-6">
+            <div className="text-xs font-semibold uppercase tracking-[0.18em] text-[var(--primary)]">
+              {getCategoryEyebrow(category, parentCategory)}
+            </div>
+            <h1 className="mt-2 text-3xl font-black tracking-tight md:text-4xl">{category.name}</h1>
+            <p className="mt-3 max-w-4xl text-sm leading-6 text-[var(--gray-600)]">
+              {getCategoryIntro(category, browseItems)}
+            </p>
+            <div className="mt-4 flex flex-wrap gap-2 text-xs font-semibold text-[var(--gray-600)]">
+              <span className="rounded-full border border-[var(--border)] bg-[var(--gray-50)] px-3 py-1.5">
+                {formatCount(products.length)} products
+              </span>
+              <span className="rounded-full border border-[var(--border)] bg-[var(--gray-50)] px-3 py-1.5">
+                {formatCount(relevantBrands.length)} brands
+              </span>
+              <span className="rounded-full border border-[var(--border)] bg-[var(--gray-50)] px-3 py-1.5">
+                {formatCount(inStockCount)} in stock
+              </span>
+              {!isGuitarsDepartment ? (
+                <span className="rounded-full border border-[var(--border)] bg-[var(--gray-50)] px-3 py-1.5">
+                  {formatCount(freeShippingCount)} with free shipping
+                </span>
+              ) : null}
+            </div>
+          </div>
+          </section>
+        ) : null}
+
+        <section
+          id="catalog"
+          className={
+            isGuitarsDepartment
+              ? "pb-10"
+              : "mx-auto max-w-7xl px-4 py-8 sm:px-6 lg:px-8"
+          }
+        >
+          {view === "department" && isDepartmentPage ? (
+            <DepartmentLanding
+              category={category}
+              childCategories={departmentSubcategories}
+              topBrands={topBrands}
+              topSellers={departmentTopSellers}
+              newArrivals={departmentNewArrivals}
+              deals={departmentDeals}
+              brandById={brandById}
+              locale={locale}
             />
-            <div className="absolute inset-0 bg-[linear-gradient(90deg,rgba(23,22,19,0.92),rgba(23,22,19,0.72),rgba(23,22,19,0.66))]" />
-            <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_left,rgba(12,140,233,0.24),transparent_34%),radial-gradient(circle_at_bottom_right,rgba(10,64,110,0.24),transparent_28%)]" />
-          </div>
-          <div className="relative mx-auto grid max-w-7xl gap-10 px-4 py-12 sm:px-6 lg:grid-cols-[1.1fr_0.9fr] lg:px-8 lg:py-16">
-            <div className="max-w-3xl">
-              <nav className="mb-5 flex flex-wrap items-center gap-2 text-sm text-white/65">
-                <Link href="/" className="transition hover:text-white">
-                  Начало
-                </Link>
-                <ChevronRight className="h-4 w-4 text-white/35" />
-                <Link href="/categories" className="transition hover:text-white">
-                  Категории
-                </Link>
-                {parentCategory ? (
-                  <>
-                    <ChevronRight className="h-4 w-4 text-white/35" />
-                    <Link
-                      href={`/categories/${parentCategory.slug}`}
-                      className="transition hover:text-white"
-                    >
-                      {parentCategory.name}
-                    </Link>
-                  </>
-                ) : null}
-                <ChevronRight className="h-4 w-4 text-white/35" />
-                <span className="text-white">{category.name}</span>
-              </nav>
-              <div className="text-xs font-semibold uppercase tracking-[0.24em] text-[var(--blue-200)]">
-                {getCategoryEyebrow(category, parentCategory)}
-              </div>
-              <h1 className="mt-4 text-4xl font-black tracking-tight md:text-6xl">
-                {category.name}
-              </h1>
-              <p className="mt-5 text-base leading-7 text-white/80 md:text-lg">
-                {getCategoryIntro(category, browseItems)}
-              </p>
-              <div className="mt-6 flex flex-wrap gap-3">
-                <TrustChip icon={<Truck className="h-4 w-4" />} label={`Безплатна доставка над ${formatEuro(freeShippingThreshold)}`} />
-                <TrustChip icon={<ShoppingBag className="h-4 w-4" />} label={`${formatCount(inStockCount)} налични артикула`} />
-                <TrustChip icon={<Filter className="h-4 w-4" />} label="Филтри по марка, цена и рейтинг" />
-                <TrustChip icon={<RotateCcw className="h-4 w-4" />} label="Съдействие и стандартно връщане" />
-              </div>
-            </div>
+          ) : null}
 
-            <div className="rounded-[32px] border border-white/10 bg-white/8 p-5 backdrop-blur">
-              <div className="grid gap-4 min-[520px]:grid-cols-3 lg:grid-cols-1">
-                <Metric label="Артикули" value={formatCount(products.length)} />
-                <Metric label="Марки" value={formatCount(relevantBrands.length)} />
-                <Metric label="С безплатна доставка" value={formatCount(freeShippingCount)} />
-              </div>
-              <div className="mt-4 rounded-2xl border border-white/10 bg-black/10 p-4">
-                <div className="text-xs font-semibold uppercase tracking-[0.18em] text-white/60">
-                  Бързо ориентиране
-                </div>
-                <div className="mt-2 text-sm leading-6 text-white/85">
-                  {topBrands.length > 0
-                    ? `Водещи марки: ${topBrands.map((brand) => brand.name).join(", ")}`
-                    : "Използвай филтрите за по-точен подбор по марка и цена."}
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        <section className="mx-auto max-w-7xl px-4 py-8 sm:px-6 lg:px-8">
-          <div className="mb-8 grid gap-4 rounded-[30px] border border-[rgba(12,140,233,0.1)] bg-white p-5 shadow-[var(--shadow-card)] lg:grid-cols-[1.2fr_0.8fr]">
+          {view === "items" ? (
+            <>
+          <div className="hidden mb-8 grid gap-4 rounded-[30px] border border-[rgba(12,140,233,0.1)] bg-white p-5 shadow-[var(--shadow-card)] lg:grid-cols-[1.2fr_0.8fr]">
             <div>
               <div className="text-xs font-semibold uppercase tracking-[0.18em] text-[var(--primary)]">
                 Department browse
@@ -722,7 +932,7 @@ export default function CategoryCatalogPage({
               ) : null}
 
               {filteredProducts.length > 0 ? (
-                <div className="mt-6 space-y-4">
+                <div id="catalog-list" className="mt-6 space-y-4">
                   {filteredProducts.map((product) => (
                     <ProductRow
                       key={product.id}
@@ -756,8 +966,11 @@ export default function CategoryCatalogPage({
               )}
             </div>
           </div>
+            </>
+          ) : null}
         </section>
 
+        {view === "items" ? (
         <section className="mx-auto max-w-7xl px-4 pb-14 sm:px-6 lg:px-8">
           <div className="grid gap-5 lg:grid-cols-[1.2fr_0.8fr]">
             <div className="rounded-[30px] border border-[rgba(12,140,233,0.1)] bg-white p-6 shadow-[var(--shadow-card)]">
@@ -796,8 +1009,11 @@ export default function CategoryCatalogPage({
             </div>
           </div>
         </section>
+        ) : null}
       </main>
+      <HomeFooter locale={locale} />
 
+      {view === "items" ? (
       <MobileFilterDrawer
         isOpen={isMobileFiltersOpen}
         onClose={() => setIsMobileFiltersOpen(false)}
@@ -857,6 +1073,555 @@ export default function CategoryCatalogPage({
           onClear={clearFilters}
         />
       </MobileFilterDrawer>
+      ) : null}
+    </div>
+  );
+}
+
+function DepartmentLanding({
+  category,
+  childCategories,
+  topBrands,
+  topSellers,
+  newArrivals,
+  deals,
+  brandById,
+  locale,
+}: {
+  category: Category;
+  childCategories: CategoryBrowseItem[];
+  topBrands: Brand[];
+  topSellers: Product[];
+  newArrivals: Product[];
+  deals: Product[];
+  brandById: Map<string, Brand>;
+  locale: Locale;
+}) {
+  if (category.slug === "guitars") {
+    return <GuitarsDepartmentLanding category={category} locale={locale} />;
+  }
+
+  return (
+    <div className="mb-8 overflow-hidden rounded-[20px] border border-[var(--border)] bg-white shadow-[var(--shadow-card)]">
+      <div className="border-b border-[var(--border)] px-5 py-4 sm:px-6">
+        <nav className="flex flex-wrap items-center gap-2 text-sm font-semibold text-[var(--gray-500)]">
+          <a href="#highlights" className="rounded-[10px] px-3 py-2 transition hover:bg-[var(--gray-100)] hover:text-[var(--gray-900)]">
+            Highlights
+          </a>
+          <a href="#brands" className="rounded-[10px] px-3 py-2 transition hover:bg-[var(--gray-100)] hover:text-[var(--gray-900)]">
+            Brands
+          </a>
+          <a href="#deals" className="rounded-[10px] px-3 py-2 transition hover:bg-[var(--gray-100)] hover:text-[var(--gray-900)]">
+            Deals
+          </a>
+          <a href="#knowledge" className="rounded-[10px] px-3 py-2 transition hover:bg-[var(--gray-100)] hover:text-[var(--gray-900)]">
+            Knowledge
+          </a>
+        <a
+            href={`/categories/${category.slug}/items`}
+            className="ml-auto inline-flex items-center gap-2 rounded-[10px] border border-[var(--border-strong)] px-3 py-2 text-[var(--gray-700)] transition hover:border-[var(--gray-900)] hover:text-[var(--gray-900)]"
+          >
+            <span>Everything in This Category</span>
+            <ChevronRight className="h-4 w-4" />
+          </a>
+        </nav>
+      </div>
+
+      <div id="highlights" className="grid gap-6 border-b border-[var(--border)] px-5 py-6 sm:px-6 lg:grid-cols-[1.15fr_0.85fr]">
+        <div>
+          <div className="text-[11px] font-semibold uppercase tracking-[0.2em] text-[var(--primary)]">
+            Subcategories
+          </div>
+          <h2 className="mt-2 text-2xl font-black tracking-tight text-[var(--gray-900)]">
+            Explore {category.name}
+          </h2>
+          <div className="mt-5 grid gap-x-8 gap-y-3 sm:grid-cols-2 xl:grid-cols-3">
+            {childCategories.map((item) => (
+              <Link
+                key={item.id}
+                href={`/categories/${item.slug}/items`}
+                className="group flex items-center justify-between gap-3 border-b border-[var(--gray-100)] py-2 text-sm text-[var(--gray-700)] transition hover:text-[var(--primary)]"
+              >
+                <span className="font-semibold">{item.name}</span>
+                <span className="text-[var(--gray-400)] transition group-hover:text-[var(--primary)]">
+                  {formatCount(item.productCount)}
+                </span>
+              </Link>
+            ))}
+          </div>
+        </div>
+
+        <div className="grid gap-4 sm:grid-cols-3 lg:grid-cols-1">
+          <CatalogCue
+            label="Top brands"
+            value={topBrands.map((brand) => brand.name).join(", ") || "Selected active brands"}
+          />
+          <CatalogCue
+            label="Top sellers"
+            value={`${formatCount(topSellers.length)} products with strong demand`}
+          />
+          <CatalogCue
+            label="Deals"
+            value={`${formatCount(deals.length)} products with active discount or deal label`}
+          />
+        </div>
+      </div>
+
+      <div className="grid gap-6 px-5 py-6 sm:px-6 xl:grid-cols-2">
+        <DepartmentCollection
+          title="Top Sellers"
+          products={topSellers}
+          brandById={brandById}
+          categorySlug={category.slug}
+        />
+        <DepartmentCollection
+          title="New Arrivals"
+          products={newArrivals}
+          brandById={brandById}
+          categorySlug={category.slug}
+        />
+        <div id="brands" className="rounded-[16px] border border-[var(--border)] bg-[var(--gray-50)] p-4">
+          <div className="text-[11px] font-semibold uppercase tracking-[0.18em] text-[var(--gray-400)]">
+            Top Brands
+          </div>
+          <div className="mt-4 grid gap-3 sm:grid-cols-2">
+            {topBrands.map((brand) => (
+              <div
+                key={brand.id}
+                className="rounded-[14px] border border-[var(--border)] bg-white px-4 py-3"
+              >
+                <div className="font-semibold text-[var(--gray-900)]">{brand.name}</div>
+                <div className="mt-1 text-sm text-[var(--gray-500)] line-clamp-2">
+                  {brand.description}
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+
+        <div id="deals" className="rounded-[16px] border border-[var(--border)] bg-[var(--gray-50)] p-4">
+          <div className="text-[11px] font-semibold uppercase tracking-[0.18em] text-[var(--gray-400)]">
+            Hot Deals
+          </div>
+          <div className="mt-4 grid gap-4 sm:grid-cols-2">
+            {deals.slice(0, 4).map((product) => (
+              <DepartmentProductCard
+                key={product.id}
+                product={product}
+                brandName={brandById.get(product.brandId)?.name ?? product.brandId}
+              />
+            ))}
+          </div>
+        </div>
+      </div>
+
+      <div
+        id="knowledge"
+        className="border-t border-[var(--border)] px-5 py-5 text-sm leading-7 text-[var(--gray-600)] sm:px-6"
+      >
+        Compare brands, ratings, dispatch notes and price tiers before you move into the full catalog.
+        The product list starts directly below, without the extra intro block.
+      </div>
+    </div>
+  );
+}
+
+function GuitarsDepartmentLanding({ category, locale }: { category: Category; locale: Locale }) {
+  const exactTiles: GuitarsCategoryTile[] = [
+    {
+      id: "fender-peak-season",
+      label: "Fender Peak Season Promo",
+      href: "/categories/guitars/items",
+      imageSrc: "https://thumbs.static-thomann.de/thumb/thumb250x250/pics/prod/124838.jpg",
+    },
+    {
+      id: "electric-guitars",
+      label: "Електрически китари",
+      href: "/categories/electric-guitars/items",
+      imageSrc: "https://thumbs.static-thomann.de/thumb/thumb250x250/pics/prod/124838.jpg",
+    },
+    {
+      id: "ukuleles",
+      label: "Укулеле",
+      href: "/categories/guitars/items",
+      imageSrc: "https://thumbs.static-thomann.de/thumb/thumb250x250/pics/prod/187303.jpg",
+    },
+    {
+      id: "acoustic-guitars",
+      label: "Акустични китари",
+      href: "/categories/acoustic-guitars/items",
+      imageSrc: "https://thumbs.static-thomann.de/thumb/thumb250x250/pics/prod/333967.jpg",
+    },
+    {
+      id: "classical-guitars",
+      label: "Класически китари",
+      href: "/categories/acoustic-guitars/items",
+      imageSrc: "https://thumbs.static-thomann.de/thumb/thumb250x250/pics/prod/130179.jpg",
+    },
+    {
+      id: "electric-basses",
+      label: "Електрически баскитари",
+      href: "/categories/bass-guitars/items",
+      imageSrc: "https://thumbs.static-thomann.de/thumb/thumb250x250/pics/prod/264956.jpg",
+    },
+    {
+      id: "electric-guitar-amps",
+      label: "Усилватели за ел. китари",
+      href: "/categories/guitar-amps/items",
+      imageSrc: "https://thumbs.static-thomann.de/thumb/thumb250x250/pics/prod/429320.jpg",
+    },
+    {
+      id: "guitar-and-bass-effects",
+      label: "Ефекти за китара и бас",
+      href: "/categories/pedals-effects/items",
+      imageSrc: "https://thumbs.static-thomann.de/thumb/thumb250x250/pics/prod/170627.jpg",
+    },
+    {
+      id: "bass-amps",
+      label: "Усилватели за бас",
+      href: "/categories/bass-amps/items",
+      imageSrc: "https://thumbs.static-thomann.de/thumb/thumb250x250/pics/prod/357682.jpg",
+    },
+    {
+      id: "acoustic-guitar-amps",
+      label: "Acoustic Guitar Amps & Preamps",
+      href: "/categories/guitar-amps/items",
+      imageSrc: "https://thumbs.static-thomann.de/thumb/thumb250x250/pics/prod/445374.jpg",
+    },
+    {
+      id: "strings",
+      label: "Струни",
+      href: "/categories/accessories/items",
+      imageSrc: "https://thumbs.static-thomann.de/thumb/thumb250x250/pics/prod/104554.jpg",
+    },
+    {
+      id: "guitar-bass-synth",
+      label: "Guitar and Bass Synth.",
+      href: "/categories/guitars/items",
+      imageSrc: "https://img.musicworld.bg/th/5/6/7/94765.png",
+    },
+    {
+      id: "vacuum-tubes",
+      label: "Vacuum Tubes for Amplifiers",
+      href: "/categories/guitar-amps/items",
+      imageSrc: "https://thumbs.static-thomann.de/thumb/thumb250x250/pics/prod/178790.jpg",
+    },
+    {
+      id: "trainers-recorders",
+      label: "Трейнъри и рекордери",
+      href: "/categories/guitars/items",
+      imageSrc: "https://img.musicworld.bg/th/8/9/2/17298.png",
+    },
+    {
+      id: "adapters",
+      label: "GTR/Bass Адаптери",
+      href: "/categories/accessories/items",
+      imageSrc: "https://thumbs.static-thomann.de/thumb/thumb250x250/pics/prod/132927.jpg",
+    },
+    {
+      id: "spare-parts",
+      label: "Резервни части",
+      href: "/categories/accessories/items",
+      imageSrc: "https://thumbs.static-thomann.de/thumb/thumb250x250/pics/prod/178790.jpg",
+    },
+    {
+      id: "cases-bags",
+      label: "Куфари и чанти за китари и бас китари",
+      href: "/categories/cases-bags/items",
+      imageSrc: "https://thumbs.static-thomann.de/thumb/thumb250x250/pics/prod/283516.jpg",
+    },
+    {
+      id: "guitar-interfaces",
+      label: "Китарни Интерфейси",
+      href: "/categories/studio-recording/items",
+      imageSrc: "https://img.musicworld.bg/th/8/0/2/78208.png",
+    },
+    {
+      id: "guitar-accessories",
+      label: "Аксесоари за китара",
+      href: "/categories/accessories/items",
+      imageSrc: "https://thumbs.static-thomann.de/thumb/thumb250x250/pics/prod/283516.jpg",
+    },
+    {
+      id: "guitar-bass-wireless",
+      label: "Guitar and Bass Wireless",
+      href: "/categories/accessories/items",
+      imageSrc: "https://thumbs.static-thomann.de/thumb/thumb250x250/pics/prod/425040.jpg",
+    },
+    {
+      id: "guitar-cables",
+      label: "Guitar Cables",
+      href: "/categories/cables/items",
+      imageSrc: "https://thumbs.static-thomann.de/thumb/thumb250x250/pics/prod/107277.jpg",
+    },
+    {
+      id: "guitar-bass-straps",
+      label: "Колани за китара и бас",
+      href: "/categories/accessories/items",
+      imageSrc: "https://thumbs.static-thomann.de/thumb/thumb250x250/pics/prod/104554.jpg",
+    },
+    {
+      id: "picks",
+      label: "Перца",
+      href: "/categories/accessories/items",
+      imageSrc: "https://thumbs.static-thomann.de/thumb/thumb250x250/pics/prod/170627.jpg",
+    },
+    {
+      id: "accessories",
+      label: "Аксесоари",
+      href: "/categories/accessories/items",
+      imageSrc: "https://thumbs.static-thomann.de/thumb/thumb250x250/pics/prod/283516.jpg",
+      tone: "green",
+    },
+    {
+      id: "stands",
+      label: "Стойки за китара и бас",
+      href: "/categories/stands/items",
+      imageSrc: "https://thumbs.static-thomann.de/thumb/thumb250x250/pics/prod/178790.jpg",
+      tone: "green",
+    },
+    {
+      id: "batteries-chargers",
+      label: "Батерии и зарядни устройства",
+      href: "/categories/accessories/items",
+      imageSrc: "https://img.musicworld.bg/th/1/0/4/93401.png",
+      tone: "green",
+    },
+    {
+      id: "tuners",
+      label: "Тунери",
+      href: "/categories/accessories/items",
+      imageSrc: "https://thumbs.static-thomann.de/thumb/thumb250x250/pics/prod/132927.jpg",
+      tone: "green",
+    },
+    {
+      id: "connectors",
+      label: "Конектори",
+      href: "/categories/cables/items",
+      imageSrc: "https://img.musicworld.bg/th/8/9/2/17298.png",
+      tone: "green",
+    },
+    {
+      id: "instrument-cables",
+      label: "Кабели за музикални инструменти",
+      href: "/categories/cables/items",
+      imageSrc: "https://thumbs.static-thomann.de/thumb/thumb250x250/pics/prod/107277.jpg",
+      tone: "green",
+    },
+    {
+      id: "meter-cables",
+      label: "Кабели за инструменти на метър",
+      href: "/categories/cables/items",
+      imageSrc: "https://thumbs.static-thomann.de/thumb/thumb250x250/pics/prod/107277.jpg",
+      tone: "green",
+    },
+  ];
+  const tiles = exactTiles.length > 0 ? exactTiles : GUITARS_CATEGORY_TILES;
+  const heroImage =
+    "https://thumbs.static-thomann.de/thumb/convert/pics/images/category/fx/cat_gi.jpg";
+  const helpAvatars = [
+    "https://thumbs.static-thomann.de/thumb/thumb72x72/pics/sbpics/200r/3478.png",
+    "https://thumbs.static-thomann.de/thumb/thumb72x72/pics/sbpics/200r/3480.png",
+    "https://thumbs.static-thomann.de/thumb/thumb72x72/pics/sbpics/200r/3485.png",
+  ];
+  const bilingualTileLabels: Record<string, { bg: string; en: string }> = {
+    "fender-peak-season": { bg: "Промо сезон Fender", en: "Fender Peak Season Promo" },
+    "electric-guitars": { bg: "Електрически китари", en: "Electric Guitars" },
+    ukuleles: { bg: "Укулеле", en: "Ukuleles" },
+    "acoustic-guitars": { bg: "Акустични китари", en: "Acoustic Guitars" },
+    "classical-guitars": { bg: "Класически китари", en: "Classical Guitars" },
+    "electric-basses": { bg: "Електрически баскитари", en: "Electric Basses" },
+    "electric-guitar-amps": { bg: "Усилватели за ел. китари", en: "Electric Guitar Amps" },
+    "guitar-and-bass-effects": { bg: "Ефекти за китара и бас", en: "Guitar and Bass Effects" },
+    "bass-amps": { bg: "Усилватели за бас", en: "Bass Amps" },
+    "acoustic-guitar-amps": {
+      bg: "Акустични усилватели и предусилватели",
+      en: "Acoustic Guitar Amps & Preamps",
+    },
+    strings: { bg: "Струни", en: "Strings" },
+    "guitar-bass-synth": { bg: "Синтезатори за китара и бас", en: "Guitar and Bass Synth." },
+    "vacuum-tubes": { bg: "Лампи за усилватели", en: "Vacuum Tubes for Amplifiers" },
+    "trainers-recorders": { bg: "Трейнъри и рекордери", en: "Trainers and Recorders" },
+    adapters: { bg: "GTR/Bass адаптери", en: "GTR/Bass Adapters" },
+    "spare-parts": { bg: "Резервни части", en: "Spare Parts" },
+    "cases-bags": { bg: "Куфари и чанти за китари и баси", en: "Cases and Bags for Guitar & Bass" },
+    "guitar-interfaces": { bg: "Китарни интерфейси", en: "Guitar Interfaces" },
+    "guitar-accessories": { bg: "Аксесоари за китара", en: "Guitar Accessories" },
+    "guitar-bass-wireless": { bg: "Безжични системи за китара и бас", en: "Guitar and Bass Wireless" },
+    "guitar-cables": { bg: "Китарни кабели", en: "Guitar Cables" },
+    "guitar-bass-straps": { bg: "Колани за китара и бас", en: "Guitar and Bass Straps" },
+    picks: { bg: "Перца", en: "Picks" },
+    accessories: { bg: "Аксесоари", en: "Accessories" },
+    stands: { bg: "Стойки за китара и бас", en: "Stands for Guitar and Bass" },
+    "batteries-chargers": { bg: "Батерии и зарядни устройства", en: "Batteries and Chargers" },
+    tuners: { bg: "Тунери", en: "Tuners" },
+    connectors: { bg: "Конектори", en: "Connectors" },
+    "instrument-cables": { bg: "Кабели за музикални инструменти", en: "Instrument Cables" },
+    "meter-cables": { bg: "Кабели за инструменти на метър", en: "Bulk Instrument Cables" },
+  };
+  const t = (bg: string, en: string) => (locale === "bg" ? bg : en);
+
+  return (
+    <div className="bg-[#ededed] pb-8">
+      <section className="relative min-h-[250px] overflow-hidden bg-black">
+        <Image
+          src={heroImage}
+          alt="Китари и баси / Guitars and Basses hero"
+          fill
+          sizes="100vw"
+          className="object-cover"
+          priority
+        />
+        <div className="absolute inset-0 bg-gradient-to-r from-black/92 via-black/68 to-transparent" />
+
+        <div className="relative mx-auto flex min-h-[250px] w-full max-w-[1360px] flex-col px-4 py-4 sm:px-6">
+          <div className="inline-flex w-fit items-center gap-2 text-sm font-semibold text-white">
+            <span className="inline-flex items-center gap-2 rounded-md bg-[#202327]/88 px-3 py-2">
+              <span className="text-xs">⌂</span>
+              <span>{t("Всички категории", "All Categories")}</span>
+            </span>
+            <ChevronRight className="h-4 w-4 text-[#c8d2dd]" />
+            <span className="inline-flex items-center rounded-md bg-[#202327]/88 px-3 py-2">
+              {t("Китари и баси", "Guitars and Basses")}
+            </span>
+          </div>
+
+          <h1 className="mt-5 text-4xl font-black leading-none tracking-tight text-white md:text-6xl">
+            {t("Китари и баси", "Guitars and Basses")}
+          </h1>
+
+          <div className="mt-8 flex flex-wrap items-center gap-8 sm:gap-12">
+            <a href="#highlights" className="text-[1.32rem] font-semibold uppercase tracking-[0.02em] text-white transition hover:text-white/85 sm:text-[1.55rem]">
+              {t("Акценти", "Highlights")}
+            </a>
+            <a href="#brands" className="text-[1.32rem] font-semibold uppercase tracking-[0.02em] text-white transition hover:text-white/85 sm:text-[1.55rem]">
+              {t("Марки", "Brands")}
+            </a>
+            <a href="#knowledge" className="text-[1.32rem] font-semibold uppercase tracking-[0.02em] text-white transition hover:text-white/85 sm:text-[1.55rem]">
+              {t("Ръководства", "Knowledge")}
+            </a>
+            <div className="ml-auto inline-flex items-center gap-3 rounded-full bg-white px-5 py-2.5 text-base font-semibold text-[#202020] sm:text-lg">
+              <span>{t("Нужда от помощ?", "Need help?")}</span>
+              <span className="flex -space-x-2">
+                {helpAvatars.map((avatar) => (
+                  <span key={avatar} className="relative block h-9 w-9 overflow-hidden rounded-full border border-white">
+                    <Image src={avatar} alt={t("Екип поддръжка", "Support advisor")} fill sizes="36px" className="object-cover" />
+                  </span>
+                ))}
+              </span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <div className="mx-auto w-full max-w-[1360px] px-4 py-8 sm:px-6">
+        <div
+          id="highlights"
+          className="grid grid-cols-2 gap-x-6 gap-y-12 sm:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5"
+        >
+          {tiles.map((tile) => (
+            <Link key={tile.id} href={tile.href} className="group flex flex-col items-center text-center">
+              <div className="relative flex h-[150px] w-full max-w-[170px] items-end justify-center">
+                <Image
+                  src={tile.imageSrc}
+                  alt={locale === "bg" ? (bilingualTileLabels[tile.id]?.bg ?? tile.label) : (bilingualTileLabels[tile.id]?.en ?? tile.label)}
+                  fill
+                  sizes="(max-width: 640px) 42vw, (max-width: 1024px) 25vw, 16vw"
+                  className="object-contain opacity-95 mix-blend-multiply transition duration-200 group-hover:scale-[1.03]"
+                />
+              </div>
+
+              <span
+                className={cx(
+                  "mt-4 max-w-[240px] text-center text-[1.03rem] font-semibold leading-[1.26]",
+                  tile.highlighted ? "text-[var(--primary)]" : "text-[#2f2f2f] group-hover:text-[#111]",
+                )}
+              >
+                {locale === "bg"
+                  ? (bilingualTileLabels[tile.id]?.bg ?? tile.label)
+                  : (bilingualTileLabels[tile.id]?.en ?? tile.label)}
+              </span>
+            </Link>
+          ))}
+        </div>
+      </div>
+
+      <div className="mt-2 flex justify-center">
+        <Link
+          href={`/categories/${category.slug}/items`}
+          className="inline-flex min-h-12 items-center justify-center rounded-full bg-black px-10 text-center text-lg font-bold text-white transition hover:bg-[#1b1b1b]"
+        >
+          {t("Всичко в тази категория", "Everything in this Category")}
+        </Link>
+      </div>
+    </div>
+  );
+}
+
+function DepartmentCollection({
+  title,
+  products,
+  brandById,
+  categorySlug,
+}: {
+  title: string;
+  products: Product[];
+  brandById: Map<string, Brand>;
+  categorySlug: string;
+}) {
+  return (
+    <div className="rounded-[16px] border border-[var(--border)] bg-[var(--gray-50)] p-4">
+      <div className="flex items-center justify-between gap-3">
+        <div className="text-[11px] font-semibold uppercase tracking-[0.18em] text-[var(--gray-400)]">
+          {title}
+        </div>
+        <a
+          href={`/categories/${categorySlug}/items`}
+          className="text-xs font-semibold uppercase tracking-[0.14em] text-[var(--primary)]"
+        >
+          View all
+        </a>
+      </div>
+      <div className="mt-4 grid gap-4 sm:grid-cols-2">
+        {products.slice(0, 4).map((product) => (
+          <DepartmentProductCard
+            key={product.id}
+            product={product}
+            brandName={brandById.get(product.brandId)?.name ?? product.brandId}
+          />
+        ))}
+      </div>
+    </div>
+  );
+}
+
+function DepartmentProductCard({
+  product,
+  brandName,
+}: {
+  product: Product;
+  brandName: string;
+}) {
+  const image = resolveProductImage(product);
+
+  return (
+    <div className="rounded-[14px] border border-[var(--border)] bg-white p-4 transition hover:border-[var(--primary)]">
+      <div className="relative h-32 overflow-hidden rounded-[10px] bg-[var(--gray-50)]">
+        <Image
+          src={image}
+          alt={product.name}
+          fill
+          sizes="(max-width: 768px) 50vw, 20vw"
+          className="object-contain p-3"
+        />
+      </div>
+      <div className="mt-3 text-[11px] font-semibold uppercase tracking-[0.16em] text-[var(--gray-400)]">
+        {brandName}
+      </div>
+      <div className="mt-2 line-clamp-2 font-semibold text-[var(--gray-900)]">{product.name}</div>
+      <div className="mt-3 text-xl font-black tracking-tight text-[var(--gray-900)]">
+        {formatEuro(product.price)}
+      </div>
     </div>
   );
 }
@@ -1597,38 +2362,6 @@ function MobileFilterDrawer({
         {children}
       </div>
     </>
-  );
-}
-
-function TrustChip({
-  icon,
-  label,
-}: {
-  icon: ReactNode;
-  label: string;
-}) {
-  return (
-    <span className="inline-flex items-center gap-2 rounded-full border border-white/12 bg-white/8 px-4 py-2 text-sm font-semibold text-white/90">
-      {icon}
-      {label}
-    </span>
-  );
-}
-
-function Metric({
-  label,
-  value,
-}: {
-  label: string;
-  value: string;
-}) {
-  return (
-    <div className="rounded-2xl border border-white/10 bg-white/10 px-4 py-4">
-      <div className="text-xs font-semibold uppercase tracking-[0.18em] text-white/60">
-        {label}
-      </div>
-      <div className="mt-2 text-3xl font-black tracking-tight">{value}</div>
-    </div>
   );
 }
 

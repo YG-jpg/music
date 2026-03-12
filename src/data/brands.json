@@ -126,5 +126,69 @@
     "logo": "/images/brands/fun-generation.svg",
     "description": "Budget-friendly stage, PA and starter live sound equipment.",
     "featured": false
+  },
+  {
+    "id": "jackson",
+    "slug": "jackson",
+    "name": "Jackson",
+    "logo": "/images/brands/jackson.svg",
+    "description": "Performance-focused electric guitars and basses for modern rock and metal players.",
+    "featured": true
+  },
+  {
+    "id": "casio",
+    "slug": "casio",
+    "name": "Casio",
+    "logo": "/images/brands/casio.svg",
+    "description": "Digital pianos and keyboards for home practice, learning and stage performance.",
+    "featured": false
+  },
+  {
+    "id": "alto-professional",
+    "slug": "alto-professional",
+    "name": "Alto Professional",
+    "logo": "/images/brands/alto-professional.svg",
+    "description": "PA speakers, mixers and live sound gear for events, bands and venues.",
+    "featured": false
+  },
+  {
+    "id": "esp",
+    "slug": "esp",
+    "name": "ESP",
+    "logo": "/images/brands/esp.svg",
+    "description": "Electric guitars designed for precision playing and aggressive modern tone.",
+    "featured": false
+  },
+  {
+    "id": "boss",
+    "slug": "boss",
+    "name": "BOSS",
+    "logo": "/images/brands/boss.svg",
+    "description": "Pedals, effects and utility tools trusted in studio and live guitar rigs.",
+    "featured": false
+  },
+  {
+    "id": "evh",
+    "slug": "evh",
+    "name": "EVH",
+    "logo": "/images/brands/evh.svg",
+    "description": "Signature guitars and amplifiers inspired by the Eddie Van Halen legacy.",
+    "featured": false
+  },
+  {
+    "id": "hagstrom",
+    "slug": "hagstrom",
+    "name": "Hagstrom",
+    "logo": "/images/brands/hagstrom.svg",
+    "description": "Scandinavian-style electric guitars and basses with distinctive build and feel.",
+    "featured": false
+  },
+  {
+    "id": "genelec",
+    "slug": "genelec",
+    "name": "Genelec",
+    "logo": "/images/brands/genelec.svg",
+    "description": "Reference studio monitoring systems for critical listening and mixing.",
+    "featured": true
   }
 ]

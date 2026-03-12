@@ -1,0 +1,3827 @@
+[
+  {
+    "id": "mw-jackson-js1xm-dinky-minion-mn-bbg-pink",
+    "sku": "MW-93854",
+    "slug": "mw-jackson-js1xm-dinky-minion-mn-bbg-pink",
+    "externalUrl": "https://www.musicworld.bg/en/c_364/i_93854/Jackson_JS1XM_Dinky_Minion_MN_BBG_PINK.html",
+    "name": "Jackson JS1XM Dinky Minion MN BBG PINK",
+    "shortDescription": "JS Series Dinky Minion JS1XM, 2/3 scale Maple Fingerboard, Bubble Gum Pink Model #: 2912224519",
+    "description": "JS Series Dinky Minion JS1XM, 2/3 scale Maple Fingerboard, Bubble Gum Pink Model #: 2912224519",
+    "brandId": "jackson",
+    "categoryIds": [
+      "guitars",
+      "electric-guitars"
+    ],
+    "baseCategoryId": "electric-guitars",
+    "price": 186.07,
+    "oldPrice": 209,
+    "currency": "EUR",
+    "stock": {
+      "quantity": 2,
+      "warehouseCode": "mw-feed",
+      "incomingQuantity": 0,
+      "nextRestockDate": null,
+      "lowStockThreshold": 2
+    },
+    "availability": "low_stock",
+    "rating": 4.2,
+    "reviewCount": 60,
+    "images": [
+      {
+        "src": "https://img.musicworld.bg/th/4/5/8/93854.png",
+        "alt": "Jackson JS1XM Dinky Minion MN BBG PINK",
+        "type": "main"
+      },
+      {
+        "src": "https://img.musicworld.bg/th/4/5/8/93854.png",
+        "alt": "Jackson JS1XM Dinky Minion MN BBG PINK detail",
+        "type": "gallery"
+      }
+    ],
+    "thumbnails": [
+      "https://img.musicworld.bg/th/4/5/8/93854.png"
+    ],
+    "tags": [
+      "guitars",
+      "jackson",
+      "musicworld-feed"
+    ],
+    "badges": [
+      "deal"
+    ],
+    "specs": [
+      {
+        "group": "General",
+        "name": "Source",
+        "value": "MusicWorld.bg feed (mock)"
+      },
+      {
+        "group": "General",
+        "name": "Brand",
+        "value": "Jackson"
+      },
+      {
+        "group": "General",
+        "name": "Category Hint",
+        "value": "guitars"
+      }
+    ],
+    "variants": [
+      {
+        "id": "mw-jackson-js1xm-dinky-minion-mn-bbg-pink-default",
+        "sku": "MW-93854",
+        "name": "Default",
+        "attributes": {
+          "condition": "New"
+        },
+        "price": null,
+        "stock": 2,
+        "active": true
+      }
+    ],
+    "shipping": {
+      "weightKg": 4.2,
+      "oversize": false,
+      "freeShippingEligible": true,
+      "estimatedDispatchDays": 3,
+      "carrierGroup": "parcel"
+    },
+    "featured": false,
+    "newArrival": false,
+    "bestseller": false,
+    "active": true,
+    "seoTitle": "Jackson JS1XM Dinky Minion MN BBG PINK | MusicWorld Mock",
+    "seoDescription": "JS Series Dinky Minion JS1XM, 2/3 scale Maple Fingerboard, Bubble Gum Pink Model #: 2912224519",
+    "metaImage": "https://img.musicworld.bg/th/4/5/8/93854.png"
+  },
+  {
+    "id": "mw-jackson-js1x-dinky-minion-ah-safety-orange",
+    "sku": "MW-94813",
+    "slug": "mw-jackson-js1x-dinky-minion-ah-safety-orange",
+    "externalUrl": "https://www.musicworld.bg/en/c_364/i_94813/Jackson_JS1X_Dinky_Minion_AH_Safety_Orange.html",
+    "name": "Jackson JS1X Dinky Minion AH Safety Orange",
+    "shortDescription": "JS Series Dinky Minion JS1X, Amaranth Fingerboard, Safety Orange Model #: 2912224580",
+    "description": "JS Series Dinky Minion JS1X, Amaranth Fingerboard, Safety Orange Model #: 2912224580",
+    "brandId": "jackson",
+    "categoryIds": [
+      "guitars",
+      "electric-guitars"
+    ],
+    "baseCategoryId": "electric-guitars",
+    "price": 186.07,
+    "oldPrice": 209,
+    "currency": "EUR",
+    "stock": {
+      "quantity": 13,
+      "warehouseCode": "mw-feed",
+      "incomingQuantity": 0,
+      "nextRestockDate": null,
+      "lowStockThreshold": 2
+    },
+    "availability": "in_stock",
+    "rating": 4.2,
+    "reviewCount": 90,
+    "images": [
+      {
+        "src": "https://img.musicworld.bg/th/3/1/8/94813.png",
+        "alt": "Jackson JS1X Dinky Minion AH Safety Orange",
+        "type": "main"
+      },
+      {
+        "src": "https://img.musicworld.bg/th/3/1/8/94813.png",
+        "alt": "Jackson JS1X Dinky Minion AH Safety Orange detail",
+        "type": "gallery"
+      }
+    ],
+    "thumbnails": [
+      "https://img.musicworld.bg/th/3/1/8/94813.png"
+    ],
+    "tags": [
+      "guitars",
+      "jackson",
+      "musicworld-feed"
+    ],
+    "badges": [
+      "deal"
+    ],
+    "specs": [
+      {
+        "group": "General",
+        "name": "Source",
+        "value": "MusicWorld.bg feed (mock)"
+      },
+      {
+        "group": "General",
+        "name": "Brand",
+        "value": "Jackson"
+      },
+      {
+        "group": "General",
+        "name": "Category Hint",
+        "value": "guitars"
+      }
+    ],
+    "variants": [
+      {
+        "id": "mw-jackson-js1x-dinky-minion-ah-safety-orange-default",
+        "sku": "MW-94813",
+        "name": "Default",
+        "attributes": {
+          "condition": "New"
+        },
+        "price": null,
+        "stock": 13,
+        "active": true
+      }
+    ],
+    "shipping": {
+      "weightKg": 7.2,
+      "oversize": false,
+      "freeShippingEligible": true,
+      "estimatedDispatchDays": 1,
+      "carrierGroup": "parcel"
+    },
+    "featured": false,
+    "newArrival": false,
+    "bestseller": false,
+    "active": true,
+    "seoTitle": "Jackson JS1X Dinky Minion AH Safety Orange | MusicWorld Mock",
+    "seoDescription": "JS Series Dinky Minion JS1X, Amaranth Fingerboard, Safety Orange Model #: 2912224580",
+    "metaImage": "https://img.musicworld.bg/th/3/1/8/94813.png"
+  },
+  {
+    "id": "mw-jackson-js-11-dinky-ah-fb-22-fr-wht",
+    "sku": "MW-55692",
+    "slug": "mw-jackson-js-11-dinky-ah-fb-22-fr-wht",
+    "externalUrl": "https://www.musicworld.bg/en/c_364/i_55692/Jackson_JS_11_Dinky_AH_FB_22_Fr_WHT.html",
+    "name": "Jackson JS 11 Dinky, AH FB, 22 Fr, WHT",
+    "shortDescription": "JS Series Dinky&trade; JS11, Amaranth Fingerboard, Snow White Model #: 2910121576",
+    "description": "JS Series Dinky&trade; JS11, Amaranth Fingerboard, Snow White Model #: 2910121576",
+    "brandId": "jackson",
+    "categoryIds": [
+      "guitars",
+      "electric-guitars"
+    ],
+    "baseCategoryId": "electric-guitars",
+    "price": 183.55,
+    "oldPrice": 209.11,
+    "currency": "EUR",
+    "stock": {
+      "quantity": 7,
+      "warehouseCode": "mw-feed",
+      "incomingQuantity": 0,
+      "nextRestockDate": null,
+      "lowStockThreshold": 2
+    },
+    "availability": "in_stock",
+    "rating": 4.2,
+    "reviewCount": 120,
+    "images": [
+      {
+        "src": "https://img.musicworld.bg/th/2/9/6/55692.png",
+        "alt": "Jackson JS 11 Dinky, AH FB, 22 Fr, WHT",
+        "type": "main"
+      },
+      {
+        "src": "https://img.musicworld.bg/th/2/9/6/55692.png",
+        "alt": "Jackson JS 11 Dinky, AH FB, 22 Fr, WHT detail",
+        "type": "gallery"
+      }
+    ],
+    "thumbnails": [
+      "https://img.musicworld.bg/th/2/9/6/55692.png"
+    ],
+    "tags": [
+      "guitars",
+      "jackson",
+      "musicworld-feed"
+    ],
+    "badges": [
+      "deal"
+    ],
+    "specs": [
+      {
+        "group": "General",
+        "name": "Source",
+        "value": "MusicWorld.bg feed (mock)"
+      },
+      {
+        "group": "General",
+        "name": "Brand",
+        "value": "Jackson"
+      },
+      {
+        "group": "General",
+        "name": "Category Hint",
+        "value": "guitars"
+      }
+    ],
+    "variants": [
+      {
+        "id": "mw-jackson-js-11-dinky-ah-fb-22-fr-wht-default",
+        "sku": "MW-55692",
+        "name": "Default",
+        "attributes": {
+          "condition": "New"
+        },
+        "price": null,
+        "stock": 7,
+        "active": true
+      }
+    ],
+    "shipping": {
+      "weightKg": 6.2,
+      "oversize": false,
+      "freeShippingEligible": true,
+      "estimatedDispatchDays": 1,
+      "carrierGroup": "parcel"
+    },
+    "featured": true,
+    "newArrival": false,
+    "bestseller": false,
+    "active": true,
+    "seoTitle": "Jackson JS 11 Dinky, AH FB, 22 Fr, WHT | MusicWorld Mock",
+    "seoDescription": "JS Series Dinky&trade; JS11, Amaranth Fingerboard, Snow White Model #: 2910121576",
+    "metaImage": "https://img.musicworld.bg/th/2/9/6/55692.png"
+  },
+  {
+    "id": "mw-jackson-js22-surfcaster-ht-blk",
+    "sku": "MW-93462",
+    "slug": "mw-jackson-js22-surfcaster-ht-blk",
+    "externalUrl": "https://www.musicworld.bg/en/c_364/i_93462/Jackson_JS22_Surfcaster_HT_BLK.html",
+    "name": "Jackson JS22 Surfcaster HT BLK",
+    "shortDescription": "Jackson JS Series Surfcaster&trade; JS22 HT - Gloss Black Model #: 2912821503",
+    "description": "Jackson JS Series Surfcaster&trade; JS22 HT - Gloss Black Model #: 2912821503",
+    "brandId": "jackson",
+    "categoryIds": [
+      "guitars",
+      "electric-guitars"
+    ],
+    "baseCategoryId": "electric-guitars",
+    "price": 268.79,
+    "oldPrice": 319,
+    "currency": "EUR",
+    "stock": {
+      "quantity": 10,
+      "warehouseCode": "mw-feed",
+      "incomingQuantity": 0,
+      "nextRestockDate": null,
+      "lowStockThreshold": 2
+    },
+    "availability": "in_stock",
+    "rating": 4.7,
+    "reviewCount": 165,
+    "images": [
+      {
+        "src": "https://img.musicworld.bg/th/2/6/4/93462.png",
+        "alt": "Jackson JS22 Surfcaster HT BLK",
+        "type": "main"
+      },
+      {
+        "src": "https://img.musicworld.bg/th/2/6/4/93462.png",
+        "alt": "Jackson JS22 Surfcaster HT BLK detail",
+        "type": "gallery"
+      }
+    ],
+    "thumbnails": [
+      "https://img.musicworld.bg/th/2/6/4/93462.png"
+    ],
+    "tags": [
+      "guitars",
+      "jackson",
+      "musicworld-feed"
+    ],
+    "badges": [
+      "deal",
+      "bestseller"
+    ],
+    "specs": [
+      {
+        "group": "General",
+        "name": "Source",
+        "value": "MusicWorld.bg feed (mock)"
+      },
+      {
+        "group": "General",
+        "name": "Brand",
+        "value": "Jackson"
+      },
+      {
+        "group": "General",
+        "name": "Category Hint",
+        "value": "guitars"
+      }
+    ],
+    "variants": [
+      {
+        "id": "mw-jackson-js22-surfcaster-ht-blk-default",
+        "sku": "MW-93462",
+        "name": "Default",
+        "attributes": {
+          "condition": "New"
+        },
+        "price": null,
+        "stock": 10,
+        "active": true
+      }
+    ],
+    "shipping": {
+      "weightKg": 2.7,
+      "oversize": false,
+      "freeShippingEligible": true,
+      "estimatedDispatchDays": 1,
+      "carrierGroup": "parcel"
+    },
+    "featured": false,
+    "newArrival": false,
+    "bestseller": true,
+    "active": true,
+    "seoTitle": "Jackson JS22 Surfcaster HT BLK | MusicWorld Mock",
+    "seoDescription": "Jackson JS Series Surfcaster&trade; JS22 HT - Gloss Black Model #: 2912821503",
+    "metaImage": "https://img.musicworld.bg/th/2/6/4/93462.png"
+  },
+  {
+    "id": "mw-jackson-x-series-soloist-slx-dx-ht-gloss-black",
+    "sku": "MW-95657",
+    "slug": "mw-jackson-x-series-soloist-slx-dx-ht-gloss-black",
+    "externalUrl": "https://www.musicworld.bg/en/c_364/i_95657/Jackson_X_Series_Soloist_SLX_DX_HT_Gloss_Black.html",
+    "name": "Jackson X Series Soloist SLX DX HT Gloss Black",
+    "shortDescription": "X Series Soloist&trade; SLX DX HT, Laurel Fingerboard, Gloss Black Model #: 2919945503",
+    "description": "X Series Soloist&trade; SLX DX HT, Laurel Fingerboard, Gloss Black Model #: 2919945503",
+    "brandId": "jackson",
+    "categoryIds": [
+      "guitars",
+      "electric-guitars"
+    ],
+    "baseCategoryId": "electric-guitars",
+    "price": 709,
+    "oldPrice": 849,
+    "currency": "EUR",
+    "stock": {
+      "quantity": 3,
+      "warehouseCode": "mw-feed",
+      "incomingQuantity": 0,
+      "nextRestockDate": null,
+      "lowStockThreshold": 2
+    },
+    "availability": "low_stock",
+    "rating": 4.5,
+    "reviewCount": 163,
+    "images": [
+      {
+        "src": "https://img.musicworld.bg/th/7/5/6/95657.png",
+        "alt": "Jackson X Series Soloist SLX DX HT Gloss Black",
+        "type": "main"
+      },
+      {
+        "src": "https://img.musicworld.bg/th/7/5/6/95657.png",
+        "alt": "Jackson X Series Soloist SLX DX HT Gloss Black detail",
+        "type": "gallery"
+      }
+    ],
+    "thumbnails": [
+      "https://img.musicworld.bg/th/7/5/6/95657.png"
+    ],
+    "tags": [
+      "guitars",
+      "jackson",
+      "musicworld-feed"
+    ],
+    "badges": [
+      "deal",
+      "bestseller"
+    ],
+    "specs": [
+      {
+        "group": "General",
+        "name": "Source",
+        "value": "MusicWorld.bg feed (mock)"
+      },
+      {
+        "group": "General",
+        "name": "Brand",
+        "value": "Jackson"
+      },
+      {
+        "group": "General",
+        "name": "Category Hint",
+        "value": "guitars"
+      }
+    ],
+    "variants": [
+      {
+        "id": "mw-jackson-x-series-soloist-slx-dx-ht-gloss-black-default",
+        "sku": "MW-95657",
+        "name": "Default",
+        "attributes": {
+          "condition": "New"
+        },
+        "price": null,
+        "stock": 3,
+        "active": true
+      }
+    ],
+    "shipping": {
+      "weightKg": 2.5,
+      "oversize": false,
+      "freeShippingEligible": true,
+      "estimatedDispatchDays": 3,
+      "carrierGroup": "parcel"
+    },
+    "featured": false,
+    "newArrival": false,
+    "bestseller": true,
+    "active": true,
+    "seoTitle": "Jackson X Series Soloist SLX DX HT Gloss Black | MusicWorld Mock",
+    "seoDescription": "X Series Soloist&trade; SLX DX HT, Laurel Fingerboard, Gloss Black Model #: 2919945503",
+    "metaImage": "https://img.musicworld.bg/th/7/5/6/95657.png"
+  },
+  {
+    "id": "mw-jackson-x-series-soloist-slx-dx-ht-snow-white",
+    "sku": "MW-95658",
+    "slug": "mw-jackson-x-series-soloist-slx-dx-ht-snow-white",
+    "externalUrl": "https://www.musicworld.bg/en/c_364/i_95658/Jackson_X_Series_Soloist_SLX_DX_HT_Snow_White.html",
+    "name": "Jackson X Series Soloist SLX DX HT Snow White",
+    "shortDescription": "X Series Soloist&trade; SLX DX HT, Laurel Fingerboard, Snow White Model #: 2919945576",
+    "description": "X Series Soloist&trade; SLX DX HT, Laurel Fingerboard, Snow White Model #: 2919945576",
+    "brandId": "jackson",
+    "categoryIds": [
+      "guitars",
+      "electric-guitars"
+    ],
+    "baseCategoryId": "electric-guitars",
+    "price": 709,
+    "oldPrice": 849,
+    "currency": "EUR",
+    "stock": {
+      "quantity": 0,
+      "warehouseCode": "mw-feed",
+      "incomingQuantity": 7,
+      "nextRestockDate": "2026-04-15",
+      "lowStockThreshold": 2
+    },
+    "availability": "out_of_stock",
+    "rating": 4.3,
+    "reviewCount": 41,
+    "images": [
+      {
+        "src": "https://img.musicworld.bg/th/8/5/6/95658.png",
+        "alt": "Jackson X Series Soloist SLX DX HT Snow White",
+        "type": "main"
+      },
+      {
+        "src": "https://img.musicworld.bg/th/8/5/6/95658.png",
+        "alt": "Jackson X Series Soloist SLX DX HT Snow White detail",
+        "type": "gallery"
+      }
+    ],
+    "thumbnails": [
+      "https://img.musicworld.bg/th/8/5/6/95658.png"
+    ],
+    "tags": [
+      "guitars",
+      "jackson",
+      "musicworld-feed"
+    ],
+    "badges": [
+      "deal"
+    ],
+    "specs": [
+      {
+        "group": "General",
+        "name": "Source",
+        "value": "MusicWorld.bg feed (mock)"
+      },
+      {
+        "group": "General",
+        "name": "Brand",
+        "value": "Jackson"
+      },
+      {
+        "group": "General",
+        "name": "Category Hint",
+        "value": "guitars"
+      }
+    ],
+    "variants": [
+      {
+        "id": "mw-jackson-x-series-soloist-slx-dx-ht-snow-white-default",
+        "sku": "MW-95658",
+        "name": "Default",
+        "attributes": {
+          "condition": "New"
+        },
+        "price": null,
+        "stock": 0,
+        "active": true
+      }
+    ],
+    "shipping": {
+      "weightKg": 1.3,
+      "oversize": false,
+      "freeShippingEligible": true,
+      "estimatedDispatchDays": 10,
+      "carrierGroup": "parcel"
+    },
+    "featured": false,
+    "newArrival": false,
+    "bestseller": false,
+    "active": true,
+    "seoTitle": "Jackson X Series Soloist SLX DX HT Snow White | MusicWorld Mock",
+    "seoDescription": "X Series Soloist&trade; SLX DX HT, Laurel Fingerboard, Snow White Model #: 2919945576",
+    "metaImage": "https://img.musicworld.bg/th/8/5/6/95658.png"
+  },
+  {
+    "id": "mw-jackson-x-series-soloist-slx-dx-gloss-black",
+    "sku": "MW-95655",
+    "slug": "mw-jackson-x-series-soloist-slx-dx-gloss-black",
+    "externalUrl": "https://www.musicworld.bg/en/c_364/i_95655/Jackson_X_Series_Soloist_SLX_DX_Gloss_Black.html",
+    "name": "Jackson X Series Soloist SLX DX Gloss Black",
+    "shortDescription": "X Series Soloist&trade; SLX DX, Laurel Fingerboard, Gloss Black Model #: 2919944503",
+    "description": "X Series Soloist&trade; SLX DX, Laurel Fingerboard, Gloss Black Model #: 2919944503",
+    "brandId": "jackson",
+    "categoryIds": [
+      "guitars",
+      "electric-guitars"
+    ],
+    "baseCategoryId": "electric-guitars",
+    "price": 799,
+    "oldPrice": 909,
+    "currency": "EUR",
+    "stock": {
+      "quantity": 0,
+      "warehouseCode": "mw-feed",
+      "incomingQuantity": 10,
+      "nextRestockDate": "2026-04-15",
+      "lowStockThreshold": 2
+    },
+    "availability": "out_of_stock",
+    "rating": 4.6,
+    "reviewCount": 134,
+    "images": [
+      {
+        "src": "https://img.musicworld.bg/th/5/5/6/95655.png",
+        "alt": "Jackson X Series Soloist SLX DX Gloss Black",
+        "type": "main"
+      },
+      {
+        "src": "https://img.musicworld.bg/th/5/5/6/95655.png",
+        "alt": "Jackson X Series Soloist SLX DX Gloss Black detail",
+        "type": "gallery"
+      }
+    ],
+    "thumbnails": [
+      "https://img.musicworld.bg/th/5/5/6/95655.png"
+    ],
+    "tags": [
+      "guitars",
+      "jackson",
+      "musicworld-feed"
+    ],
+    "badges": [
+      "deal",
+      "bestseller"
+    ],
+    "specs": [
+      {
+        "group": "General",
+        "name": "Source",
+        "value": "MusicWorld.bg feed (mock)"
+      },
+      {
+        "group": "General",
+        "name": "Brand",
+        "value": "Jackson"
+      },
+      {
+        "group": "General",
+        "name": "Category Hint",
+        "value": "guitars"
+      }
+    ],
+    "variants": [
+      {
+        "id": "mw-jackson-x-series-soloist-slx-dx-gloss-black-default",
+        "sku": "MW-95655",
+        "name": "Default",
+        "attributes": {
+          "condition": "New"
+        },
+        "price": null,
+        "stock": 0,
+        "active": true
+      }
+    ],
+    "shipping": {
+      "weightKg": 7.6,
+      "oversize": false,
+      "freeShippingEligible": true,
+      "estimatedDispatchDays": 10,
+      "carrierGroup": "parcel"
+    },
+    "featured": false,
+    "newArrival": false,
+    "bestseller": true,
+    "active": true,
+    "seoTitle": "Jackson X Series Soloist SLX DX Gloss Black | MusicWorld Mock",
+    "seoDescription": "X Series Soloist&trade; SLX DX, Laurel Fingerboard, Gloss Black Model #: 2919944503",
+    "metaImage": "https://img.musicworld.bg/th/5/5/6/95655.png"
+  },
+  {
+    "id": "mw-jackson-x-series-soloist-slx-dx-gold-bullion",
+    "sku": "MW-95656",
+    "slug": "mw-jackson-x-series-soloist-slx-dx-gold-bullion",
+    "externalUrl": "https://www.musicworld.bg/en/c_364/i_95656/Jackson_X_Series_Soloist_SLX_DX_Gold_Bullion.html",
+    "name": "Jackson X Series Soloist SLX DX Gold Bullion",
+    "shortDescription": "X Series Soloist&trade; SLX DX, Laurel Fingerboard, Gold Bullion Model #: 2919944500",
+    "description": "X Series Soloist&trade; SLX DX, Laurel Fingerboard, Gold Bullion Model #: 2919944500",
+    "brandId": "jackson",
+    "categoryIds": [
+      "guitars",
+      "electric-guitars"
+    ],
+    "baseCategoryId": "electric-guitars",
+    "price": 799,
+    "oldPrice": 909,
+    "currency": "EUR",
+    "stock": {
+      "quantity": 3,
+      "warehouseCode": "mw-feed",
+      "incomingQuantity": 0,
+      "nextRestockDate": null,
+      "lowStockThreshold": 2
+    },
+    "availability": "low_stock",
+    "rating": 4.9,
+    "reviewCount": 247,
+    "images": [
+      {
+        "src": "https://img.musicworld.bg/th/6/5/6/95656.png",
+        "alt": "Jackson X Series Soloist SLX DX Gold Bullion",
+        "type": "main"
+      },
+      {
+        "src": "https://img.musicworld.bg/th/6/5/6/95656.png",
+        "alt": "Jackson X Series Soloist SLX DX Gold Bullion detail",
+        "type": "gallery"
+      }
+    ],
+    "thumbnails": [
+      "https://img.musicworld.bg/th/6/5/6/95656.png"
+    ],
+    "tags": [
+      "guitars",
+      "jackson",
+      "musicworld-feed"
+    ],
+    "badges": [
+      "deal",
+      "bestseller",
+      "new"
+    ],
+    "specs": [
+      {
+        "group": "General",
+        "name": "Source",
+        "value": "MusicWorld.bg feed (mock)"
+      },
+      {
+        "group": "General",
+        "name": "Brand",
+        "value": "Jackson"
+      },
+      {
+        "group": "General",
+        "name": "Category Hint",
+        "value": "guitars"
+      }
+    ],
+    "variants": [
+      {
+        "id": "mw-jackson-x-series-soloist-slx-dx-gold-bullion-default",
+        "sku": "MW-95656",
+        "name": "Default",
+        "attributes": {
+          "condition": "New"
+        },
+        "price": null,
+        "stock": 3,
+        "active": true
+      }
+    ],
+    "shipping": {
+      "weightKg": 5.9,
+      "oversize": false,
+      "freeShippingEligible": true,
+      "estimatedDispatchDays": 3,
+      "carrierGroup": "parcel"
+    },
+    "featured": false,
+    "newArrival": true,
+    "bestseller": true,
+    "active": true,
+    "seoTitle": "Jackson X Series Soloist SLX DX Gold Bullion | MusicWorld Mock",
+    "seoDescription": "X Series Soloist&trade; SLX DX, Laurel Fingerboard, Gold Bullion Model #: 2919944500",
+    "metaImage": "https://img.musicworld.bg/th/6/5/6/95656.png"
+  },
+  {
+    "id": "mw-jackson-pro-origins-1985-san-dimas-sd1-h-fr-bk",
+    "sku": "MW-94253",
+    "slug": "mw-jackson-pro-origins-1985-san-dimas-sd1-h-fr-bk",
+    "externalUrl": "https://www.musicworld.bg/en/c_364/i_94253/Jackson_Pro_Origins_1985_San_Dimas_SD1_H_FR_BK.html",
+    "name": "Jackson Pro Origins 1985 San Dimas SD1 H FR BK",
+    "shortDescription": "Pro Origins 1985 San Dimas SD1A H FR, Rosewood Fingerboard, Gloss Black Model #: 2910049503",
+    "description": "Pro Origins 1985 San Dimas SD1A H FR, Rosewood Fingerboard, Gloss Black Model #: 2910049503",
+    "brandId": "jackson",
+    "categoryIds": [
+      "guitars",
+      "electric-guitars"
+    ],
+    "baseCategoryId": "electric-guitars",
+    "price": 1000.91,
+    "oldPrice": 1199,
+    "currency": "EUR",
+    "stock": {
+      "quantity": 12,
+      "warehouseCode": "mw-feed",
+      "incomingQuantity": 0,
+      "nextRestockDate": null,
+      "lowStockThreshold": 2
+    },
+    "availability": "in_stock",
+    "rating": 4.7,
+    "reviewCount": 185,
+    "images": [
+      {
+        "src": "https://img.musicworld.bg/th/3/5/2/94253.png",
+        "alt": "Jackson Pro Origins 1985 San Dimas SD1 H FR BK",
+        "type": "main"
+      },
+      {
+        "src": "https://img.musicworld.bg/th/3/5/2/94253.png",
+        "alt": "Jackson Pro Origins 1985 San Dimas SD1 H FR BK detail",
+        "type": "gallery"
+      }
+    ],
+    "thumbnails": [
+      "https://img.musicworld.bg/th/3/5/2/94253.png"
+    ],
+    "tags": [
+      "guitars",
+      "jackson",
+      "musicworld-feed"
+    ],
+    "badges": [
+      "deal",
+      "bestseller"
+    ],
+    "specs": [
+      {
+        "group": "General",
+        "name": "Source",
+        "value": "MusicWorld.bg feed (mock)"
+      },
+      {
+        "group": "General",
+        "name": "Brand",
+        "value": "Jackson"
+      },
+      {
+        "group": "General",
+        "name": "Category Hint",
+        "value": "guitars"
+      }
+    ],
+    "variants": [
+      {
+        "id": "mw-jackson-pro-origins-1985-san-dimas-sd1-h-fr-bk-default",
+        "sku": "MW-94253",
+        "name": "Default",
+        "attributes": {
+          "condition": "New"
+        },
+        "price": null,
+        "stock": 12,
+        "active": true
+      }
+    ],
+    "shipping": {
+      "weightKg": 7.7,
+      "oversize": false,
+      "freeShippingEligible": true,
+      "estimatedDispatchDays": 1,
+      "carrierGroup": "parcel"
+    },
+    "featured": false,
+    "newArrival": false,
+    "bestseller": true,
+    "active": true,
+    "seoTitle": "Jackson Pro Origins 1985 San Dimas SD1 H FR BK | MusicWorld Mock",
+    "seoDescription": "Pro Origins 1985 San Dimas SD1A H FR, Rosewood Fingerboard, Gloss Black Model #: 2910049503",
+    "metaImage": "https://img.musicworld.bg/th/3/5/2/94253.png"
+  },
+  {
+    "id": "mw-jackson-pro-origins-1985-san-dimas-sd1-hs-yl-bng",
+    "sku": "MW-95617",
+    "slug": "mw-jackson-pro-origins-1985-san-dimas-sd1-hs-yl-bng",
+    "externalUrl": "https://www.musicworld.bg/en/c_364/i_95617/Jackson_Pro_Origins_1985_San_Dimas_SD1_HS_YL_BNG.html",
+    "name": "Jackson Pro Origins 1985 San Dimas SD1 HS YL BNG",
+    "shortDescription": "Pro Origins 1985 Limited Edition San Dimas SD1 HS FR, Ebony Fingerboard, Yellow Bengal Model #: 2910059500",
+    "description": "Pro Origins 1985 Limited Edition San Dimas SD1 HS FR, Ebony Fingerboard, Yellow Bengal Model #: 2910059500",
+    "brandId": "jackson",
+    "categoryIds": [
+      "guitars",
+      "electric-guitars"
+    ],
+    "baseCategoryId": "electric-guitars",
+    "price": 1109,
+    "oldPrice": 1399,
+    "currency": "EUR",
+    "stock": {
+      "quantity": 0,
+      "warehouseCode": "mw-feed",
+      "incomingQuantity": 8,
+      "nextRestockDate": "2026-04-15",
+      "lowStockThreshold": 2
+    },
+    "availability": "out_of_stock",
+    "rating": 4.4,
+    "reviewCount": 152,
+    "images": [
+      {
+        "src": "https://img.musicworld.bg/th/7/1/6/95617.png",
+        "alt": "Jackson Pro Origins 1985 San Dimas SD1 HS YL BNG",
+        "type": "main"
+      },
+      {
+        "src": "https://img.musicworld.bg/th/7/1/6/95617.png",
+        "alt": "Jackson Pro Origins 1985 San Dimas SD1 HS YL BNG detail",
+        "type": "gallery"
+      }
+    ],
+    "thumbnails": [
+      "https://img.musicworld.bg/th/7/1/6/95617.png"
+    ],
+    "tags": [
+      "guitars",
+      "jackson",
+      "musicworld-feed"
+    ],
+    "badges": [
+      "deal",
+      "bestseller"
+    ],
+    "specs": [
+      {
+        "group": "General",
+        "name": "Source",
+        "value": "MusicWorld.bg feed (mock)"
+      },
+      {
+        "group": "General",
+        "name": "Brand",
+        "value": "Jackson"
+      },
+      {
+        "group": "General",
+        "name": "Category Hint",
+        "value": "guitars"
+      }
+    ],
+    "variants": [
+      {
+        "id": "mw-jackson-pro-origins-1985-san-dimas-sd1-hs-yl-bng-default",
+        "sku": "MW-95617",
+        "name": "Default",
+        "attributes": {
+          "condition": "New"
+        },
+        "price": null,
+        "stock": 0,
+        "active": true
+      }
+    ],
+    "shipping": {
+      "weightKg": 5.4,
+      "oversize": false,
+      "freeShippingEligible": true,
+      "estimatedDispatchDays": 10,
+      "carrierGroup": "parcel"
+    },
+    "featured": true,
+    "newArrival": false,
+    "bestseller": true,
+    "active": true,
+    "seoTitle": "Jackson Pro Origins 1985 San Dimas SD1 HS YL BNG | MusicWorld Mock",
+    "seoDescription": "Pro Origins 1985 Limited Edition San Dimas SD1 HS FR, Ebony Fingerboard, Yellow Bengal Model #: 2910059500",
+    "metaImage": "https://img.musicworld.bg/th/7/1/6/95617.png"
+  },
+  {
+    "id": "mw-jackson-pro-origins-1985-san-dimas-sd1-hh-fr-bk",
+    "sku": "MW-93966",
+    "slug": "mw-jackson-pro-origins-1985-san-dimas-sd1-hh-fr-bk",
+    "externalUrl": "https://www.musicworld.bg/en/c_364/i_93966/Jackson_Pro_Origins_1985_San_Dimas_SD1_HH_FR_BK.html",
+    "name": "Jackson Pro Origins 1985 San Dimas SD1 HH FR BK",
+    "shortDescription": "Pro Origins 1985 San Dimas SD1 HH FR, Maple Fingerboard, Gloss Black Model #: 2910059503",
+    "description": "Pro Origins 1985 San Dimas SD1 HH FR, Maple Fingerboard, Gloss Black Model #: 2910059503",
+    "brandId": "jackson",
+    "categoryIds": [
+      "guitars",
+      "electric-guitars"
+    ],
+    "baseCategoryId": "electric-guitars",
+    "price": 1073.23,
+    "oldPrice": 1249,
+    "currency": "EUR",
+    "stock": {
+      "quantity": 10,
+      "warehouseCode": "mw-feed",
+      "incomingQuantity": 0,
+      "nextRestockDate": null,
+      "lowStockThreshold": 2
+    },
+    "availability": "in_stock",
+    "rating": 4.9,
+    "reviewCount": 237,
+    "images": [
+      {
+        "src": "https://img.musicworld.bg/th/6/6/9/93966.png",
+        "alt": "Jackson Pro Origins 1985 San Dimas SD1 HH FR BK",
+        "type": "main"
+      },
+      {
+        "src": "https://img.musicworld.bg/th/6/6/9/93966.png",
+        "alt": "Jackson Pro Origins 1985 San Dimas SD1 HH FR BK detail",
+        "type": "gallery"
+      }
+    ],
+    "thumbnails": [
+      "https://img.musicworld.bg/th/6/6/9/93966.png"
+    ],
+    "tags": [
+      "guitars",
+      "jackson",
+      "musicworld-feed"
+    ],
+    "badges": [
+      "deal",
+      "bestseller"
+    ],
+    "specs": [
+      {
+        "group": "General",
+        "name": "Source",
+        "value": "MusicWorld.bg feed (mock)"
+      },
+      {
+        "group": "General",
+        "name": "Brand",
+        "value": "Jackson"
+      },
+      {
+        "group": "General",
+        "name": "Category Hint",
+        "value": "guitars"
+      }
+    ],
+    "variants": [
+      {
+        "id": "mw-jackson-pro-origins-1985-san-dimas-sd1-hh-fr-bk-default",
+        "sku": "MW-93966",
+        "name": "Default",
+        "attributes": {
+          "condition": "New"
+        },
+        "price": null,
+        "stock": 10,
+        "active": true
+      }
+    ],
+    "shipping": {
+      "weightKg": 4.9,
+      "oversize": false,
+      "freeShippingEligible": true,
+      "estimatedDispatchDays": 1,
+      "carrierGroup": "parcel"
+    },
+    "featured": false,
+    "newArrival": false,
+    "bestseller": true,
+    "active": true,
+    "seoTitle": "Jackson Pro Origins 1985 San Dimas SD1 HH FR BK | MusicWorld Mock",
+    "seoDescription": "Pro Origins 1985 San Dimas SD1 HH FR, Maple Fingerboard, Gloss Black Model #: 2910059503",
+    "metaImage": "https://img.musicworld.bg/th/6/6/9/93966.png"
+  },
+  {
+    "id": "mw-jackson-pro-origins-1985-sd1-hh-fr-mpl-car",
+    "sku": "MW-95608",
+    "slug": "mw-jackson-pro-origins-1985-sd1-hh-fr-mpl-car",
+    "externalUrl": "https://www.musicworld.bg/en/c_364/i_95608/Jackson_Pro_Origins_1985_SD1_HH_FR_MPL_CAR.html",
+    "name": "Jackson Pro Origins 1985 SD1 HH FR MPL CAR",
+    "shortDescription": "Pro Origins 1985 San Dimas SD1 HH FR, Maple Fingerboard, Candy Apple Red Model #: 2910059592",
+    "description": "Pro Origins 1985 San Dimas SD1 HH FR, Maple Fingerboard, Candy Apple Red Model #: 2910059592",
+    "brandId": "jackson",
+    "categoryIds": [
+      "guitars",
+      "electric-guitars"
+    ],
+    "baseCategoryId": "electric-guitars",
+    "price": 1073.23,
+    "oldPrice": 1249,
+    "currency": "EUR",
+    "stock": {
+      "quantity": 0,
+      "warehouseCode": "mw-feed",
+      "incomingQuantity": 9,
+      "nextRestockDate": "2026-04-15",
+      "lowStockThreshold": 2
+    },
+    "availability": "out_of_stock",
+    "rating": 4.5,
+    "reviewCount": 143,
+    "images": [
+      {
+        "src": "https://img.musicworld.bg/th/8/0/6/95608.png",
+        "alt": "Jackson Pro Origins 1985 SD1 HH FR MPL CAR",
+        "type": "main"
+      },
+      {
+        "src": "https://img.musicworld.bg/th/8/0/6/95608.png",
+        "alt": "Jackson Pro Origins 1985 SD1 HH FR MPL CAR detail",
+        "type": "gallery"
+      }
+    ],
+    "thumbnails": [
+      "https://img.musicworld.bg/th/8/0/6/95608.png"
+    ],
+    "tags": [
+      "guitars",
+      "jackson",
+      "musicworld-feed"
+    ],
+    "badges": [
+      "deal",
+      "bestseller"
+    ],
+    "specs": [
+      {
+        "group": "General",
+        "name": "Source",
+        "value": "MusicWorld.bg feed (mock)"
+      },
+      {
+        "group": "General",
+        "name": "Brand",
+        "value": "Jackson"
+      },
+      {
+        "group": "General",
+        "name": "Category Hint",
+        "value": "guitars"
+      }
+    ],
+    "variants": [
+      {
+        "id": "mw-jackson-pro-origins-1985-sd1-hh-fr-mpl-car-default",
+        "sku": "MW-95608",
+        "name": "Default",
+        "attributes": {
+          "condition": "New"
+        },
+        "price": null,
+        "stock": 0,
+        "active": true
+      }
+    ],
+    "shipping": {
+      "weightKg": 7.5,
+      "oversize": false,
+      "freeShippingEligible": true,
+      "estimatedDispatchDays": 10,
+      "carrierGroup": "parcel"
+    },
+    "featured": false,
+    "newArrival": false,
+    "bestseller": true,
+    "active": true,
+    "seoTitle": "Jackson Pro Origins 1985 SD1 HH FR MPL CAR | MusicWorld Mock",
+    "seoDescription": "Pro Origins 1985 San Dimas SD1 HH FR, Maple Fingerboard, Candy Apple Red Model #: 2910059592",
+    "metaImage": "https://img.musicworld.bg/th/8/0/6/95608.png"
+  },
+  {
+    "id": "mw-jackson-pro-origins-1985-san-dimas-sd1-hh-fr-sw",
+    "sku": "MW-94252",
+    "slug": "mw-jackson-pro-origins-1985-san-dimas-sd1-hh-fr-sw",
+    "externalUrl": "https://www.musicworld.bg/en/c_364/i_94252/Jackson_Pro_Origins_1985_San_Dimas_SD1_HH_FR_SW.html",
+    "name": "Jackson Pro Origins 1985 San Dimas SD1 HH FR SW",
+    "shortDescription": "Pro Origins 1985 San Dimas SD1 HH FR, Maple Fingerboard, Snow White Model #: 2910059576 For over 40 years, Jackson has been the guitar of choice for the world&#039;s most legendary metal shredders and hard rockers. Now we&#039;re going back to our ...",
+    "description": "Pro Origins 1985 San Dimas SD1 HH FR, Maple Fingerboard, Snow White Model #: 2910059576 For over 40 years, Jackson has been the guitar of choice for the world&#039;s most legendary metal shredders and hard rockers. Now we&#039;re going back to our ...",
+    "brandId": "jackson",
+    "categoryIds": [
+      "guitars",
+      "electric-guitars"
+    ],
+    "baseCategoryId": "electric-guitars",
+    "price": 1073.23,
+    "oldPrice": 1249,
+    "currency": "EUR",
+    "stock": {
+      "quantity": 20,
+      "warehouseCode": "mw-feed",
+      "incomingQuantity": 0,
+      "nextRestockDate": null,
+      "lowStockThreshold": 2
+    },
+    "availability": "in_stock",
+    "rating": 4.7,
+    "reviewCount": 145,
+    "images": [
+      {
+        "src": "https://img.musicworld.bg/th/2/5/2/94252.png",
+        "alt": "Jackson Pro Origins 1985 San Dimas SD1 HH FR SW",
+        "type": "main"
+      },
+      {
+        "src": "https://img.musicworld.bg/th/2/5/2/94252.png",
+        "alt": "Jackson Pro Origins 1985 San Dimas SD1 HH FR SW detail",
+        "type": "gallery"
+      }
+    ],
+    "thumbnails": [
+      "https://img.musicworld.bg/th/2/5/2/94252.png"
+    ],
+    "tags": [
+      "guitars",
+      "jackson",
+      "musicworld-feed"
+    ],
+    "badges": [
+      "deal",
+      "bestseller",
+      "new"
+    ],
+    "specs": [
+      {
+        "group": "General",
+        "name": "Source",
+        "value": "MusicWorld.bg feed (mock)"
+      },
+      {
+        "group": "General",
+        "name": "Brand",
+        "value": "Jackson"
+      },
+      {
+        "group": "General",
+        "name": "Category Hint",
+        "value": "guitars"
+      }
+    ],
+    "variants": [
+      {
+        "id": "mw-jackson-pro-origins-1985-san-dimas-sd1-hh-fr-sw-default",
+        "sku": "MW-94252",
+        "name": "Default",
+        "attributes": {
+          "condition": "New"
+        },
+        "price": null,
+        "stock": 20,
+        "active": true
+      }
+    ],
+    "shipping": {
+      "weightKg": 1.7,
+      "oversize": false,
+      "freeShippingEligible": true,
+      "estimatedDispatchDays": 1,
+      "carrierGroup": "parcel"
+    },
+    "featured": false,
+    "newArrival": true,
+    "bestseller": true,
+    "active": true,
+    "seoTitle": "Jackson Pro Origins 1985 San Dimas SD1 HH FR SW | MusicWorld Mock",
+    "seoDescription": "Pro Origins 1985 San Dimas SD1 HH FR, Maple Fingerboard, Snow White Model #: 2910059576 For over 40 years, Jackson has been the guitar of choice for the wo",
+    "metaImage": "https://img.musicworld.bg/th/2/5/2/94252.png"
+  },
+  {
+    "id": "mw-jackson-pro-origins-1985-san-dimas-sd1-hh-fr-tf",
+    "sku": "MW-95299",
+    "slug": "mw-jackson-pro-origins-1985-san-dimas-sd1-hh-fr-tf",
+    "externalUrl": "https://www.musicworld.bg/en/c_364/i_95299/Jackson_Pro_Origins_1985_San_Dimas_SD1_HH_FR_TF.html",
+    "name": "Jackson Pro Origins 1985 San Dimas SD1 HH FR TF",
+    "shortDescription": "Pro Origins 1985 Limited Edition San Dimas SD1 HH FR, Maple Fingerboard, Two Face Model #: 2912049500",
+    "description": "Pro Origins 1985 Limited Edition San Dimas SD1 HH FR, Maple Fingerboard, Two Face Model #: 2912049500",
+    "brandId": "jackson",
+    "categoryIds": [
+      "guitars",
+      "electric-guitars"
+    ],
+    "baseCategoryId": "electric-guitars",
+    "price": 1073.23,
+    "oldPrice": 1249,
+    "currency": "EUR",
+    "stock": {
+      "quantity": 14,
+      "warehouseCode": "mw-feed",
+      "incomingQuantity": 0,
+      "nextRestockDate": null,
+      "lowStockThreshold": 2
+    },
+    "availability": "in_stock",
+    "rating": 4.9,
+    "reviewCount": 157,
+    "images": [
+      {
+        "src": "https://img.musicworld.bg/th/9/9/2/95299.png",
+        "alt": "Jackson Pro Origins 1985 San Dimas SD1 HH FR TF",
+        "type": "main"
+      },
+      {
+        "src": "https://img.musicworld.bg/th/9/9/2/95299.png",
+        "alt": "Jackson Pro Origins 1985 San Dimas SD1 HH FR TF detail",
+        "type": "gallery"
+      }
+    ],
+    "thumbnails": [
+      "https://img.musicworld.bg/th/9/9/2/95299.png"
+    ],
+    "tags": [
+      "guitars",
+      "jackson",
+      "musicworld-feed"
+    ],
+    "badges": [
+      "deal",
+      "bestseller"
+    ],
+    "specs": [
+      {
+        "group": "General",
+        "name": "Source",
+        "value": "MusicWorld.bg feed (mock)"
+      },
+      {
+        "group": "General",
+        "name": "Brand",
+        "value": "Jackson"
+      },
+      {
+        "group": "General",
+        "name": "Category Hint",
+        "value": "guitars"
+      }
+    ],
+    "variants": [
+      {
+        "id": "mw-jackson-pro-origins-1985-san-dimas-sd1-hh-fr-tf-default",
+        "sku": "MW-95299",
+        "name": "Default",
+        "attributes": {
+          "condition": "New"
+        },
+        "price": null,
+        "stock": 14,
+        "active": true
+      }
+    ],
+    "shipping": {
+      "weightKg": 3.9,
+      "oversize": false,
+      "freeShippingEligible": true,
+      "estimatedDispatchDays": 1,
+      "carrierGroup": "parcel"
+    },
+    "featured": false,
+    "newArrival": false,
+    "bestseller": true,
+    "active": true,
+    "seoTitle": "Jackson Pro Origins 1985 San Dimas SD1 HH FR TF | MusicWorld Mock",
+    "seoDescription": "Pro Origins 1985 Limited Edition San Dimas SD1 HH FR, Maple Fingerboard, Two Face Model #: 2912049500",
+    "metaImage": "https://img.musicworld.bg/th/9/9/2/95299.png"
+  },
+  {
+    "id": "mw-jackson-adrian-smith-50th-anniv-maiden-sig",
+    "sku": "MW-95499",
+    "slug": "mw-jackson-adrian-smith-50th-anniv-maiden-sig",
+    "externalUrl": "https://www.musicworld.bg/en/c_364/i_95499/Jackson_Adrian_Smith_50th_Anniv_Maiden_Sig.html",
+    "name": "Jackson Adrian Smith 50th Anniv. Maiden Sig.",
+    "shortDescription": "50th Anniversary Iron Maiden Adrian Smith Jackson SC1 Model #: 2913067257",
+    "description": "50th Anniversary Iron Maiden Adrian Smith Jackson SC1 Model #: 2913067257",
+    "brandId": "jackson",
+    "categoryIds": [
+      "guitars",
+      "electric-guitars"
+    ],
+    "baseCategoryId": "electric-guitars",
+    "price": 1641,
+    "oldPrice": 1849,
+    "currency": "EUR",
+    "stock": {
+      "quantity": 10,
+      "warehouseCode": "mw-feed",
+      "incomingQuantity": 0,
+      "nextRestockDate": null,
+      "lowStockThreshold": 2
+    },
+    "availability": "in_stock",
+    "rating": 4.7,
+    "reviewCount": 225,
+    "images": [
+      {
+        "src": "https://img.musicworld.bg/th/9/9/4/95499.png",
+        "alt": "Jackson Adrian Smith 50th Anniv. Maiden Sig.",
+        "type": "main"
+      },
+      {
+        "src": "https://img.musicworld.bg/th/9/9/4/95499.png",
+        "alt": "Jackson Adrian Smith 50th Anniv. Maiden Sig. detail",
+        "type": "gallery"
+      }
+    ],
+    "thumbnails": [
+      "https://img.musicworld.bg/th/9/9/4/95499.png"
+    ],
+    "tags": [
+      "guitars",
+      "jackson",
+      "musicworld-feed"
+    ],
+    "badges": [
+      "deal",
+      "bestseller",
+      "new"
+    ],
+    "specs": [
+      {
+        "group": "General",
+        "name": "Source",
+        "value": "MusicWorld.bg feed (mock)"
+      },
+      {
+        "group": "General",
+        "name": "Brand",
+        "value": "Jackson"
+      },
+      {
+        "group": "General",
+        "name": "Category Hint",
+        "value": "guitars"
+      }
+    ],
+    "variants": [
+      {
+        "id": "mw-jackson-adrian-smith-50th-anniv-maiden-sig-default",
+        "sku": "MW-95499",
+        "name": "Default",
+        "attributes": {
+          "condition": "New"
+        },
+        "price": null,
+        "stock": 10,
+        "active": true
+      }
+    ],
+    "shipping": {
+      "weightKg": 1.7,
+      "oversize": false,
+      "freeShippingEligible": true,
+      "estimatedDispatchDays": 1,
+      "carrierGroup": "parcel"
+    },
+    "featured": false,
+    "newArrival": true,
+    "bestseller": true,
+    "active": true,
+    "seoTitle": "Jackson Adrian Smith 50th Anniv. Maiden Sig. | MusicWorld Mock",
+    "seoDescription": "50th Anniversary Iron Maiden Adrian Smith Jackson SC1 Model #: 2913067257",
+    "metaImage": "https://img.musicworld.bg/th/9/9/4/95499.png"
+  },
+  {
+    "id": "mw-esp-ltd-mt-130-or",
+    "sku": "MW-92601",
+    "slug": "mw-esp-ltd-mt-130-or",
+    "externalUrl": "https://www.musicworld.bg/en/c_364/i_92601/ESP_LTD_MT_130_OR.html",
+    "name": "ESP LTD MT-130 OR",
+    "shortDescription": "LTD MT-130 ORANGE MT Series Guitar",
+    "description": "LTD MT-130 ORANGE MT Series Guitar",
+    "brandId": "esp",
+    "categoryIds": [
+      "guitars",
+      "electric-guitars"
+    ],
+    "baseCategoryId": "electric-guitars",
+    "price": 299,
+    "oldPrice": 358.8,
+    "currency": "EUR",
+    "stock": {
+      "quantity": 2,
+      "warehouseCode": "mw-feed",
+      "incomingQuantity": 0,
+      "nextRestockDate": null,
+      "lowStockThreshold": 2
+    },
+    "availability": "low_stock",
+    "rating": 4,
+    "reviewCount": 228,
+    "images": [
+      {
+        "src": "https://img.musicworld.bg/th/1/0/6/92601.png",
+        "alt": "ESP LTD MT-130 OR",
+        "type": "main"
+      },
+      {
+        "src": "https://img.musicworld.bg/th/1/0/6/92601.png",
+        "alt": "ESP LTD MT-130 OR detail",
+        "type": "gallery"
+      }
+    ],
+    "thumbnails": [
+      "https://img.musicworld.bg/th/1/0/6/92601.png"
+    ],
+    "tags": [
+      "guitars",
+      "esp",
+      "musicworld-feed"
+    ],
+    "badges": [
+      "deal",
+      "bestseller"
+    ],
+    "specs": [
+      {
+        "group": "General",
+        "name": "Source",
+        "value": "MusicWorld.bg feed (mock)"
+      },
+      {
+        "group": "General",
+        "name": "Brand",
+        "value": "ESP"
+      },
+      {
+        "group": "General",
+        "name": "Category Hint",
+        "value": "guitars"
+      }
+    ],
+    "variants": [
+      {
+        "id": "mw-esp-ltd-mt-130-or-default",
+        "sku": "MW-92601",
+        "name": "Default",
+        "attributes": {
+          "condition": "New"
+        },
+        "price": null,
+        "stock": 2,
+        "active": true
+      }
+    ],
+    "shipping": {
+      "weightKg": 4,
+      "oversize": false,
+      "freeShippingEligible": true,
+      "estimatedDispatchDays": 3,
+      "carrierGroup": "parcel"
+    },
+    "featured": false,
+    "newArrival": false,
+    "bestseller": true,
+    "active": true,
+    "seoTitle": "ESP LTD MT-130 OR | MusicWorld Mock",
+    "seoDescription": "LTD MT-130 ORANGE MT Series Guitar",
+    "metaImage": "https://img.musicworld.bg/th/1/0/6/92601.png"
+  },
+  {
+    "id": "mw-esp-ltd-mt-130-sky-blue",
+    "sku": "MW-92602",
+    "slug": "mw-esp-ltd-mt-130-sky-blue",
+    "externalUrl": "https://www.musicworld.bg/en/c_364/i_92602/ESP_LTD_MT_130_SKY_BLUE.html",
+    "name": "ESP LTD MT-130 SKY BLUE",
+    "shortDescription": "LTD MT-130 SKY BLUE MT Series Guitar",
+    "description": "LTD MT-130 SKY BLUE MT Series Guitar",
+    "brandId": "esp",
+    "categoryIds": [
+      "guitars",
+      "electric-guitars"
+    ],
+    "baseCategoryId": "electric-guitars",
+    "price": 299,
+    "oldPrice": 358.8,
+    "currency": "EUR",
+    "stock": {
+      "quantity": 0,
+      "warehouseCode": "mw-feed",
+      "incomingQuantity": 12,
+      "nextRestockDate": "2026-04-15",
+      "lowStockThreshold": 2
+    },
+    "availability": "out_of_stock",
+    "rating": 4.8,
+    "reviewCount": 26,
+    "images": [
+      {
+        "src": "https://img.musicworld.bg/th/2/0/6/92602.png",
+        "alt": "ESP LTD MT-130 SKY BLUE",
+        "type": "main"
+      },
+      {
+        "src": "https://img.musicworld.bg/th/2/0/6/92602.png",
+        "alt": "ESP LTD MT-130 SKY BLUE detail",
+        "type": "gallery"
+      }
+    ],
+    "thumbnails": [
+      "https://img.musicworld.bg/th/2/0/6/92602.png"
+    ],
+    "tags": [
+      "guitars",
+      "esp",
+      "musicworld-feed"
+    ],
+    "badges": [
+      "deal"
+    ],
+    "specs": [
+      {
+        "group": "General",
+        "name": "Source",
+        "value": "MusicWorld.bg feed (mock)"
+      },
+      {
+        "group": "General",
+        "name": "Brand",
+        "value": "ESP"
+      },
+      {
+        "group": "General",
+        "name": "Category Hint",
+        "value": "guitars"
+      }
+    ],
+    "variants": [
+      {
+        "id": "mw-esp-ltd-mt-130-sky-blue-default",
+        "sku": "MW-92602",
+        "name": "Default",
+        "attributes": {
+          "condition": "New"
+        },
+        "price": null,
+        "stock": 0,
+        "active": true
+      }
+    ],
+    "shipping": {
+      "weightKg": 7.8,
+      "oversize": false,
+      "freeShippingEligible": true,
+      "estimatedDispatchDays": 10,
+      "carrierGroup": "parcel"
+    },
+    "featured": false,
+    "newArrival": false,
+    "bestseller": false,
+    "active": true,
+    "seoTitle": "ESP LTD MT-130 SKY BLUE | MusicWorld Mock",
+    "seoDescription": "LTD MT-130 SKY BLUE MT Series Guitar",
+    "metaImage": "https://img.musicworld.bg/th/2/0/6/92602.png"
+  },
+  {
+    "id": "mw-esp-ltd-mt-130-snow-white",
+    "sku": "MW-92603",
+    "slug": "mw-esp-ltd-mt-130-snow-white",
+    "externalUrl": "https://www.musicworld.bg/en/c_364/i_92603/ESP_LTD_MT_130_SNOW_WHITE.html",
+    "name": "ESP LTD MT-130 SNOW WHITE",
+    "shortDescription": "LTD MT-130 SNOW WHITE MT Series Guitar",
+    "description": "LTD MT-130 SNOW WHITE MT Series Guitar",
+    "brandId": "esp",
+    "categoryIds": [
+      "guitars",
+      "electric-guitars"
+    ],
+    "baseCategoryId": "electric-guitars",
+    "price": 299,
+    "oldPrice": 358.8,
+    "currency": "EUR",
+    "stock": {
+      "quantity": 17,
+      "warehouseCode": "mw-feed",
+      "incomingQuantity": 0,
+      "nextRestockDate": null,
+      "lowStockThreshold": 2
+    },
+    "availability": "in_stock",
+    "rating": 4.6,
+    "reviewCount": 34,
+    "images": [
+      {
+        "src": "https://img.musicworld.bg/th/3/0/6/92603.png",
+        "alt": "ESP LTD MT-130 SNOW WHITE",
+        "type": "main"
+      },
+      {
+        "src": "https://img.musicworld.bg/th/3/0/6/92603.png",
+        "alt": "ESP LTD MT-130 SNOW WHITE detail",
+        "type": "gallery"
+      }
+    ],
+    "thumbnails": [
+      "https://img.musicworld.bg/th/3/0/6/92603.png"
+    ],
+    "tags": [
+      "guitars",
+      "esp",
+      "musicworld-feed"
+    ],
+    "badges": [
+      "deal"
+    ],
+    "specs": [
+      {
+        "group": "General",
+        "name": "Source",
+        "value": "MusicWorld.bg feed (mock)"
+      },
+      {
+        "group": "General",
+        "name": "Brand",
+        "value": "ESP"
+      },
+      {
+        "group": "General",
+        "name": "Category Hint",
+        "value": "guitars"
+      }
+    ],
+    "variants": [
+      {
+        "id": "mw-esp-ltd-mt-130-snow-white-default",
+        "sku": "MW-92603",
+        "name": "Default",
+        "attributes": {
+          "condition": "New"
+        },
+        "price": null,
+        "stock": 17,
+        "active": true
+      }
+    ],
+    "shipping": {
+      "weightKg": 5.6,
+      "oversize": false,
+      "freeShippingEligible": true,
+      "estimatedDispatchDays": 1,
+      "carrierGroup": "parcel"
+    },
+    "featured": false,
+    "newArrival": false,
+    "bestseller": false,
+    "active": true,
+    "seoTitle": "ESP LTD MT-130 SNOW WHITE | MusicWorld Mock",
+    "seoDescription": "LTD MT-130 SNOW WHITE MT Series Guitar",
+    "metaImage": "https://img.musicworld.bg/th/3/0/6/92603.png"
+  },
+  {
+    "id": "mw-esp-ltd-gh-sv-200-blk-gary-holt",
+    "sku": "MW-91938",
+    "slug": "mw-esp-ltd-gh-sv-200-blk-gary-holt",
+    "externalUrl": "https://www.musicworld.bg/en/c_364/i_91938/ESP_LTD_GH_SV_200_BLK_GARY_HOLT.html",
+    "name": "ESP LTD GH-SV-200 BLK GARY HOLT",
+    "shortDescription": "LTD GH-SV-200 BLK GARY HOLT &bull; Construction: Bolt-On",
+    "description": "LTD GH-SV-200 BLK GARY HOLT &bull; Construction: Bolt-On",
+    "brandId": "esp",
+    "categoryIds": [
+      "guitars",
+      "electric-guitars"
+    ],
+    "baseCategoryId": "electric-guitars",
+    "price": 839,
+    "oldPrice": 1006.8,
+    "currency": "EUR",
+    "stock": {
+      "quantity": 15,
+      "warehouseCode": "mw-feed",
+      "incomingQuantity": 0,
+      "nextRestockDate": null,
+      "lowStockThreshold": 2
+    },
+    "availability": "in_stock",
+    "rating": 4,
+    "reviewCount": 68,
+    "images": [
+      {
+        "src": "https://img.musicworld.bg/th/8/3/9/91938.png",
+        "alt": "ESP LTD GH-SV-200 BLK GARY HOLT",
+        "type": "main"
+      },
+      {
+        "src": "https://img.musicworld.bg/th/8/3/9/91938.png",
+        "alt": "ESP LTD GH-SV-200 BLK GARY HOLT detail",
+        "type": "gallery"
+      }
+    ],
+    "thumbnails": [
+      "https://img.musicworld.bg/th/8/3/9/91938.png"
+    ],
+    "tags": [
+      "guitars",
+      "esp",
+      "musicworld-feed"
+    ],
+    "badges": [
+      "deal"
+    ],
+    "specs": [
+      {
+        "group": "General",
+        "name": "Source",
+        "value": "MusicWorld.bg feed (mock)"
+      },
+      {
+        "group": "General",
+        "name": "Brand",
+        "value": "ESP"
+      },
+      {
+        "group": "General",
+        "name": "Category Hint",
+        "value": "guitars"
+      }
+    ],
+    "variants": [
+      {
+        "id": "mw-esp-ltd-gh-sv-200-blk-gary-holt-default",
+        "sku": "MW-91938",
+        "name": "Default",
+        "attributes": {
+          "condition": "New"
+        },
+        "price": null,
+        "stock": 15,
+        "active": true
+      }
+    ],
+    "shipping": {
+      "weightKg": 6,
+      "oversize": false,
+      "freeShippingEligible": true,
+      "estimatedDispatchDays": 1,
+      "carrierGroup": "parcel"
+    },
+    "featured": false,
+    "newArrival": false,
+    "bestseller": false,
+    "active": true,
+    "seoTitle": "ESP LTD GH-SV-200 BLK GARY HOLT | MusicWorld Mock",
+    "seoDescription": "LTD GH-SV-200 BLK GARY HOLT &bull; Construction: Bolt-On",
+    "metaImage": "https://img.musicworld.bg/th/8/3/9/91938.png"
+  },
+  {
+    "id": "mw-esp-ltd-te-200-tsb",
+    "sku": "MW-82550",
+    "slug": "mw-esp-ltd-te-200-tsb",
+    "externalUrl": "https://www.musicworld.bg/en/c_364/i_82550/ESP_LTD_TE_200_TSB.html",
+    "name": "ESP LTD TE-200 TSB",
+    "shortDescription": "LTD TE-200 TSB TOBACCO SUNBURST TE Series Guitar",
+    "description": "LTD TE-200 TSB TOBACCO SUNBURST TE Series Guitar",
+    "brandId": "esp",
+    "categoryIds": [
+      "guitars",
+      "electric-guitars"
+    ],
+    "baseCategoryId": "electric-guitars",
+    "price": 499,
+    "oldPrice": 766.8,
+    "currency": "EUR",
+    "stock": {
+      "quantity": 7,
+      "warehouseCode": "mw-feed",
+      "incomingQuantity": 0,
+      "nextRestockDate": null,
+      "lowStockThreshold": 2
+    },
+    "availability": "in_stock",
+    "rating": 4.4,
+    "reviewCount": 192,
+    "images": [
+      {
+        "src": "https://img.musicworld.bg/th/0/5/5/82550.png",
+        "alt": "ESP LTD TE-200 TSB",
+        "type": "main"
+      },
+      {
+        "src": "https://img.musicworld.bg/th/0/5/5/82550.png",
+        "alt": "ESP LTD TE-200 TSB detail",
+        "type": "gallery"
+      }
+    ],
+    "thumbnails": [
+      "https://img.musicworld.bg/th/0/5/5/82550.png"
+    ],
+    "tags": [
+      "guitars",
+      "esp",
+      "musicworld-feed"
+    ],
+    "badges": [
+      "deal",
+      "bestseller",
+      "new"
+    ],
+    "specs": [
+      {
+        "group": "General",
+        "name": "Source",
+        "value": "MusicWorld.bg feed (mock)"
+      },
+      {
+        "group": "General",
+        "name": "Brand",
+        "value": "ESP"
+      },
+      {
+        "group": "General",
+        "name": "Category Hint",
+        "value": "guitars"
+      }
+    ],
+    "variants": [
+      {
+        "id": "mw-esp-ltd-te-200-tsb-default",
+        "sku": "MW-82550",
+        "name": "Default",
+        "attributes": {
+          "condition": "New"
+        },
+        "price": null,
+        "stock": 7,
+        "active": true
+      }
+    ],
+    "shipping": {
+      "weightKg": 2.4,
+      "oversize": false,
+      "freeShippingEligible": true,
+      "estimatedDispatchDays": 1,
+      "carrierGroup": "parcel"
+    },
+    "featured": true,
+    "newArrival": true,
+    "bestseller": true,
+    "active": true,
+    "seoTitle": "ESP LTD TE-200 TSB | MusicWorld Mock",
+    "seoDescription": "LTD TE-200 TSB TOBACCO SUNBURST TE Series Guitar",
+    "metaImage": "https://img.musicworld.bg/th/0/5/5/82550.png"
+  },
+  {
+    "id": "mw-evh-wolfgang-special-striped-blk-yelowl",
+    "sku": "MW-89982",
+    "slug": "mw-evh-wolfgang-special-striped-blk-yelowl",
+    "externalUrl": "https://www.musicworld.bg/en/c_364/i_89982/EVH_Wolfgang_Special_Striped_Blk_Yelowl.html",
+    "name": "EVH Wolfgang Special Striped Blk / Yelowl",
+    "shortDescription": "Wolfgang Special Striped Series, Ebony Fingerboard, D-Tuna, Black and Yellow, Including EVH Wolfgang/Striped Series Gig Bag Model #: 5107702316",
+    "description": "Wolfgang Special Striped Series, Ebony Fingerboard, D-Tuna, Black and Yellow, Including EVH Wolfgang/Striped Series Gig Bag Model #: 5107702316",
+    "brandId": "evh",
+    "categoryIds": [
+      "guitars",
+      "electric-guitars"
+    ],
+    "baseCategoryId": "electric-guitars",
+    "price": 1288.8,
+    "oldPrice": 1549,
+    "currency": "EUR",
+    "stock": {
+      "quantity": 7,
+      "warehouseCode": "mw-feed",
+      "incomingQuantity": 0,
+      "nextRestockDate": null,
+      "lowStockThreshold": 2
+    },
+    "availability": "in_stock",
+    "rating": 4.2,
+    "reviewCount": 240,
+    "images": [
+      {
+        "src": "https://img.musicworld.bg/th/2/8/9/89982.png",
+        "alt": "EVH Wolfgang Special Striped Blk / Yelowl",
+        "type": "main"
+      },
+      {
+        "src": "https://img.musicworld.bg/th/2/8/9/89982.png",
+        "alt": "EVH Wolfgang Special Striped Blk / Yelowl detail",
+        "type": "gallery"
+      }
+    ],
+    "thumbnails": [
+      "https://img.musicworld.bg/th/2/8/9/89982.png"
+    ],
+    "tags": [
+      "guitars",
+      "evh",
+      "musicworld-feed"
+    ],
+    "badges": [
+      "deal",
+      "bestseller"
+    ],
+    "specs": [
+      {
+        "group": "General",
+        "name": "Source",
+        "value": "MusicWorld.bg feed (mock)"
+      },
+      {
+        "group": "General",
+        "name": "Brand",
+        "value": "EVH"
+      },
+      {
+        "group": "General",
+        "name": "Category Hint",
+        "value": "guitars"
+      }
+    ],
+    "variants": [
+      {
+        "id": "mw-evh-wolfgang-special-striped-blk-yelowl-default",
+        "sku": "MW-89982",
+        "name": "Default",
+        "attributes": {
+          "condition": "New"
+        },
+        "price": null,
+        "stock": 7,
+        "active": true
+      }
+    ],
+    "shipping": {
+      "weightKg": 1.2,
+      "oversize": false,
+      "freeShippingEligible": true,
+      "estimatedDispatchDays": 1,
+      "carrierGroup": "parcel"
+    },
+    "featured": true,
+    "newArrival": false,
+    "bestseller": true,
+    "active": true,
+    "seoTitle": "EVH Wolfgang Special Striped Blk / Yelowl | MusicWorld Mock",
+    "seoDescription": "Wolfgang Special Striped Series, Ebony Fingerboard, D-Tuna, Black and Yellow, Including EVH Wolfgang/Striped Series Gig Bag Model #: 5107702316",
+    "metaImage": "https://img.musicworld.bg/th/2/8/9/89982.png"
+  },
+  {
+    "id": "mw-evh-wolfgang-special-qm-mn-solar",
+    "sku": "MW-84157",
+    "slug": "mw-evh-wolfgang-special-qm-mn-solar",
+    "externalUrl": "https://www.musicworld.bg/en/c_364/i_84157/EVH_Wolfgang_Special_QM_MN_Solar.html",
+    "name": "EVH Wolfgang Special QM MN Solar",
+    "shortDescription": "Wolfgang Special QM, Baked Maple Fingerboard, Solar Model #: 5107701596",
+    "description": "Wolfgang Special QM, Baked Maple Fingerboard, Solar Model #: 5107701596",
+    "brandId": "evh",
+    "categoryIds": [
+      "guitars",
+      "electric-guitars"
+    ],
+    "baseCategoryId": "electric-guitars",
+    "price": 1245.6,
+    "oldPrice": 1499,
+    "currency": "EUR",
+    "stock": {
+      "quantity": 18,
+      "warehouseCode": "mw-feed",
+      "incomingQuantity": 0,
+      "nextRestockDate": null,
+      "lowStockThreshold": 2
+    },
+    "availability": "in_stock",
+    "rating": 4.9,
+    "reviewCount": 227,
+    "images": [
+      {
+        "src": "https://img.musicworld.bg/th/7/5/1/84157.png",
+        "alt": "EVH Wolfgang Special QM MN Solar",
+        "type": "main"
+      },
+      {
+        "src": "https://img.musicworld.bg/th/7/5/1/84157.png",
+        "alt": "EVH Wolfgang Special QM MN Solar detail",
+        "type": "gallery"
+      }
+    ],
+    "thumbnails": [
+      "https://img.musicworld.bg/th/7/5/1/84157.png"
+    ],
+    "tags": [
+      "guitars",
+      "evh",
+      "musicworld-feed"
+    ],
+    "badges": [
+      "deal",
+      "bestseller",
+      "new"
+    ],
+    "specs": [
+      {
+        "group": "General",
+        "name": "Source",
+        "value": "MusicWorld.bg feed (mock)"
+      },
+      {
+        "group": "General",
+        "name": "Brand",
+        "value": "EVH"
+      },
+      {
+        "group": "General",
+        "name": "Category Hint",
+        "value": "guitars"
+      }
+    ],
+    "variants": [
+      {
+        "id": "mw-evh-wolfgang-special-qm-mn-solar-default",
+        "sku": "MW-84157",
+        "name": "Default",
+        "attributes": {
+          "condition": "New"
+        },
+        "price": null,
+        "stock": 18,
+        "active": true
+      }
+    ],
+    "shipping": {
+      "weightKg": 5.9,
+      "oversize": false,
+      "freeShippingEligible": true,
+      "estimatedDispatchDays": 1,
+      "carrierGroup": "parcel"
+    },
+    "featured": false,
+    "newArrival": true,
+    "bestseller": true,
+    "active": true,
+    "seoTitle": "EVH Wolfgang Special QM MN Solar | MusicWorld Mock",
+    "seoDescription": "Wolfgang Special QM, Baked Maple Fingerboard, Solar Model #: 5107701596",
+    "metaImage": "https://img.musicworld.bg/th/7/5/1/84157.png"
+  },
+  {
+    "id": "mw-hagstrom-fantomen-white-gloss",
+    "sku": "MW-66452",
+    "slug": "mw-hagstrom-fantomen-white-gloss",
+    "externalUrl": "https://www.musicworld.bg/en/c_364/i_66452/Hagstrom_Fantomen_White_Gloss.html",
+    "name": "Hagstrom Fantomen White Gloss",
+    "shortDescription": "Hagstrom Fantomen White Gloss",
+    "description": "Hagstrom Fantomen White Gloss",
+    "brandId": "hagstrom",
+    "categoryIds": [
+      "guitars",
+      "electric-guitars"
+    ],
+    "baseCategoryId": "electric-guitars",
+    "price": 849,
+    "oldPrice": 1138.8,
+    "currency": "EUR",
+    "stock": {
+      "quantity": 19,
+      "warehouseCode": "mw-feed",
+      "incomingQuantity": 0,
+      "nextRestockDate": null,
+      "lowStockThreshold": 2
+    },
+    "availability": "in_stock",
+    "rating": 4.2,
+    "reviewCount": 210,
+    "images": [
+      {
+        "src": "https://img.musicworld.bg/th/2/5/4/66452.png",
+        "alt": "Hagstrom Fantomen White Gloss",
+        "type": "main"
+      },
+      {
+        "src": "https://img.musicworld.bg/th/2/5/4/66452.png",
+        "alt": "Hagstrom Fantomen White Gloss detail",
+        "type": "gallery"
+      }
+    ],
+    "thumbnails": [
+      "https://img.musicworld.bg/th/2/5/4/66452.png"
+    ],
+    "tags": [
+      "guitars",
+      "hagstrom",
+      "musicworld-feed"
+    ],
+    "badges": [
+      "deal",
+      "bestseller"
+    ],
+    "specs": [
+      {
+        "group": "General",
+        "name": "Source",
+        "value": "MusicWorld.bg feed (mock)"
+      },
+      {
+        "group": "General",
+        "name": "Brand",
+        "value": "Hagstrom"
+      },
+      {
+        "group": "General",
+        "name": "Category Hint",
+        "value": "guitars"
+      }
+    ],
+    "variants": [
+      {
+        "id": "mw-hagstrom-fantomen-white-gloss-default",
+        "sku": "MW-66452",
+        "name": "Default",
+        "attributes": {
+          "condition": "New"
+        },
+        "price": null,
+        "stock": 19,
+        "active": true
+      }
+    ],
+    "shipping": {
+      "weightKg": 3.2,
+      "oversize": false,
+      "freeShippingEligible": true,
+      "estimatedDispatchDays": 1,
+      "carrierGroup": "parcel"
+    },
+    "featured": false,
+    "newArrival": false,
+    "bestseller": true,
+    "active": true,
+    "seoTitle": "Hagstrom Fantomen White Gloss | MusicWorld Mock",
+    "seoDescription": "Hagstrom Fantomen White Gloss",
+    "metaImage": "https://img.musicworld.bg/th/2/5/4/66452.png"
+  },
+  {
+    "id": "mw-hagstrom-fantomen-black-gloss",
+    "sku": "MW-66453",
+    "slug": "mw-hagstrom-fantomen-black-gloss",
+    "externalUrl": "https://www.musicworld.bg/en/c_364/i_66453/Hagstrom_Fantomen_Black_Gloss.html",
+    "name": "Hagstrom Fantomen Black Gloss",
+    "shortDescription": "Hagstrom Fantomen Black Gloss",
+    "description": "Hagstrom Fantomen Black Gloss",
+    "brandId": "hagstrom",
+    "categoryIds": [
+      "guitars",
+      "electric-guitars"
+    ],
+    "baseCategoryId": "electric-guitars",
+    "price": 849,
+    "oldPrice": 1138.8,
+    "currency": "EUR",
+    "stock": {
+      "quantity": 20,
+      "warehouseCode": "mw-feed",
+      "incomingQuantity": 0,
+      "nextRestockDate": null,
+      "lowStockThreshold": 2
+    },
+    "availability": "in_stock",
+    "rating": 4.1,
+    "reviewCount": 49,
+    "images": [
+      {
+        "src": "https://img.musicworld.bg/th/3/5/4/66453.png",
+        "alt": "Hagstrom Fantomen Black Gloss",
+        "type": "main"
+      },
+      {
+        "src": "https://img.musicworld.bg/th/3/5/4/66453.png",
+        "alt": "Hagstrom Fantomen Black Gloss detail",
+        "type": "gallery"
+      }
+    ],
+    "thumbnails": [
+      "https://img.musicworld.bg/th/3/5/4/66453.png"
+    ],
+    "tags": [
+      "guitars",
+      "hagstrom",
+      "musicworld-feed"
+    ],
+    "badges": [
+      "deal"
+    ],
+    "specs": [
+      {
+        "group": "General",
+        "name": "Source",
+        "value": "MusicWorld.bg feed (mock)"
+      },
+      {
+        "group": "General",
+        "name": "Brand",
+        "value": "Hagstrom"
+      },
+      {
+        "group": "General",
+        "name": "Category Hint",
+        "value": "guitars"
+      }
+    ],
+    "variants": [
+      {
+        "id": "mw-hagstrom-fantomen-black-gloss-default",
+        "sku": "MW-66453",
+        "name": "Default",
+        "attributes": {
+          "condition": "New"
+        },
+        "price": null,
+        "stock": 20,
+        "active": true
+      }
+    ],
+    "shipping": {
+      "weightKg": 1.1,
+      "oversize": false,
+      "freeShippingEligible": true,
+      "estimatedDispatchDays": 1,
+      "carrierGroup": "parcel"
+    },
+    "featured": false,
+    "newArrival": false,
+    "bestseller": false,
+    "active": true,
+    "seoTitle": "Hagstrom Fantomen Black Gloss | MusicWorld Mock",
+    "seoDescription": "Hagstrom Fantomen Black Gloss",
+    "metaImage": "https://img.musicworld.bg/th/3/5/4/66453.png"
+  },
+  {
+    "id": "mw-casio-cdp-s110-bk",
+    "sku": "MW-82087",
+    "slug": "mw-casio-cdp-s110-bk",
+    "externalUrl": "https://www.musicworld.bg/en/c_754/i_82087/CASIO_CDP_S110_BK.html",
+    "name": "CASIO CDP-S110 BK",
+    "shortDescription": "Take Your First Step on a Satisfying Musical Journey The CDP-S110 is the entry-level model in the CDP-S digital piano series and offers an impressive range of features: authentic keyboard, sound generation and an impressive speaker syste ...",
+    "description": "Take Your First Step on a Satisfying Musical Journey The CDP-S110 is the entry-level model in the CDP-S digital piano series and offers an impressive range of features: authentic keyboard, sound generation and an impressive speaker syste ...",
+    "brandId": "casio",
+    "categoryIds": [
+      "keyboards",
+      "digital-pianos"
+    ],
+    "baseCategoryId": "digital-pianos",
+    "price": 309,
+    "oldPrice": 499,
+    "currency": "EUR",
+    "stock": {
+      "quantity": 6,
+      "warehouseCode": "mw-feed",
+      "incomingQuantity": 0,
+      "nextRestockDate": null,
+      "lowStockThreshold": 2
+    },
+    "availability": "in_stock",
+    "rating": 4.5,
+    "reviewCount": 53,
+    "images": [
+      {
+        "src": "https://img.musicworld.bg/th/7/8/0/82087.png",
+        "alt": "CASIO CDP-S110 BK",
+        "type": "main"
+      },
+      {
+        "src": "https://img.musicworld.bg/th/7/8/0/82087.png",
+        "alt": "CASIO CDP-S110 BK detail",
+        "type": "gallery"
+      }
+    ],
+    "thumbnails": [
+      "https://img.musicworld.bg/th/7/8/0/82087.png"
+    ],
+    "tags": [
+      "keyboards",
+      "casio",
+      "musicworld-feed"
+    ],
+    "badges": [
+      "deal"
+    ],
+    "specs": [
+      {
+        "group": "General",
+        "name": "Source",
+        "value": "MusicWorld.bg feed (mock)"
+      },
+      {
+        "group": "General",
+        "name": "Brand",
+        "value": "CASIO"
+      },
+      {
+        "group": "General",
+        "name": "Category Hint",
+        "value": "keyboards"
+      }
+    ],
+    "variants": [
+      {
+        "id": "mw-casio-cdp-s110-bk-default",
+        "sku": "MW-82087",
+        "name": "Default",
+        "attributes": {
+          "condition": "New"
+        },
+        "price": null,
+        "stock": 6,
+        "active": true
+      }
+    ],
+    "shipping": {
+      "weightKg": 7.5,
+      "oversize": false,
+      "freeShippingEligible": true,
+      "estimatedDispatchDays": 1,
+      "carrierGroup": "parcel"
+    },
+    "featured": false,
+    "newArrival": false,
+    "bestseller": false,
+    "active": true,
+    "seoTitle": "CASIO CDP-S110 BK | MusicWorld Mock",
+    "seoDescription": "Take Your First Step on a Satisfying Musical Journey The CDP-S110 is the entry-level model in the CDP-S digital piano series and offers an impressive range",
+    "metaImage": "https://img.musicworld.bg/th/7/8/0/82087.png"
+  },
+  {
+    "id": "mw-casio-px-s1100-bk",
+    "sku": "MW-81686",
+    "slug": "mw-casio-px-s1100-bk",
+    "externalUrl": "https://www.musicworld.bg/en/c_754/i_81686/CASIO_PX_S1100_BK.html",
+    "name": "CASIO PX-S1100 BK",
+    "shortDescription": "Дигитално пиано с Bluetooth CASIO Privia PX-S1100 черен цвят ОТВЪД РУТИННОТО СВИРЕНЕ",
+    "description": "Дигитално пиано с Bluetooth CASIO Privia PX-S1100 черен цвят ОТВЪД РУТИННОТО СВИРЕНЕ",
+    "brandId": "casio",
+    "categoryIds": [
+      "keyboards",
+      "digital-pianos"
+    ],
+    "baseCategoryId": "digital-pianos",
+    "price": 499,
+    "oldPrice": 719,
+    "currency": "EUR",
+    "stock": {
+      "quantity": 19,
+      "warehouseCode": "mw-feed",
+      "incomingQuantity": 0,
+      "nextRestockDate": null,
+      "lowStockThreshold": 2
+    },
+    "availability": "in_stock",
+    "rating": 4,
+    "reviewCount": 108,
+    "images": [
+      {
+        "src": "https://img.musicworld.bg/th/6/8/6/81686.png",
+        "alt": "CASIO PX-S1100 BK",
+        "type": "main"
+      },
+      {
+        "src": "https://img.musicworld.bg/th/6/8/6/81686.png",
+        "alt": "CASIO PX-S1100 BK detail",
+        "type": "gallery"
+      }
+    ],
+    "thumbnails": [
+      "https://img.musicworld.bg/th/6/8/6/81686.png"
+    ],
+    "tags": [
+      "keyboards",
+      "casio",
+      "musicworld-feed"
+    ],
+    "badges": [
+      "deal"
+    ],
+    "specs": [
+      {
+        "group": "General",
+        "name": "Source",
+        "value": "MusicWorld.bg feed (mock)"
+      },
+      {
+        "group": "General",
+        "name": "Brand",
+        "value": "CASIO"
+      },
+      {
+        "group": "General",
+        "name": "Category Hint",
+        "value": "keyboards"
+      }
+    ],
+    "variants": [
+      {
+        "id": "mw-casio-px-s1100-bk-default",
+        "sku": "MW-81686",
+        "name": "Default",
+        "attributes": {
+          "condition": "New"
+        },
+        "price": null,
+        "stock": 19,
+        "active": true
+      }
+    ],
+    "shipping": {
+      "weightKg": 4,
+      "oversize": false,
+      "freeShippingEligible": true,
+      "estimatedDispatchDays": 1,
+      "carrierGroup": "parcel"
+    },
+    "featured": false,
+    "newArrival": false,
+    "bestseller": false,
+    "active": true,
+    "seoTitle": "CASIO PX-S1100 BK | MusicWorld Mock",
+    "seoDescription": "Дигитално пиано с Bluetooth CASIO Privia PX-S1100 черен цвят ОТВЪД РУТИННОТО СВИРЕНЕ",
+    "metaImage": "https://img.musicworld.bg/th/6/8/6/81686.png"
+  },
+  {
+    "id": "mw-casio-px-s1100-cb",
+    "sku": "MW-94765",
+    "slug": "mw-casio-px-s1100-cb",
+    "externalUrl": "https://www.musicworld.bg/en/c_754/i_94765/CASIO_PX_S1100_CB.html",
+    "name": "CASIO PX-S1100 CB",
+    "shortDescription": "Дигитално пиано с Bluetooth CASIO Privia PX-S1100 Calm Blue ОТВЪД РУТИННОТО СВИРЕНЕ",
+    "description": "Дигитално пиано с Bluetooth CASIO Privia PX-S1100 Calm Blue ОТВЪД РУТИННОТО СВИРЕНЕ",
+    "brandId": "casio",
+    "categoryIds": [
+      "keyboards",
+      "digital-pianos"
+    ],
+    "baseCategoryId": "digital-pianos",
+    "price": 499,
+    "oldPrice": 719,
+    "currency": "EUR",
+    "stock": {
+      "quantity": 17,
+      "warehouseCode": "mw-feed",
+      "incomingQuantity": 0,
+      "nextRestockDate": null,
+      "lowStockThreshold": 2
+    },
+    "availability": "in_stock",
+    "rating": 4.6,
+    "reviewCount": 124,
+    "images": [
+      {
+        "src": "https://img.musicworld.bg/th/5/6/7/94765.png",
+        "alt": "CASIO PX-S1100 CB",
+        "type": "main"
+      },
+      {
+        "src": "https://img.musicworld.bg/th/5/6/7/94765.png",
+        "alt": "CASIO PX-S1100 CB detail",
+        "type": "gallery"
+      }
+    ],
+    "thumbnails": [
+      "https://img.musicworld.bg/th/5/6/7/94765.png"
+    ],
+    "tags": [
+      "keyboards",
+      "casio",
+      "musicworld-feed"
+    ],
+    "badges": [
+      "deal",
+      "bestseller"
+    ],
+    "specs": [
+      {
+        "group": "General",
+        "name": "Source",
+        "value": "MusicWorld.bg feed (mock)"
+      },
+      {
+        "group": "General",
+        "name": "Brand",
+        "value": "CASIO"
+      },
+      {
+        "group": "General",
+        "name": "Category Hint",
+        "value": "keyboards"
+      }
+    ],
+    "variants": [
+      {
+        "id": "mw-casio-px-s1100-cb-default",
+        "sku": "MW-94765",
+        "name": "Default",
+        "attributes": {
+          "condition": "New"
+        },
+        "price": null,
+        "stock": 17,
+        "active": true
+      }
+    ],
+    "shipping": {
+      "weightKg": 1.6,
+      "oversize": false,
+      "freeShippingEligible": true,
+      "estimatedDispatchDays": 1,
+      "carrierGroup": "parcel"
+    },
+    "featured": false,
+    "newArrival": false,
+    "bestseller": false,
+    "active": true,
+    "seoTitle": "CASIO PX-S1100 CB | MusicWorld Mock",
+    "seoDescription": "Дигитално пиано с Bluetooth CASIO Privia PX-S1100 Calm Blue ОТВЪД РУТИННОТО СВИРЕНЕ",
+    "metaImage": "https://img.musicworld.bg/th/5/6/7/94765.png"
+  },
+  {
+    "id": "mw-casio-px-s1100-mb",
+    "sku": "MW-94766",
+    "slug": "mw-casio-px-s1100-mb",
+    "externalUrl": "https://www.musicworld.bg/en/c_754/i_94766/CASIO_PX_S1100_MB.html",
+    "name": "CASIO PX-S1100 MB",
+    "shortDescription": "Дигитално пиано с Bluetooth CASIO Privia PX-S1100 Mellow Beige ОТВЪД РУТИННОТО СВИРЕНЕ",
+    "description": "Дигитално пиано с Bluetooth CASIO Privia PX-S1100 Mellow Beige ОТВЪД РУТИННОТО СВИРЕНЕ",
+    "brandId": "casio",
+    "categoryIds": [
+      "keyboards",
+      "digital-pianos"
+    ],
+    "baseCategoryId": "digital-pianos",
+    "price": 499,
+    "oldPrice": 719,
+    "currency": "EUR",
+    "stock": {
+      "quantity": 8,
+      "warehouseCode": "mw-feed",
+      "incomingQuantity": 0,
+      "nextRestockDate": null,
+      "lowStockThreshold": 2
+    },
+    "availability": "in_stock",
+    "rating": 4.3,
+    "reviewCount": 241,
+    "images": [
+      {
+        "src": "https://img.musicworld.bg/th/6/6/7/94766.png",
+        "alt": "CASIO PX-S1100 MB",
+        "type": "main"
+      },
+      {
+        "src": "https://img.musicworld.bg/th/6/6/7/94766.png",
+        "alt": "CASIO PX-S1100 MB detail",
+        "type": "gallery"
+      }
+    ],
+    "thumbnails": [
+      "https://img.musicworld.bg/th/6/6/7/94766.png"
+    ],
+    "tags": [
+      "keyboards",
+      "casio",
+      "musicworld-feed"
+    ],
+    "badges": [
+      "deal",
+      "bestseller"
+    ],
+    "specs": [
+      {
+        "group": "General",
+        "name": "Source",
+        "value": "MusicWorld.bg feed (mock)"
+      },
+      {
+        "group": "General",
+        "name": "Brand",
+        "value": "CASIO"
+      },
+      {
+        "group": "General",
+        "name": "Category Hint",
+        "value": "keyboards"
+      }
+    ],
+    "variants": [
+      {
+        "id": "mw-casio-px-s1100-mb-default",
+        "sku": "MW-94766",
+        "name": "Default",
+        "attributes": {
+          "condition": "New"
+        },
+        "price": null,
+        "stock": 8,
+        "active": true
+      }
+    ],
+    "shipping": {
+      "weightKg": 5.3,
+      "oversize": false,
+      "freeShippingEligible": true,
+      "estimatedDispatchDays": 1,
+      "carrierGroup": "parcel"
+    },
+    "featured": false,
+    "newArrival": false,
+    "bestseller": true,
+    "active": true,
+    "seoTitle": "CASIO PX-S1100 MB | MusicWorld Mock",
+    "seoDescription": "Дигитално пиано с Bluetooth CASIO Privia PX-S1100 Mellow Beige ОТВЪД РУТИННОТО СВИРЕНЕ",
+    "metaImage": "https://img.musicworld.bg/th/6/6/7/94766.png"
+  },
+  {
+    "id": "mw-casio-ap-270-bk-celviano",
+    "sku": "MW-66142",
+    "slug": "mw-casio-ap-270-bk-celviano",
+    "externalUrl": "https://www.musicworld.bg/en/c_754/i_66142/CASIO_AP_270_BK_CELVIANO.html",
+    "name": "CASIO AP-270 BK CELVIANO",
+    "shortDescription": "Класическо начало! С два различни звука от концертни рояли и звуци от още 20 инструмента, AP-270 е гаранция за успех на начинаещите пианисти.",
+    "description": "Класическо начало! С два различни звука от концертни рояли и звуци от още 20 инструмента, AP-270 е гаранция за успех на начинаещите пианисти.",
+    "brandId": "casio",
+    "categoryIds": [
+      "keyboards",
+      "digital-pianos"
+    ],
+    "baseCategoryId": "digital-pianos",
+    "price": 729,
+    "oldPrice": 1039,
+    "currency": "EUR",
+    "stock": {
+      "quantity": 2,
+      "warehouseCode": "mw-feed",
+      "incomingQuantity": 0,
+      "nextRestockDate": null,
+      "lowStockThreshold": 2
+    },
+    "availability": "low_stock",
+    "rating": 4.5,
+    "reviewCount": 33,
+    "images": [
+      {
+        "src": "https://img.musicworld.bg/th/2/4/1/66142.png",
+        "alt": "CASIO AP-270 BK CELVIANO",
+        "type": "main"
+      },
+      {
+        "src": "https://img.musicworld.bg/th/2/4/1/66142.png",
+        "alt": "CASIO AP-270 BK CELVIANO detail",
+        "type": "gallery"
+      }
+    ],
+    "thumbnails": [
+      "https://img.musicworld.bg/th/2/4/1/66142.png"
+    ],
+    "tags": [
+      "keyboards",
+      "casio",
+      "musicworld-feed"
+    ],
+    "badges": [
+      "deal",
+      "new"
+    ],
+    "specs": [
+      {
+        "group": "General",
+        "name": "Source",
+        "value": "MusicWorld.bg feed (mock)"
+      },
+      {
+        "group": "General",
+        "name": "Brand",
+        "value": "CASIO"
+      },
+      {
+        "group": "General",
+        "name": "Category Hint",
+        "value": "keyboards"
+      }
+    ],
+    "variants": [
+      {
+        "id": "mw-casio-ap-270-bk-celviano-default",
+        "sku": "MW-66142",
+        "name": "Default",
+        "attributes": {
+          "condition": "New"
+        },
+        "price": null,
+        "stock": 2,
+        "active": true
+      }
+    ],
+    "shipping": {
+      "weightKg": 4.5,
+      "oversize": false,
+      "freeShippingEligible": true,
+      "estimatedDispatchDays": 3,
+      "carrierGroup": "parcel"
+    },
+    "featured": false,
+    "newArrival": true,
+    "bestseller": false,
+    "active": true,
+    "seoTitle": "CASIO AP-270 BK CELVIANO | MusicWorld Mock",
+    "seoDescription": "Класическо начало! С два различни звука от концертни рояли и звуци от още 20 инструмента, AP-270 е гаранция за успех на начинаещите пианисти.",
+    "metaImage": "https://img.musicworld.bg/th/2/4/1/66142.png"
+  },
+  {
+    "id": "mw-casio-ap-270-bn-celviano",
+    "sku": "MW-81817",
+    "slug": "mw-casio-ap-270-bn-celviano",
+    "externalUrl": "https://www.musicworld.bg/en/c_754/i_81817/CASIO_AP_270_BN_CELVIANO.html",
+    "name": "CASIO AP-270 BN CELVIANO",
+    "shortDescription": "Класическо начало! С два различни звука от концертни рояли и звуци от още 20 инструмента, AP-270 е гаранция за успех на начинаещите пианисти.",
+    "description": "Класическо начало! С два различни звука от концертни рояли и звуци от още 20 инструмента, AP-270 е гаранция за успех на начинаещите пианисти.",
+    "brandId": "casio",
+    "categoryIds": [
+      "keyboards",
+      "digital-pianos"
+    ],
+    "baseCategoryId": "digital-pianos",
+    "price": 729,
+    "oldPrice": 1039,
+    "currency": "EUR",
+    "stock": {
+      "quantity": 0,
+      "warehouseCode": "mw-feed",
+      "incomingQuantity": 12,
+      "nextRestockDate": "2026-04-15",
+      "lowStockThreshold": 2
+    },
+    "availability": "out_of_stock",
+    "rating": 4.8,
+    "reviewCount": 146,
+    "images": [
+      {
+        "src": "https://img.musicworld.bg/th/7/1/8/81817.png",
+        "alt": "CASIO AP-270 BN CELVIANO",
+        "type": "main"
+      },
+      {
+        "src": "https://img.musicworld.bg/th/7/1/8/81817.png",
+        "alt": "CASIO AP-270 BN CELVIANO detail",
+        "type": "gallery"
+      }
+    ],
+    "thumbnails": [
+      "https://img.musicworld.bg/th/7/1/8/81817.png"
+    ],
+    "tags": [
+      "keyboards",
+      "casio",
+      "musicworld-feed"
+    ],
+    "badges": [
+      "deal",
+      "bestseller"
+    ],
+    "specs": [
+      {
+        "group": "General",
+        "name": "Source",
+        "value": "MusicWorld.bg feed (mock)"
+      },
+      {
+        "group": "General",
+        "name": "Brand",
+        "value": "CASIO"
+      },
+      {
+        "group": "General",
+        "name": "Category Hint",
+        "value": "keyboards"
+      }
+    ],
+    "variants": [
+      {
+        "id": "mw-casio-ap-270-bn-celviano-default",
+        "sku": "MW-81817",
+        "name": "Default",
+        "attributes": {
+          "condition": "New"
+        },
+        "price": null,
+        "stock": 0,
+        "active": true
+      }
+    ],
+    "shipping": {
+      "weightKg": 4.8,
+      "oversize": false,
+      "freeShippingEligible": true,
+      "estimatedDispatchDays": 10,
+      "carrierGroup": "parcel"
+    },
+    "featured": false,
+    "newArrival": false,
+    "bestseller": true,
+    "active": true,
+    "seoTitle": "CASIO AP-270 BN CELVIANO | MusicWorld Mock",
+    "seoDescription": "Класическо начало! С два различни звука от концертни рояли и звуци от още 20 инструмента, AP-270 е гаранция за успех на начинаещите пианисти.",
+    "metaImage": "https://img.musicworld.bg/th/7/1/8/81817.png"
+  },
+  {
+    "id": "mw-yamaha-piano-digital-p-45-special-offer-bundle",
+    "sku": "MW-94679",
+    "slug": "mw-yamaha-piano-digital-p-45-special-offer-bundle",
+    "externalUrl": "https://www.musicworld.bg/en/c_754/i_94679/YAMAHA_PIANO_DIGITAL_P_45_Special_Offer_bundle.html",
+    "name": "YAMAHA PIANO DIGITAL P-45 Special Offer_bundle",
+    "shortDescription": "Take a great piano with you wherever you go... Graded Hammer Standard keyboard for an authentic piano-playing experience.",
+    "description": "Take a great piano with you wherever you go... Graded Hammer Standard keyboard for an authentic piano-playing experience.",
+    "brandId": "yamaha",
+    "categoryIds": [
+      "keyboards",
+      "digital-pianos"
+    ],
+    "baseCategoryId": "digital-pianos",
+    "price": 331.82,
+    "oldPrice": null,
+    "currency": "EUR",
+    "stock": {
+      "quantity": 2,
+      "warehouseCode": "mw-feed",
+      "incomingQuantity": 0,
+      "nextRestockDate": null,
+      "lowStockThreshold": 2
+    },
+    "availability": "low_stock",
+    "rating": 4.9,
+    "reviewCount": 177,
+    "images": [
+      {
+        "src": "https://img.musicworld.bg/th/9/7/6/94679.png",
+        "alt": "YAMAHA PIANO DIGITAL P-45 Special Offer_bundle",
+        "type": "main"
+      },
+      {
+        "src": "https://img.musicworld.bg/th/9/7/6/94679.png",
+        "alt": "YAMAHA PIANO DIGITAL P-45 Special Offer_bundle detail",
+        "type": "gallery"
+      }
+    ],
+    "thumbnails": [
+      "https://img.musicworld.bg/th/9/7/6/94679.png"
+    ],
+    "tags": [
+      "keyboards",
+      "yamaha",
+      "musicworld-feed"
+    ],
+    "badges": [
+      "bestseller"
+    ],
+    "specs": [
+      {
+        "group": "General",
+        "name": "Source",
+        "value": "MusicWorld.bg feed (mock)"
+      },
+      {
+        "group": "General",
+        "name": "Brand",
+        "value": "YAMAHA"
+      },
+      {
+        "group": "General",
+        "name": "Category Hint",
+        "value": "keyboards"
+      }
+    ],
+    "variants": [
+      {
+        "id": "mw-yamaha-piano-digital-p-45-special-offer-bundle-default",
+        "sku": "MW-94679",
+        "name": "Default",
+        "attributes": {
+          "condition": "New"
+        },
+        "price": null,
+        "stock": 2,
+        "active": true
+      }
+    ],
+    "shipping": {
+      "weightKg": 3.9,
+      "oversize": false,
+      "freeShippingEligible": true,
+      "estimatedDispatchDays": 3,
+      "carrierGroup": "parcel"
+    },
+    "featured": false,
+    "newArrival": false,
+    "bestseller": true,
+    "active": true,
+    "seoTitle": "YAMAHA PIANO DIGITAL P-45 Special Offer_bundle | MusicWorld Mock",
+    "seoDescription": "Take a great piano with you wherever you go... Graded Hammer Standard keyboard for an authentic piano-playing experience.",
+    "metaImage": "https://img.musicworld.bg/th/9/7/6/94679.png"
+  },
+  {
+    "id": "mw-yamaha-piano-digital-p-145-bt",
+    "sku": "MW-94359",
+    "slug": "mw-yamaha-piano-digital-p-145-bt",
+    "externalUrl": "https://www.musicworld.bg/en/c_754/i_94359/YAMAHA_PIANO_DIGITAL_P_145_BT.html",
+    "name": "YAMAHA PIANO DIGITAL P-145 BT",
+    "shortDescription": "The entry-level model of the P Series. Perfect for beginners with a serious interest in playing the piano! Yamaha&rsquo;s P Series digital pianos are loved by piano players around the world who want the comfortable feel of an acoustic piano in a ...",
+    "description": "The entry-level model of the P Series. Perfect for beginners with a serious interest in playing the piano! Yamaha&rsquo;s P Series digital pianos are loved by piano players around the world who want the comfortable feel of an acoustic piano in a ...",
+    "brandId": "yamaha",
+    "categoryIds": [
+      "keyboards",
+      "digital-pianos"
+    ],
+    "baseCategoryId": "digital-pianos",
+    "price": 456,
+    "oldPrice": 498,
+    "currency": "EUR",
+    "stock": {
+      "quantity": 11,
+      "warehouseCode": "mw-feed",
+      "incomingQuantity": 0,
+      "nextRestockDate": null,
+      "lowStockThreshold": 2
+    },
+    "availability": "in_stock",
+    "rating": 4,
+    "reviewCount": 208,
+    "images": [
+      {
+        "src": "https://img.musicworld.bg/th/9/5/3/94359.png",
+        "alt": "YAMAHA PIANO DIGITAL P-145 BT",
+        "type": "main"
+      },
+      {
+        "src": "https://img.musicworld.bg/th/9/5/3/94359.png",
+        "alt": "YAMAHA PIANO DIGITAL P-145 BT detail",
+        "type": "gallery"
+      }
+    ],
+    "thumbnails": [
+      "https://img.musicworld.bg/th/9/5/3/94359.png"
+    ],
+    "tags": [
+      "keyboards",
+      "yamaha",
+      "musicworld-feed"
+    ],
+    "badges": [
+      "deal",
+      "bestseller"
+    ],
+    "specs": [
+      {
+        "group": "General",
+        "name": "Source",
+        "value": "MusicWorld.bg feed (mock)"
+      },
+      {
+        "group": "General",
+        "name": "Brand",
+        "value": "YAMAHA"
+      },
+      {
+        "group": "General",
+        "name": "Category Hint",
+        "value": "keyboards"
+      }
+    ],
+    "variants": [
+      {
+        "id": "mw-yamaha-piano-digital-p-145-bt-default",
+        "sku": "MW-94359",
+        "name": "Default",
+        "attributes": {
+          "condition": "New"
+        },
+        "price": null,
+        "stock": 11,
+        "active": true
+      }
+    ],
+    "shipping": {
+      "weightKg": 2,
+      "oversize": false,
+      "freeShippingEligible": true,
+      "estimatedDispatchDays": 1,
+      "carrierGroup": "parcel"
+    },
+    "featured": true,
+    "newArrival": false,
+    "bestseller": true,
+    "active": true,
+    "seoTitle": "YAMAHA PIANO DIGITAL P-145 BT | MusicWorld Mock",
+    "seoDescription": "The entry-level model of the P Series. Perfect for beginners with a serious interest in playing the piano! Yamaha&rsquo;s P Series digital pianos are loved",
+    "metaImage": "https://img.musicworld.bg/th/9/5/3/94359.png"
+  },
+  {
+    "id": "mw-yamaha-piano-digital-p-145-bt-bundle",
+    "sku": "MW-94360",
+    "slug": "mw-yamaha-piano-digital-p-145-bt-bundle",
+    "externalUrl": "https://www.musicworld.bg/en/c_754/i_94360/YAMAHA_PIANO_DIGITAL_P_145_BT_bundle.html",
+    "name": "YAMAHA PIANO DIGITAL P-145 BT_bundle",
+    "shortDescription": "The entry-level model of the P Series. Perfect for beginners with a serious interest in playing the piano! Yamaha&rsquo;s P Series digital pianos are loved by piano players around the world who want the comfortable feel of an acoustic piano in a ...",
+    "description": "The entry-level model of the P Series. Perfect for beginners with a serious interest in playing the piano! Yamaha&rsquo;s P Series digital pianos are loved by piano players around the world who want the comfortable feel of an acoustic piano in a ...",
+    "brandId": "yamaha",
+    "categoryIds": [
+      "keyboards",
+      "digital-pianos"
+    ],
+    "baseCategoryId": "digital-pianos",
+    "price": 642,
+    "oldPrice": 684,
+    "currency": "EUR",
+    "stock": {
+      "quantity": 18,
+      "warehouseCode": "mw-feed",
+      "incomingQuantity": 0,
+      "nextRestockDate": null,
+      "lowStockThreshold": 2
+    },
+    "availability": "in_stock",
+    "rating": 4.1,
+    "reviewCount": 89,
+    "images": [
+      {
+        "src": "https://img.musicworld.bg/th/0/6/3/94360.png",
+        "alt": "YAMAHA PIANO DIGITAL P-145 BT_bundle",
+        "type": "main"
+      },
+      {
+        "src": "https://img.musicworld.bg/th/0/6/3/94360.png",
+        "alt": "YAMAHA PIANO DIGITAL P-145 BT_bundle detail",
+        "type": "gallery"
+      }
+    ],
+    "thumbnails": [
+      "https://img.musicworld.bg/th/0/6/3/94360.png"
+    ],
+    "tags": [
+      "keyboards",
+      "yamaha",
+      "musicworld-feed"
+    ],
+    "badges": [
+      "deal",
+      "new"
+    ],
+    "specs": [
+      {
+        "group": "General",
+        "name": "Source",
+        "value": "MusicWorld.bg feed (mock)"
+      },
+      {
+        "group": "General",
+        "name": "Brand",
+        "value": "YAMAHA"
+      },
+      {
+        "group": "General",
+        "name": "Category Hint",
+        "value": "keyboards"
+      }
+    ],
+    "variants": [
+      {
+        "id": "mw-yamaha-piano-digital-p-145-bt-bundle-default",
+        "sku": "MW-94360",
+        "name": "Default",
+        "attributes": {
+          "condition": "New"
+        },
+        "price": null,
+        "stock": 18,
+        "active": true
+      }
+    ],
+    "shipping": {
+      "weightKg": 3.1,
+      "oversize": false,
+      "freeShippingEligible": true,
+      "estimatedDispatchDays": 1,
+      "carrierGroup": "parcel"
+    },
+    "featured": false,
+    "newArrival": true,
+    "bestseller": false,
+    "active": true,
+    "seoTitle": "YAMAHA PIANO DIGITAL P-145 BT_bundle | MusicWorld Mock",
+    "seoDescription": "The entry-level model of the P Series. Perfect for beginners with a serious interest in playing the piano! Yamaha&rsquo;s P Series digital pianos are loved",
+    "metaImage": "https://img.musicworld.bg/th/0/6/3/94360.png"
+  },
+  {
+    "id": "mw-yamaha-piano-digital-csp-295-black",
+    "sku": "MW-88855",
+    "slug": "mw-yamaha-piano-digital-csp-295-black",
+    "externalUrl": "https://www.musicworld.bg/en/c_754/i_88855/YAMAHA_PIANO_DIGITAL_CSP_295_Black.html",
+    "name": "YAMAHA PIANO DIGITAL CSP-295 Black",
+    "shortDescription": "This flagship model of the Clavinova CSP-200 Series is an upright-styled digital piano, with unique Stream Lights for playing fun and learning ease. It includes a realistically expressive 88-key GrandTouch&trade; counterweighted keyboard, as well ...",
+    "description": "This flagship model of the Clavinova CSP-200 Series is an upright-styled digital piano, with unique Stream Lights for playing fun and learning ease. It includes a realistically expressive 88-key GrandTouch&trade; counterweighted keyboard, as well ...",
+    "brandId": "yamaha",
+    "categoryIds": [
+      "keyboards",
+      "digital-pianos"
+    ],
+    "baseCategoryId": "digital-pianos",
+    "price": 5600,
+    "oldPrice": null,
+    "currency": "EUR",
+    "stock": {
+      "quantity": 2,
+      "warehouseCode": "mw-feed",
+      "incomingQuantity": 0,
+      "nextRestockDate": null,
+      "lowStockThreshold": 2
+    },
+    "availability": "low_stock",
+    "rating": 4.7,
+    "reviewCount": 165,
+    "images": [
+      {
+        "src": "https://img.musicworld.bg/th/5/5/8/88855.png",
+        "alt": "YAMAHA PIANO DIGITAL CSP-295 Black",
+        "type": "main"
+      },
+      {
+        "src": "https://img.musicworld.bg/th/5/5/8/88855.png",
+        "alt": "YAMAHA PIANO DIGITAL CSP-295 Black detail",
+        "type": "gallery"
+      }
+    ],
+    "thumbnails": [
+      "https://img.musicworld.bg/th/5/5/8/88855.png"
+    ],
+    "tags": [
+      "keyboards",
+      "yamaha",
+      "musicworld-feed"
+    ],
+    "badges": [
+      "bestseller"
+    ],
+    "specs": [
+      {
+        "group": "General",
+        "name": "Source",
+        "value": "MusicWorld.bg feed (mock)"
+      },
+      {
+        "group": "General",
+        "name": "Brand",
+        "value": "YAMAHA"
+      },
+      {
+        "group": "General",
+        "name": "Category Hint",
+        "value": "keyboards"
+      }
+    ],
+    "variants": [
+      {
+        "id": "mw-yamaha-piano-digital-csp-295-black-default",
+        "sku": "MW-88855",
+        "name": "Default",
+        "attributes": {
+          "condition": "New"
+        },
+        "price": null,
+        "stock": 2,
+        "active": true
+      }
+    ],
+    "shipping": {
+      "weightKg": 6.7,
+      "oversize": false,
+      "freeShippingEligible": true,
+      "estimatedDispatchDays": 3,
+      "carrierGroup": "parcel"
+    },
+    "featured": false,
+    "newArrival": false,
+    "bestseller": true,
+    "active": true,
+    "seoTitle": "YAMAHA PIANO DIGITAL CSP-295 Black | MusicWorld Mock",
+    "seoDescription": "This flagship model of the Clavinova CSP-200 Series is an upright-styled digital piano, with unique Stream Lights for playing fun and learning ease. It inc",
+    "metaImage": "https://img.musicworld.bg/th/5/5/8/88855.png"
+  },
+  {
+    "id": "mw-yamaha-piano-digital-csp-295-polished-ebony",
+    "sku": "MW-88856",
+    "slug": "mw-yamaha-piano-digital-csp-295-polished-ebony",
+    "externalUrl": "https://www.musicworld.bg/en/c_754/i_88856/YAMAHA_PIANO_DIGITAL_CSP_295_Polished_Ebony.html",
+    "name": "YAMAHA PIANO DIGITAL CSP-295 Polished Ebony",
+    "shortDescription": "This flagship model of the Clavinova CSP-200 Series is an upright-styled digital piano, with unique Stream Lights for playing fun and learning ease. It includes a realistically expressive 88-key GrandTouch&trade; counterweighted keyboard, as well ...",
+    "description": "This flagship model of the Clavinova CSP-200 Series is an upright-styled digital piano, with unique Stream Lights for playing fun and learning ease. It includes a realistically expressive 88-key GrandTouch&trade; counterweighted keyboard, as well ...",
+    "brandId": "yamaha",
+    "categoryIds": [
+      "keyboards",
+      "digital-pianos"
+    ],
+    "baseCategoryId": "digital-pianos",
+    "price": 5990,
+    "oldPrice": null,
+    "currency": "EUR",
+    "stock": {
+      "quantity": 3,
+      "warehouseCode": "mw-feed",
+      "incomingQuantity": 0,
+      "nextRestockDate": null,
+      "lowStockThreshold": 2
+    },
+    "availability": "low_stock",
+    "rating": 4.7,
+    "reviewCount": 115,
+    "images": [
+      {
+        "src": "https://img.musicworld.bg/th/6/5/8/88856.png",
+        "alt": "YAMAHA PIANO DIGITAL CSP-295 Polished Ebony",
+        "type": "main"
+      },
+      {
+        "src": "https://img.musicworld.bg/th/6/5/8/88856.png",
+        "alt": "YAMAHA PIANO DIGITAL CSP-295 Polished Ebony detail",
+        "type": "gallery"
+      }
+    ],
+    "thumbnails": [
+      "https://img.musicworld.bg/th/6/5/8/88856.png"
+    ],
+    "tags": [
+      "keyboards",
+      "yamaha",
+      "musicworld-feed"
+    ],
+    "badges": [],
+    "specs": [
+      {
+        "group": "General",
+        "name": "Source",
+        "value": "MusicWorld.bg feed (mock)"
+      },
+      {
+        "group": "General",
+        "name": "Brand",
+        "value": "YAMAHA"
+      },
+      {
+        "group": "General",
+        "name": "Category Hint",
+        "value": "keyboards"
+      }
+    ],
+    "variants": [
+      {
+        "id": "mw-yamaha-piano-digital-csp-295-polished-ebony-default",
+        "sku": "MW-88856",
+        "name": "Default",
+        "attributes": {
+          "condition": "New"
+        },
+        "price": null,
+        "stock": 3,
+        "active": true
+      }
+    ],
+    "shipping": {
+      "weightKg": 5.7,
+      "oversize": false,
+      "freeShippingEligible": true,
+      "estimatedDispatchDays": 3,
+      "carrierGroup": "parcel"
+    },
+    "featured": false,
+    "newArrival": false,
+    "bestseller": false,
+    "active": true,
+    "seoTitle": "YAMAHA PIANO DIGITAL CSP-295 Polished Ebony | MusicWorld Mock",
+    "seoDescription": "This flagship model of the Clavinova CSP-200 Series is an upright-styled digital piano, with unique Stream Lights for playing fun and learning ease. It inc",
+    "metaImage": "https://img.musicworld.bg/th/6/5/8/88856.png"
+  },
+  {
+    "id": "mw-yamaha-piano-digital-csp-295-polished-white",
+    "sku": "MW-88857",
+    "slug": "mw-yamaha-piano-digital-csp-295-polished-white",
+    "externalUrl": "https://www.musicworld.bg/en/c_754/i_88857/YAMAHA_PIANO_DIGITAL_CSP_295_Polished_White.html",
+    "name": "YAMAHA PIANO DIGITAL CSP-295 Polished White",
+    "shortDescription": "This flagship model of the Clavinova CSP-200 Series is an upright-styled digital piano, with unique Stream Lights for playing fun and learning ease. It includes a realistically expressive 88-key GrandTouch&trade; counterweighted keyboard, as well ...",
+    "description": "This flagship model of the Clavinova CSP-200 Series is an upright-styled digital piano, with unique Stream Lights for playing fun and learning ease. It includes a realistically expressive 88-key GrandTouch&trade; counterweighted keyboard, as well ...",
+    "brandId": "yamaha",
+    "categoryIds": [
+      "keyboards",
+      "digital-pianos"
+    ],
+    "baseCategoryId": "digital-pianos",
+    "price": 6400,
+    "oldPrice": null,
+    "currency": "EUR",
+    "stock": {
+      "quantity": 2,
+      "warehouseCode": "mw-feed",
+      "incomingQuantity": 0,
+      "nextRestockDate": null,
+      "lowStockThreshold": 2
+    },
+    "availability": "low_stock",
+    "rating": 4.8,
+    "reviewCount": 126,
+    "images": [
+      {
+        "src": "https://img.musicworld.bg/th/7/5/8/88857.png",
+        "alt": "YAMAHA PIANO DIGITAL CSP-295 Polished White",
+        "type": "main"
+      },
+      {
+        "src": "https://img.musicworld.bg/th/7/5/8/88857.png",
+        "alt": "YAMAHA PIANO DIGITAL CSP-295 Polished White detail",
+        "type": "gallery"
+      }
+    ],
+    "thumbnails": [
+      "https://img.musicworld.bg/th/7/5/8/88857.png"
+    ],
+    "tags": [
+      "keyboards",
+      "yamaha",
+      "musicworld-feed"
+    ],
+    "badges": [
+      "bestseller"
+    ],
+    "specs": [
+      {
+        "group": "General",
+        "name": "Source",
+        "value": "MusicWorld.bg feed (mock)"
+      },
+      {
+        "group": "General",
+        "name": "Brand",
+        "value": "YAMAHA"
+      },
+      {
+        "group": "General",
+        "name": "Category Hint",
+        "value": "keyboards"
+      }
+    ],
+    "variants": [
+      {
+        "id": "mw-yamaha-piano-digital-csp-295-polished-white-default",
+        "sku": "MW-88857",
+        "name": "Default",
+        "attributes": {
+          "condition": "New"
+        },
+        "price": null,
+        "stock": 2,
+        "active": true
+      }
+    ],
+    "shipping": {
+      "weightKg": 2.8,
+      "oversize": false,
+      "freeShippingEligible": true,
+      "estimatedDispatchDays": 3,
+      "carrierGroup": "parcel"
+    },
+    "featured": false,
+    "newArrival": false,
+    "bestseller": false,
+    "active": true,
+    "seoTitle": "YAMAHA PIANO DIGITAL CSP-295 Polished White | MusicWorld Mock",
+    "seoDescription": "This flagship model of the Clavinova CSP-200 Series is an upright-styled digital piano, with unique Stream Lights for playing fun and learning ease. It inc",
+    "metaImage": "https://img.musicworld.bg/th/7/5/8/88857.png"
+  },
+  {
+    "id": "mw-yamaha-piano-digital-csp-295-gp-polished-ebony",
+    "sku": "MW-88858",
+    "slug": "mw-yamaha-piano-digital-csp-295-gp-polished-ebony",
+    "externalUrl": "https://www.musicworld.bg/en/c_754/i_88858/YAMAHA_PIANO_DIGITAL_CSP_295_GP_Polished_Ebony.html",
+    "name": "YAMAHA PIANO DIGITAL CSP-295 GP Polished Ebony",
+    "shortDescription": "This flagship model of the Clavinova CSP-200 Series is an upright-styled digital piano, with unique Stream Lights for playing fun and learning ease. It includes a realistically expressive 88-key GrandTouch&trade; counterweighted keyboard, as well ...",
+    "description": "This flagship model of the Clavinova CSP-200 Series is an upright-styled digital piano, with unique Stream Lights for playing fun and learning ease. It includes a realistically expressive 88-key GrandTouch&trade; counterweighted keyboard, as well ...",
+    "brandId": "yamaha",
+    "categoryIds": [
+      "keyboards",
+      "digital-pianos"
+    ],
+    "baseCategoryId": "digital-pianos",
+    "price": 14000,
+    "oldPrice": null,
+    "currency": "EUR",
+    "stock": {
+      "quantity": 3,
+      "warehouseCode": "mw-feed",
+      "incomingQuantity": 0,
+      "nextRestockDate": null,
+      "lowStockThreshold": 2
+    },
+    "availability": "low_stock",
+    "rating": 4.7,
+    "reviewCount": 205,
+    "images": [
+      {
+        "src": "https://img.musicworld.bg/th/8/5/8/88858.png",
+        "alt": "YAMAHA PIANO DIGITAL CSP-295 GP Polished Ebony",
+        "type": "main"
+      },
+      {
+        "src": "https://img.musicworld.bg/th/8/5/8/88858.png",
+        "alt": "YAMAHA PIANO DIGITAL CSP-295 GP Polished Ebony detail",
+        "type": "gallery"
+      }
+    ],
+    "thumbnails": [
+      "https://img.musicworld.bg/th/8/5/8/88858.png"
+    ],
+    "tags": [
+      "keyboards",
+      "yamaha",
+      "musicworld-feed"
+    ],
+    "badges": [
+      "bestseller"
+    ],
+    "specs": [
+      {
+        "group": "General",
+        "name": "Source",
+        "value": "MusicWorld.bg feed (mock)"
+      },
+      {
+        "group": "General",
+        "name": "Brand",
+        "value": "YAMAHA"
+      },
+      {
+        "group": "General",
+        "name": "Category Hint",
+        "value": "keyboards"
+      }
+    ],
+    "variants": [
+      {
+        "id": "mw-yamaha-piano-digital-csp-295-gp-polished-ebony-default",
+        "sku": "MW-88858",
+        "name": "Default",
+        "attributes": {
+          "condition": "New"
+        },
+        "price": null,
+        "stock": 3,
+        "active": true
+      }
+    ],
+    "shipping": {
+      "weightKg": 5.7,
+      "oversize": false,
+      "freeShippingEligible": true,
+      "estimatedDispatchDays": 3,
+      "carrierGroup": "parcel"
+    },
+    "featured": false,
+    "newArrival": false,
+    "bestseller": true,
+    "active": true,
+    "seoTitle": "YAMAHA PIANO DIGITAL CSP-295 GP Polished Ebony | MusicWorld Mock",
+    "seoDescription": "This flagship model of the Clavinova CSP-200 Series is an upright-styled digital piano, with unique Stream Lights for playing fun and learning ease. It inc",
+    "metaImage": "https://img.musicworld.bg/th/8/5/8/88858.png"
+  },
+  {
+    "id": "mw-yamaha-piano-digital-csp-295-gp-polished-white",
+    "sku": "MW-88859",
+    "slug": "mw-yamaha-piano-digital-csp-295-gp-polished-white",
+    "externalUrl": "https://www.musicworld.bg/en/c_754/i_88859/YAMAHA_PIANO_DIGITAL_CSP_295_GP_Polished_White.html",
+    "name": "YAMAHA PIANO DIGITAL CSP-295 GP Polished White",
+    "shortDescription": "This flagship model of the Clavinova CSP-200 Series is an upright-styled digital piano, with unique Stream Lights for playing fun and learning ease. It includes a realistically expressive 88-key GrandTouch&trade; counterweighted keyboard, as well ...",
+    "description": "This flagship model of the Clavinova CSP-200 Series is an upright-styled digital piano, with unique Stream Lights for playing fun and learning ease. It includes a realistically expressive 88-key GrandTouch&trade; counterweighted keyboard, as well ...",
+    "brandId": "yamaha",
+    "categoryIds": [
+      "keyboards",
+      "digital-pianos"
+    ],
+    "baseCategoryId": "digital-pianos",
+    "price": 14680,
+    "oldPrice": null,
+    "currency": "EUR",
+    "stock": {
+      "quantity": 0,
+      "warehouseCode": "mw-feed",
+      "incomingQuantity": 6,
+      "nextRestockDate": "2026-04-15",
+      "lowStockThreshold": 2
+    },
+    "availability": "out_of_stock",
+    "rating": 4.2,
+    "reviewCount": 230,
+    "images": [
+      {
+        "src": "https://img.musicworld.bg/th/9/5/8/88859.png",
+        "alt": "YAMAHA PIANO DIGITAL CSP-295 GP Polished White",
+        "type": "main"
+      },
+      {
+        "src": "https://img.musicworld.bg/th/9/5/8/88859.png",
+        "alt": "YAMAHA PIANO DIGITAL CSP-295 GP Polished White detail",
+        "type": "gallery"
+      }
+    ],
+    "thumbnails": [
+      "https://img.musicworld.bg/th/9/5/8/88859.png"
+    ],
+    "tags": [
+      "keyboards",
+      "yamaha",
+      "musicworld-feed"
+    ],
+    "badges": [
+      "bestseller"
+    ],
+    "specs": [
+      {
+        "group": "General",
+        "name": "Source",
+        "value": "MusicWorld.bg feed (mock)"
+      },
+      {
+        "group": "General",
+        "name": "Brand",
+        "value": "YAMAHA"
+      },
+      {
+        "group": "General",
+        "name": "Category Hint",
+        "value": "keyboards"
+      }
+    ],
+    "variants": [
+      {
+        "id": "mw-yamaha-piano-digital-csp-295-gp-polished-white-default",
+        "sku": "MW-88859",
+        "name": "Default",
+        "attributes": {
+          "condition": "New"
+        },
+        "price": null,
+        "stock": 0,
+        "active": true
+      }
+    ],
+    "shipping": {
+      "weightKg": 6.2,
+      "oversize": false,
+      "freeShippingEligible": true,
+      "estimatedDispatchDays": 10,
+      "carrierGroup": "parcel"
+    },
+    "featured": false,
+    "newArrival": false,
+    "bestseller": true,
+    "active": true,
+    "seoTitle": "YAMAHA PIANO DIGITAL CSP-295 GP Polished White | MusicWorld Mock",
+    "seoDescription": "This flagship model of the Clavinova CSP-200 Series is an upright-styled digital piano, with unique Stream Lights for playing fun and learning ease. It inc",
+    "metaImage": "https://img.musicworld.bg/th/9/5/8/88859.png"
+  },
+  {
+    "id": "mw-yamaha-piano-digital-dgx-670-black",
+    "sku": "MW-78661",
+    "slug": "mw-yamaha-piano-digital-dgx-670-black",
+    "externalUrl": "https://www.musicworld.bg/en/c_754/i_78661/YAMAHA_PIANO_DIGITAL_DGX_670_Black.html",
+    "name": "YAMAHA PIANO DIGITAL DGX-670 Black",
+    "shortDescription": "[y:bfncJC2gEEU?si=DCBrit-SaXZqTR4u]",
+    "description": "[y:bfncJC2gEEU?si=DCBrit-SaXZqTR4u]",
+    "brandId": "yamaha",
+    "categoryIds": [
+      "keyboards",
+      "digital-pianos"
+    ],
+    "baseCategoryId": "digital-pianos",
+    "price": 942,
+    "oldPrice": null,
+    "currency": "EUR",
+    "stock": {
+      "quantity": 20,
+      "warehouseCode": "mw-feed",
+      "incomingQuantity": 0,
+      "nextRestockDate": null,
+      "lowStockThreshold": 2
+    },
+    "availability": "in_stock",
+    "rating": 4.9,
+    "reviewCount": 217,
+    "images": [
+      {
+        "src": "https://img.musicworld.bg/th/1/6/6/78661.png",
+        "alt": "YAMAHA PIANO DIGITAL DGX-670 Black",
+        "type": "main"
+      },
+      {
+        "src": "https://img.musicworld.bg/th/1/6/6/78661.png",
+        "alt": "YAMAHA PIANO DIGITAL DGX-670 Black detail",
+        "type": "gallery"
+      }
+    ],
+    "thumbnails": [
+      "https://img.musicworld.bg/th/1/6/6/78661.png"
+    ],
+    "tags": [
+      "keyboards",
+      "yamaha",
+      "musicworld-feed"
+    ],
+    "badges": [
+      "bestseller"
+    ],
+    "specs": [
+      {
+        "group": "General",
+        "name": "Source",
+        "value": "MusicWorld.bg feed (mock)"
+      },
+      {
+        "group": "General",
+        "name": "Brand",
+        "value": "YAMAHA"
+      },
+      {
+        "group": "General",
+        "name": "Category Hint",
+        "value": "keyboards"
+      }
+    ],
+    "variants": [
+      {
+        "id": "mw-yamaha-piano-digital-dgx-670-black-default",
+        "sku": "MW-78661",
+        "name": "Default",
+        "attributes": {
+          "condition": "New"
+        },
+        "price": null,
+        "stock": 20,
+        "active": true
+      }
+    ],
+    "shipping": {
+      "weightKg": 1.9,
+      "oversize": false,
+      "freeShippingEligible": true,
+      "estimatedDispatchDays": 1,
+      "carrierGroup": "parcel"
+    },
+    "featured": false,
+    "newArrival": false,
+    "bestseller": true,
+    "active": true,
+    "seoTitle": "YAMAHA PIANO DIGITAL DGX-670 Black | MusicWorld Mock",
+    "seoDescription": "[y:bfncJC2gEEU?si=DCBrit-SaXZqTR4u]",
+    "metaImage": "https://img.musicworld.bg/th/1/6/6/78661.png"
+  },
+  {
+    "id": "mw-yamaha-piano-digital-dgx-670-black-bundle",
+    "sku": "MW-78663",
+    "slug": "mw-yamaha-piano-digital-dgx-670-black-bundle",
+    "externalUrl": "https://www.musicworld.bg/en/c_754/i_78663/YAMAHA_PIANO_DIGITAL_DGX_670_Black_bundle.html",
+    "name": "YAMAHA PIANO DIGITAL DGX-670 Black_bundle",
+    "shortDescription": "The DGX-670 is a digital piano for enjoying everything from traditional piano playing to playing along with other instruments. In addition to the",
+    "description": "The DGX-670 is a digital piano for enjoying everything from traditional piano playing to playing along with other instruments. In addition to the",
+    "brandId": "yamaha",
+    "categoryIds": [
+      "keyboards",
+      "digital-pianos"
+    ],
+    "baseCategoryId": "digital-pianos",
+    "price": 1186.75,
+    "oldPrice": null,
+    "currency": "EUR",
+    "stock": {
+      "quantity": 13,
+      "warehouseCode": "mw-feed",
+      "incomingQuantity": 0,
+      "nextRestockDate": null,
+      "lowStockThreshold": 2
+    },
+    "availability": "in_stock",
+    "rating": 4.6,
+    "reviewCount": 144,
+    "images": [
+      {
+        "src": "https://img.musicworld.bg/th/3/6/6/78663.png",
+        "alt": "YAMAHA PIANO DIGITAL DGX-670 Black_bundle",
+        "type": "main"
+      },
+      {
+        "src": "https://img.musicworld.bg/th/3/6/6/78663.png",
+        "alt": "YAMAHA PIANO DIGITAL DGX-670 Black_bundle detail",
+        "type": "gallery"
+      }
+    ],
+    "thumbnails": [
+      "https://img.musicworld.bg/th/3/6/6/78663.png"
+    ],
+    "tags": [
+      "keyboards",
+      "yamaha",
+      "musicworld-feed"
+    ],
+    "badges": [
+      "bestseller"
+    ],
+    "specs": [
+      {
+        "group": "General",
+        "name": "Source",
+        "value": "MusicWorld.bg feed (mock)"
+      },
+      {
+        "group": "General",
+        "name": "Brand",
+        "value": "YAMAHA"
+      },
+      {
+        "group": "General",
+        "name": "Category Hint",
+        "value": "keyboards"
+      }
+    ],
+    "variants": [
+      {
+        "id": "mw-yamaha-piano-digital-dgx-670-black-bundle-default",
+        "sku": "MW-78663",
+        "name": "Default",
+        "attributes": {
+          "condition": "New"
+        },
+        "price": null,
+        "stock": 13,
+        "active": true
+      }
+    ],
+    "shipping": {
+      "weightKg": 4.6,
+      "oversize": false,
+      "freeShippingEligible": true,
+      "estimatedDispatchDays": 1,
+      "carrierGroup": "parcel"
+    },
+    "featured": true,
+    "newArrival": false,
+    "bestseller": true,
+    "active": true,
+    "seoTitle": "YAMAHA PIANO DIGITAL DGX-670 Black_bundle | MusicWorld Mock",
+    "seoDescription": "The DGX-670 is a digital piano for enjoying everything from traditional piano playing to playing along with other instruments. In addition to the",
+    "metaImage": "https://img.musicworld.bg/th/3/6/6/78663.png"
+  }
+]
