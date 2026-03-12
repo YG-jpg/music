@@ -19,6 +19,10 @@ const nextConfig: NextConfig = {
         protocol: "https",
         hostname: "thumbs.static-thomann.de",
       },
+      {
+        protocol: "https",
+        hostname: "assets.alphatheta.com",
+      },
     ],
   },
   turbopack: {

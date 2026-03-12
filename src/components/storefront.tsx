@@ -3,6 +3,7 @@
 import { startTransition, useDeferredValue, useState, type ReactNode } from "react";
 import Image from "next/image";
 import Link from "next/link";
+import logoMain from "../../logo_main.png";
 import { CartButton, useCart } from "@/components/cart-provider";
 import {
   Globe,
@@ -30,6 +31,17 @@ import {
 const heroImage =
   "https://images.unsplash.com/photo-1763889594062-04a75c7cb821?auto=format&fit=crop&w=1600&q=80";
 
+const categoryHrefById: Record<string, string> = {
+  guitars: "/categories/guitars",
+  keys: "/categories/keyboards",
+  drums: "/categories/drums",
+  studio: "/categories/studio-recording",
+  dj: "/categories/dj-equipment",
+  live: "/categories/pa-live-sound",
+  accessories: "/categories/accessories",
+  deals: "/categories",
+};
+
 function formatCurrency(amount: number, locale: Locale) {
   return new Intl.NumberFormat(locale === "bg" ? "bg-BG" : "en-US", {
     style: "currency",
@@ -55,15 +67,13 @@ export default function Storefront() {
   );
 
   const filterProducts = (items: Product[]) =>
-    items.filter((product) =>
-      [product.brand, product.name.bg, product.name.en].some(matches),
-    );
+    items.filter((product) => [product.brand, product.name.bg, product.name.en].some(matches));
 
   const visibleDeals = filterProducts(dealProducts);
   const visibleFeatured = filterProducts(featuredProducts);
 
   return (
-    <div className="min-h-screen bg-[var(--gray-50)] text-[var(--gray-900)]">
+    <div className="home-page min-h-screen bg-[var(--gray-50)] text-[var(--gray-900)]">
       <header className="sticky top-0 z-40 border-b border-[var(--border)] bg-white/95 backdrop-blur">
         <div className="hidden bg-[var(--gray-900)] py-2 text-white md:block">
           <div className="mx-auto flex max-w-7xl items-center justify-between px-4 sm:px-6 lg:px-8">
@@ -93,16 +103,13 @@ export default function Storefront() {
 
         <div className="mx-auto max-w-7xl px-4 py-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between gap-4">
-            <Link href="/" className="flex items-center gap-3">
-              <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-[var(--primary)] text-xl font-black italic text-white">
-                M
-              </div>
-              <div>
-                <div className="text-xl font-black tracking-tight">MusicWorld</div>
-                <div className="text-[11px] font-bold uppercase tracking-[0.24em] text-[var(--primary)]">
-                  .bg
-                </div>
-              </div>
+            <Link href="/" className="flex items-center">
+              <Image
+                src={logoMain}
+                alt="Music World"
+                priority
+                className="h-12 w-auto sm:h-14"
+              />
             </Link>
 
             <div className="hidden max-w-2xl flex-1 md:block">
@@ -143,7 +150,7 @@ export default function Storefront() {
             {categories.map((category) => (
               <Link
                 key={category.id}
-                href="/categories"
+                href={categoryHrefById[category.id] ?? "/categories"}
                 className="rounded-full px-3 py-1.5 text-sm font-medium text-[var(--gray-700)] transition hover:text-[var(--primary)]"
               >
                 {category.label[locale]}
@@ -205,7 +212,7 @@ export default function Storefront() {
             {visibleCategories.map((category) => (
               <Link
                 key={category.id}
-                href="/categories"
+                href={categoryHrefById[category.id] ?? "/categories"}
                 className="group overflow-hidden rounded-2xl border border-[var(--border)] bg-white transition hover:border-[var(--primary)] hover:shadow-[var(--shadow-card)]"
               >
                 <div className="relative aspect-square overflow-hidden bg-[var(--gray-100)]">
@@ -292,7 +299,10 @@ export default function Storefront() {
           <h2 className="mb-10 text-center text-3xl font-bold">{copy.benefitsTitle}</h2>
           <div className="grid gap-6 md:grid-cols-3">
             {benefits.map((benefit) => (
-              <div key={benefit.id} className="rounded-2xl bg-white p-8 text-center shadow-[var(--shadow-card)]">
+              <div
+                key={benefit.id}
+                className="rounded-2xl bg-white p-8 text-center shadow-[var(--shadow-card)]"
+              >
                 <div className="mx-auto mb-4 flex h-16 w-16 items-center justify-center rounded-full bg-[var(--blue-100)] text-[var(--primary)]">
                   {benefit.icon === "truck" ? (
                     <Truck className="h-8 w-8" />
@@ -482,7 +492,11 @@ function ProductCard({
             Source
           </a>
         ) : null}
-        <div className={`mt-2 text-sm ${product.inStock ? "text-[var(--success)]" : "text-[var(--error)]"}`}>
+        <div
+          className={`mt-2 text-sm ${
+            product.inStock ? "text-[var(--success)]" : "text-[var(--error)]"
+          }`}
+        >
           {product.inStock ? inStockLabel : outOfStockLabel}
         </div>
       </div>

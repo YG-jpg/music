@@ -2,7 +2,17 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import { Minus, Plus, ShoppingCart, Trash2, X } from "lucide-react";
+import {
+  ArrowRight,
+  BadgeCheck,
+  Headphones,
+  Minus,
+  Plus,
+  ShoppingCart,
+  Trash2,
+  Truck,
+  X,
+} from "lucide-react";
 import {
   createContext,
   type PropsWithChildren,
@@ -10,8 +20,13 @@ import {
   useEffect,
   useState,
 } from "react";
+import siteSettingsData from "@/data/site-settings.json";
+import { buttonStyles } from "@/lib/button-styles";
+import { formatEuro, getFreeShippingProgress } from "@/lib/commerce-ui";
 
 const STORAGE_KEY = "musicworld-cart-v1";
+const freeShippingThreshold = siteSettingsData.shipping.freeShippingThreshold;
+const dispatchMessage = siteSettingsData.shipping.dispatchMessage;
 
 export interface CartProductInput {
   id: string;
@@ -44,14 +59,11 @@ interface CartContextValue {
 const CartContext = createContext<CartContextValue | null>(null);
 
 function clampQuantity(quantity: number, maxQuantity = 99) {
-  return Math.min(Math.max(1, quantity), maxQuantity);
-}
+  if (maxQuantity <= 0) {
+    return 0;
+  }
 
-function formatCurrency(amount: number) {
-  return new Intl.NumberFormat("bg-BG", {
-    style: "currency",
-    currency: "EUR",
-  }).format(amount);
+  return Math.min(Math.max(1, quantity), maxQuantity);
 }
 
 export function CartProvider({ children }: PropsWithChildren) {
@@ -85,6 +97,28 @@ export function CartProvider({ children }: PropsWithChildren) {
     window.localStorage.setItem(STORAGE_KEY, JSON.stringify(items));
   }, [isHydrated, items]);
 
+  useEffect(() => {
+    if (!isOpen) {
+      return;
+    }
+
+    const previousOverflow = document.body.style.overflow;
+    document.body.style.overflow = "hidden";
+
+    const handleKeyDown = (event: KeyboardEvent) => {
+      if (event.key === "Escape") {
+        setIsOpen(false);
+      }
+    };
+
+    window.addEventListener("keydown", handleKeyDown);
+
+    return () => {
+      document.body.style.overflow = previousOverflow;
+      window.removeEventListener("keydown", handleKeyDown);
+    };
+  }, [isOpen]);
+
   const itemCount = items.reduce((total, item) => total + item.quantity, 0);
   const subtotal = items.reduce((total, item) => total + item.price * item.quantity, 0);
 
@@ -115,10 +149,16 @@ export function CartProvider({ children }: PropsWithChildren) {
           return [];
         }
 
+        const nextQuantity = clampQuantity(quantity, item.maxQuantity);
+
+        if (nextQuantity <= 0) {
+          return [];
+        }
+
         return [
           {
             ...item,
-            quantity: clampQuantity(quantity, item.maxQuantity),
+            quantity: nextQuantity,
           },
         ];
       }),
@@ -126,9 +166,14 @@ export function CartProvider({ children }: PropsWithChildren) {
   }
 
   function addItem(product: CartProductInput, quantity = 1) {
+    const maxQuantity = product.maxQuantity ?? 99;
+
+    if (maxQuantity <= 0) {
+      return;
+    }
+
     setItems((current) => {
       const existing = current.find((item) => item.id === product.id);
-      const maxQuantity = product.maxQuantity ?? 99;
 
       if (existing) {
         return current.map((item) =>
@@ -205,8 +250,18 @@ export function CartButton({ className = "" }: { className?: string }) {
 }
 
 function CartDrawer() {
-  const { items, subtotal, isOpen, closeCart, updateQuantity, removeItem, clearCart } =
-    useCart();
+  const {
+    items,
+    itemCount,
+    subtotal,
+    isOpen,
+    closeCart,
+    updateQuantity,
+    removeItem,
+    clearCart,
+  } = useCart();
+  const shippingProgress = getFreeShippingProgress(subtotal, freeShippingThreshold);
+  const bagLabel = itemCount === 1 ? "1 item" : `${itemCount} items`;
 
   return (
     <>
@@ -225,6 +280,10 @@ function CartDrawer() {
               Cart
             </div>
             <h2 className="text-xl font-black tracking-tight">Your gear bag</h2>
+            <p className="mt-1 text-sm text-[var(--gray-500)]">
+              {itemCount === 0 ? "No items yet" : `${itemCount} item${itemCount === 1 ? "" : "s"} ready`}
+            </p>
+            <p className="mt-1 text-xs text-[var(--gray-400)]">Saved on this device while you browse</p>
           </div>
           <button
             type="button"
@@ -243,27 +302,62 @@ function CartDrawer() {
             </div>
             <h3 className="mt-4 text-xl font-bold">Cart is empty</h3>
             <p className="mt-2 max-w-sm text-sm leading-6 text-[var(--gray-600)]">
-              Add powered mixers or other products and they will stay here while you
-              browse.
+              Add products to compare setups, keep the subtotal in view and come back to the bag while you browse.
             </p>
-            <button
-              type="button"
-              onClick={closeCart}
-              className="mt-5 rounded-full bg-[var(--primary)] px-5 py-3 text-sm font-semibold text-white"
-            >
-              Continue shopping
-            </button>
+            <div className="mt-5 flex flex-wrap justify-center gap-2 text-xs text-[var(--gray-500)]">
+              <span className="rounded-full border border-[var(--border)] bg-white px-3 py-2">
+                EUR pricing incl. VAT
+              </span>
+              <span className="rounded-full border border-[var(--border)] bg-white px-3 py-2">
+                {dispatchMessage}
+              </span>
+              <span className="rounded-full border border-[var(--border)] bg-white px-3 py-2">
+                Support by phone and email
+              </span>
+            </div>
+            <div className="mt-6 grid w-full max-w-sm gap-3">
+              <Link
+                href="/categories"
+                onClick={closeCart}
+                className={buttonStyles.primary}
+              >
+                <span>Browse categories</span>
+                <ArrowRight className="h-4 w-4" />
+              </Link>
+              <button
+                type="button"
+                onClick={closeCart}
+                className={buttonStyles.secondary}
+              >
+                Continue shopping
+              </button>
+            </div>
           </div>
         ) : (
           <>
-            <div className="flex-1 space-y-4 overflow-y-auto px-4 py-4">
+            <div className="border-b border-[var(--border)] bg-[var(--gray-50)] px-5 py-3">
+              <div className="flex items-center justify-between gap-3 text-sm">
+                <div>
+                  <div className="font-semibold text-[var(--gray-900)]">{bagLabel} in bag</div>
+                  <div className="mt-0.5 text-[var(--gray-500)]">Subtotal updates instantly while you edit quantities</div>
+                </div>
+                <div className="text-right">
+                  <div className="text-[11px] font-semibold uppercase tracking-[0.16em] text-[var(--gray-400)]">
+                    Subtotal
+                  </div>
+                  <div className="mt-1 text-lg font-black text-[var(--gray-900)]">{formatEuro(subtotal)}</div>
+                </div>
+              </div>
+            </div>
+
+            <div className="flex-1 space-y-3 overflow-y-auto px-4 py-4">
               {items.map((item) => (
-                <div
+                <article
                   key={item.id}
                   className="rounded-3xl border border-[var(--border)] bg-[var(--gray-50)] p-4"
                 >
                   <div className="flex gap-3">
-                    <div className="relative h-20 w-20 shrink-0 overflow-hidden rounded-2xl bg-white">
+                    <div className="relative h-20 w-20 shrink-0 overflow-hidden rounded-2xl border border-[var(--border)] bg-white">
                       <Image
                         src={item.image}
                         alt={item.name}
@@ -274,95 +368,186 @@ function CartDrawer() {
                     </div>
 
                     <div className="min-w-0 flex-1">
-                      <div className="text-[11px] font-semibold uppercase tracking-[0.18em] text-[var(--primary)]">
-                        {item.brand}
+                      <div className="flex items-start justify-between gap-3">
+                        <div className="min-w-0">
+                          <div className="text-[11px] font-semibold uppercase tracking-[0.18em] text-[var(--primary)]">
+                            {item.brand}
+                          </div>
+                          <div className="mt-1 line-clamp-2 text-sm font-semibold leading-5">{item.name}</div>
+                          <div className="mt-2 text-xs text-[var(--gray-500)]">
+                            Unit price <span className="font-semibold text-[var(--gray-700)]">{formatEuro(item.price)}</span>
+                          </div>
+                        </div>
+                        <div className="text-right">
+                          <div className="text-[11px] font-semibold uppercase tracking-[0.16em] text-[var(--gray-400)]">
+                            Line total
+                          </div>
+                          <div className="mt-1 text-base font-black text-[var(--gray-900)]">
+                            {formatEuro(item.price * item.quantity)}
+                          </div>
+                        </div>
                       </div>
-                      <div className="mt-1 text-sm font-semibold leading-5">{item.name}</div>
-                      <div className="mt-2 text-sm font-bold">{formatCurrency(item.price)}</div>
 
+                      <div className="mt-3 flex flex-wrap gap-2 text-xs text-[var(--gray-500)]">
+                        <span className="rounded-full bg-white px-3 py-1.5 font-medium text-[var(--gray-600)]">
+                          {dispatchMessage}
+                        </span>
+                        <span className="rounded-full bg-white px-3 py-1.5 font-medium text-[var(--gray-600)]">
+                          Prices incl. VAT
+                        </span>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div className="mt-4 flex items-end justify-between gap-3">
+                    <div>
+                      <div className="mb-2 text-[11px] font-semibold uppercase tracking-[0.16em] text-[var(--gray-400)]">
+                        Quantity
+                      </div>
+                      <div className="inline-flex items-center gap-2 rounded-full border border-[var(--border-strong)] bg-white px-2 py-1 shadow-[0_8px_20px_rgba(15,23,42,0.04)]">
+                        <button
+                          type="button"
+                          onClick={() => updateQuantity(item.id, item.quantity - 1)}
+                          className="inline-flex h-8 w-8 items-center justify-center rounded-full transition hover:bg-[var(--gray-100)] disabled:cursor-not-allowed disabled:opacity-40"
+                          aria-label={`Decrease quantity for ${item.name}`}
+                          disabled={item.quantity <= 1}
+                        >
+                          <Minus className="h-4 w-4" />
+                        </button>
+                        <span className="min-w-8 text-center text-sm font-semibold">
+                          {item.quantity}
+                        </span>
+                        <button
+                          type="button"
+                          onClick={() => updateQuantity(item.id, item.quantity + 1)}
+                          className="inline-flex h-8 w-8 items-center justify-center rounded-full transition hover:bg-[var(--gray-100)] disabled:cursor-not-allowed disabled:opacity-40"
+                          aria-label={`Increase quantity for ${item.name}`}
+                          disabled={item.quantity >= (item.maxQuantity ?? 99)}
+                        >
+                          <Plus className="h-4 w-4" />
+                        </button>
+                      </div>
+                      <div className="mt-2 text-xs text-[var(--gray-500)]">
+                        {(item.maxQuantity ?? 99) < 99
+                          ? `Available for up to ${item.maxQuantity} pcs in this order`
+                          : "Adjust quantity directly in the bag"}
+                      </div>
+                    </div>
+
+                    <div className="flex flex-col items-end gap-3">
                       {item.externalUrl ? (
                         <a
                           href={item.externalUrl}
                           target="_blank"
                           rel="noreferrer"
-                          className="mt-2 inline-flex text-xs font-semibold text-[var(--gray-500)] underline underline-offset-2"
+                          className="inline-flex text-xs font-semibold text-[var(--gray-500)] underline underline-offset-2"
                         >
-                          Source details
+                          Product details
                         </a>
                       ) : (
                         <Link
                           href="/"
-                          className="mt-2 inline-flex text-xs font-semibold text-[var(--gray-500)] underline underline-offset-2"
+                          onClick={closeCart}
+                          className="inline-flex text-xs font-semibold text-[var(--gray-500)] underline underline-offset-2"
                         >
                           Continue browsing
                         </Link>
                       )}
-                    </div>
-
-                    <button
-                      type="button"
-                      onClick={() => removeItem(item.id)}
-                      className="inline-flex h-9 w-9 shrink-0 items-center justify-center rounded-full text-[var(--gray-500)] transition hover:bg-white"
-                      aria-label={`Remove ${item.name}`}
-                    >
-                      <Trash2 className="h-4 w-4" />
-                    </button>
-                  </div>
-
-                  <div className="mt-4 flex items-center justify-between">
-                    <div className="inline-flex items-center gap-2 rounded-full border border-[var(--border-strong)] bg-white px-2 py-1">
                       <button
                         type="button"
-                        onClick={() => updateQuantity(item.id, item.quantity - 1)}
-                        className="inline-flex h-8 w-8 items-center justify-center rounded-full transition hover:bg-[var(--gray-100)]"
-                        aria-label={`Decrease quantity for ${item.name}`}
+                        onClick={() => removeItem(item.id)}
+                        className="inline-flex items-center gap-2 rounded-full border border-transparent px-3 py-2 text-sm font-semibold text-[var(--gray-600)] transition hover:border-[var(--border)] hover:bg-white hover:text-[var(--gray-900)]"
+                        aria-label={`Remove ${item.name}`}
                       >
-                        <Minus className="h-4 w-4" />
+                        <Trash2 className="h-4 w-4" />
+                        <span>Remove</span>
                       </button>
-                      <span className="min-w-6 text-center text-sm font-semibold">
-                        {item.quantity}
-                      </span>
-                      <button
-                        type="button"
-                        onClick={() => updateQuantity(item.id, item.quantity + 1)}
-                        className="inline-flex h-8 w-8 items-center justify-center rounded-full transition hover:bg-[var(--gray-100)]"
-                        aria-label={`Increase quantity for ${item.name}`}
-                      >
-                        <Plus className="h-4 w-4" />
-                      </button>
-                    </div>
-
-                    <div className="text-sm font-semibold">
-                      {formatCurrency(item.price * item.quantity)}
                     </div>
                   </div>
-                </div>
+                </article>
               ))}
             </div>
 
             <div className="border-t border-[var(--border)] px-5 py-5">
-              <div className="flex items-center justify-between text-sm text-[var(--gray-600)]">
+              <div className="rounded-3xl bg-[var(--gray-50)] p-4">
+                <div className="flex items-center justify-between gap-3 text-sm font-semibold text-[var(--gray-700)]">
+                  <span>
+                    {shippingProgress.unlocked
+                      ? "Free shipping unlocked"
+                      : `${formatEuro(shippingProgress.remaining)} away from free shipping`}
+                  </span>
+                  <span>{shippingProgress.progress}%</span>
+                </div>
+                <div className="mt-3 h-2 overflow-hidden rounded-full bg-[var(--gray-200)]">
+                  <div
+                    className="h-full rounded-full bg-[var(--primary)] transition-[width]"
+                    style={{ width: `${shippingProgress.progress}%` }}
+                  />
+                </div>
+                <p className="mt-3 text-xs leading-5 text-[var(--gray-500)]">
+                  {dispatchMessage} VAT included where applicable.
+                </p>
+                <div className="mt-4 grid gap-2 text-sm text-[var(--gray-600)]">
+                  <div className="flex items-center justify-between">
+                    <span>{bagLabel}</span>
+                    <span className="font-semibold text-[var(--gray-900)]">{formatEuro(subtotal)}</span>
+                  </div>
+                  <div className="flex items-center justify-between">
+                    <span>Shipping</span>
+                    <span>{shippingProgress.unlocked ? "Free" : "Calculated at checkout"}</span>
+                  </div>
+                </div>
+              </div>
+              <div className="mt-5 flex items-center justify-between text-sm text-[var(--gray-600)]">
                 <span>Subtotal</span>
                 <span className="text-lg font-black text-[var(--gray-900)]">
-                  {formatCurrency(subtotal)}
+                  {formatEuro(subtotal)}
                 </span>
               </div>
               <p className="mt-2 text-xs leading-5 text-[var(--gray-500)]">
-                Demo cart only. No payment or backend checkout is connected yet.
+                Shipping is calculated by size and weight before payment. Taxes are included where applicable.
               </p>
-              <div className="mt-5 grid gap-3 sm:grid-cols-2">
+              <div className="mt-3 flex flex-wrap gap-2 text-xs text-[var(--gray-500)]">
+                <span className="inline-flex items-center gap-1.5 rounded-full border border-[var(--border)] bg-white px-3 py-2">
+                  <BadgeCheck className="h-3.5 w-3.5 text-[var(--primary)]" />
+                  <span>Secure checkout flow ready</span>
+                </span>
+                <span className="inline-flex items-center gap-1.5 rounded-full border border-[var(--border)] bg-white px-3 py-2">
+                  <Truck className="h-3.5 w-3.5 text-[var(--primary)]" />
+                  <span>Dispatch by stock status</span>
+                </span>
+                <span className="inline-flex items-center gap-1.5 rounded-full border border-[var(--border)] bg-white px-3 py-2">
+                  <Headphones className="h-3.5 w-3.5 text-[var(--primary)]" />
+                  <span>{siteSettingsData.contact.phone}</span>
+                </span>
+              </div>
+              <div className="mt-5 grid gap-3">
                 <button
                   type="button"
-                  onClick={clearCart}
-                  className="rounded-full border border-[var(--border-strong)] px-4 py-3 text-sm font-semibold"
+                  className={buttonStyles.primary}
                 >
-                  Clear cart
+                  <span>Proceed to checkout soon</span>
+                  <ArrowRight className="h-4 w-4" />
                 </button>
                 <button
                   type="button"
-                  className="rounded-full bg-[var(--primary)] px-4 py-3 text-sm font-semibold text-white"
+                  onClick={closeCart}
+                  className={buttonStyles.secondary}
                 >
-                  Checkout soon
+                  Continue shopping
+                </button>
+              </div>
+              <div className="mt-4 flex items-center justify-between gap-3">
+                <p className="text-xs text-[var(--gray-500)]">
+                  Frontend cart only. Checkout and payment are not connected yet.
+                </p>
+                <button
+                  type="button"
+                  onClick={clearCart}
+                  className={buttonStyles.ghost}
+                >
+                  <Trash2 className="h-4 w-4" />
+                  <span>Clear bag</span>
                 </button>
               </div>
             </div>

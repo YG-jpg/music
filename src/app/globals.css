@@ -23,17 +23,16 @@
   --gray-700: #374151;
   --gray-800: #1f2937;
   --gray-900: #111827;
-  --border: rgba(17, 24, 39, 0.08);
-  --border-strong: rgba(17, 24, 39, 0.16);
+  --border: rgba(17, 24, 39, 0.1);
+  --border-strong: rgba(17, 24, 39, 0.18);
   --warning: #f59e0b;
   --success: #059669;
   --success-soft: rgba(5, 150, 105, 0.12);
   --error: #ef4444;
   --error-soft: rgba(239, 68, 68, 0.12);
-  --shadow-card: 0 22px 60px -34px rgba(15, 23, 42, 0.32);
-  --shadow-dropdown: 0 10px 15px -3px rgba(0, 0, 0, 0.1),
-    0 4px 6px -4px rgba(0, 0, 0, 0.1);
-  --shadow-pop: 0 28px 80px -36px rgba(12, 140, 233, 0.38);
+  --shadow-card: 0 14px 32px -24px rgba(15, 23, 42, 0.24);
+  --shadow-dropdown: 0 18px 38px -28px rgba(15, 23, 42, 0.28);
+  --shadow-pop: 0 22px 54px -34px rgba(12, 140, 233, 0.24);
 }
 
 @theme inline {
@@ -76,6 +75,95 @@ img {
 ::selection {
   background: rgba(12, 140, 233, 0.2);
   color: var(--gray-900);
+}
+
+/* Square-density pass to keep the existing UI, but closer to retail catalog shapes. */
+.rounded-full {
+  border-radius: 8px !important;
+}
+
+.rounded-3xl {
+  border-radius: 16px !important;
+}
+
+.rounded-2xl {
+  border-radius: 14px !important;
+}
+
+.rounded-xl {
+  border-radius: 12px !important;
+}
+
+.rounded-lg {
+  border-radius: 8px !important;
+}
+
+.rounded-\[32px\] {
+  border-radius: 18px !important;
+}
+
+.rounded-\[30px\] {
+  border-radius: 16px !important;
+}
+
+.rounded-\[28px\] {
+  border-radius: 16px !important;
+}
+
+.rounded-\[24px\] {
+  border-radius: 14px !important;
+}
+
+.rounded-\[22px\] {
+  border-radius: 12px !important;
+}
+
+.home-page {
+  --border: rgba(17, 24, 39, 0.08);
+  --border-strong: rgba(17, 24, 39, 0.16);
+  --shadow-card: 0 22px 60px -34px rgba(15, 23, 42, 0.32);
+  --shadow-dropdown: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -4px rgba(0, 0, 0, 0.1);
+  --shadow-pop: 0 28px 80px -36px rgba(12, 140, 233, 0.38);
+}
+
+.home-page .rounded-full {
+  border-radius: 9999px !important;
+}
+
+.home-page .rounded-3xl {
+  border-radius: 1.5rem !important;
+}
+
+.home-page .rounded-2xl {
+  border-radius: 1rem !important;
+}
+
+.home-page .rounded-xl {
+  border-radius: 0.75rem !important;
+}
+
+.home-page .rounded-lg {
+  border-radius: 0.5rem !important;
+}
+
+.home-page .rounded-\[32px\] {
+  border-radius: 32px !important;
+}
+
+.home-page .rounded-\[30px\] {
+  border-radius: 30px !important;
+}
+
+.home-page .rounded-\[28px\] {
+  border-radius: 28px !important;
+}
+
+.home-page .rounded-\[24px\] {
+  border-radius: 24px !important;
+}
+
+.home-page .rounded-\[22px\] {
+  border-radius: 22px !important;
 }
 
 .grid-overlay {

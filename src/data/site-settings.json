@@ -12,7 +12,7 @@
   },
   "shipping": {
     "freeShippingThreshold": 149,
-    "freeShippingMessage": "Free shipping over €149 for parcel-size orders.",
+    "freeShippingMessage": "Free shipping over EUR 149 for parcel-size orders.",
     "dispatchMessage": "Most in-stock items dispatch within 24 hours."
   },
   "socialLinks": [

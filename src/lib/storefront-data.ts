@@ -5,6 +5,10 @@ import musicworldFeedData from "@/data/musicworld-feed.json";
 import navigationData from "@/data/navigation.json";
 import productsData from "@/data/products.json";
 import siteSettingsData from "@/data/site-settings.json";
+import {
+  categoryImageFallbacks,
+  getProductFallbackImage,
+} from "@/lib/catalog-image-fallbacks";
 
 import type {
   Brand as CatalogBrand,
@@ -87,65 +91,10 @@ const siteSettings = siteSettingsData as SiteSettings;
 const brandById = new Map(brandsCatalog.map((brand) => [brand.id, brand]));
 const productById = new Map(products.map((product) => [product.id, product]));
 
-const categoryImageFallbacks = {
-  guitars:
-    "https://images.unsplash.com/photo-1564186763535-ebb21ef5277f?w=800&auto=format&fit=crop&q=80",
-  keys:
-    "https://images.unsplash.com/photo-1520523839897-bd0b52f945a0?w=800&auto=format&fit=crop&q=80",
-  drums:
-    "https://images.unsplash.com/photo-1519892300165-cb5542fb47c7?w=800&auto=format&fit=crop&q=80",
-  studio:
-    "https://images.unsplash.com/photo-1598488035139-bdbb2231ce04?w=800&auto=format&fit=crop&q=80",
-  dj: "https://images.unsplash.com/photo-1571330735066-03aaa9429d89?w=800&auto=format&fit=crop&q=80",
-  live:
-    "https://images.unsplash.com/photo-1516223725307-6f76b9ec8742?w=800&auto=format&fit=crop&q=80",
-  accessories:
-    "https://images.unsplash.com/photo-1511379938547-c1f69419868d?w=800&auto=format&fit=crop&q=80",
-  deals:
-    "https://images.unsplash.com/photo-1470229722913-7c0e2dbbafd3?w=800&auto=format&fit=crop&q=80",
-} as const;
-
-const productImageFallbacks: Record<string, string> = {
-  "fender-player-ii-stratocaster-hss-black":
-    "https://images.unsplash.com/photo-1510915228340-29c85a43dcfe?w=800&auto=format&fit=crop&q=80",
-  "gibson-les-paul-standard-50s-heritage-cherry-sunburst":
-    "https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?w=800&auto=format&fit=crop&q=80",
-  "ibanez-azes40-black":
-    "https://images.unsplash.com/photo-1543062094-d22540c12726?w=800&auto=format&fit=crop&q=80",
-  "yamaha-fg830-natural":
-    "https://images.unsplash.com/photo-1511379938547-c1f69419868d?w=800&auto=format&fit=crop&q=80",
-  "roland-fp-30x-digital-piano-black":
-    "https://images.unsplash.com/photo-1520523839897-bd0b52f945a0?w=800&auto=format&fit=crop&q=80",
-  "yamaha-stage-custom-birch-shell-set-raven-black":
-    "https://images.unsplash.com/photo-1519892300165-cb5542fb47c7?w=800&auto=format&fit=crop&q=80",
-  "pearl-export-exx-725sbr-jet-black":
-    "https://images.unsplash.com/photo-1460036521480-ff49c08c2781?w=800&auto=format&fit=crop&q=80",
-  "universal-audio-apollo-twin-x-duo-gen-2":
-    "https://images.unsplash.com/photo-1598488035139-bdbb2231ce04?w=800&auto=format&fit=crop&q=80",
-  "focusrite-scarlett-2i2-4th-gen":
-    "https://images.unsplash.com/photo-1525201548942-d8732f6617a0?w=800&auto=format&fit=crop&q=80",
-  "shure-sm7b-vocal-dynamic-microphone":
-    "https://images.unsplash.com/photo-1525201548942-d8732f6617a0?w=800&auto=format&fit=crop&q=80",
-  "sennheiser-hd-650-open-back-headphones":
-    "https://images.unsplash.com/photo-1514320291840-2e0a9bf2a9ae?w=800&auto=format&fit=crop&q=80",
-  "pioneer-dj-ddj-flx10":
-    "https://images.unsplash.com/photo-1571330735066-03aaa9429d89?w=800&auto=format&fit=crop&q=80",
-  "pioneer-dj-djm-a9":
-    "https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?w=800&auto=format&fit=crop&q=80",
-  "yamaha-mg12xu-analog-mixer":
-    "https://images.unsplash.com/photo-1516280440614-37939bbacd81?w=800&auto=format&fit=crop&q=80",
-  "yamaha-dbr12-powered-speaker":
-    "https://images.unsplash.com/photo-1516223725307-6f76b9ec8742?w=800&auto=format&fit=crop&q=80",
-  "korg-minilogue-xd-4-voice-analog-synth":
-    "https://images.unsplash.com/photo-1511379938547-c1f69419868d?w=800&auto=format&fit=crop&q=80",
-};
-
 const articleImageFallbacks = {
-  guitars:
-    "https://images.unsplash.com/photo-1511379938547-c1f69419868d?w=800&auto=format&fit=crop&q=80",
-  studio:
-    "https://images.unsplash.com/photo-1598488035139-bdbb2231ce04?w=800&auto=format&fit=crop&q=80",
-  dj: "https://images.unsplash.com/photo-1571330735066-03aaa9429d89?w=800&auto=format&fit=crop&q=80",
+  guitars: categoryImageFallbacks.guitars,
+  studio: categoryImageFallbacks["studio-recording"],
+  dj: categoryImageFallbacks["dj-equipment"],
 } as const;
 
 const topCategoryConfig = [
@@ -506,11 +455,7 @@ function resolveProductImage(product: CatalogProduct) {
     return firstImage;
   }
 
-  return (
-    productImageFallbacks[product.slug] ??
-    categoryImageFallbacks[getTopCategoryKey(product)] ??
-    categoryImageFallbacks.guitars
-  );
+  return getProductFallbackImage(product);
 }
 
 function buildBadge(product: CatalogProduct) {
@@ -558,36 +503,6 @@ function collectDescendantCategoryIds(rootId: string | null) {
   }
 
   return [...collected];
-}
-
-function getTopCategoryKey(product: CatalogProduct) {
-  const categoryIds = new Set(product.categoryIds);
-
-  if (categoryIds.has("pa-live-sound")) {
-    return "live";
-  }
-
-  if (categoryIds.has("dj-equipment")) {
-    return "dj";
-  }
-
-  if (categoryIds.has("studio-recording")) {
-    return "studio";
-  }
-
-  if (categoryIds.has("keyboards")) {
-    return "keys";
-  }
-
-  if (categoryIds.has("drums")) {
-    return "drums";
-  }
-
-  if (categoryIds.has("accessories")) {
-    return "accessories";
-  }
-
-  return "guitars";
 }
 
 function translateGuideCategory(value: string, locale: Locale) {
