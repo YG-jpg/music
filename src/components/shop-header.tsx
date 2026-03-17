@@ -213,6 +213,7 @@ export function ShopHeader({
   browsingCta,
 }: ShopHeaderProps) {
   const [openMegaMenuId, setOpenMegaMenuId] = useState<string | null>(null);
+  const [hoveredMenuIndex, setHoveredMenuIndex] = useState<number | null>(null);
   const showSearch = typeof searchValue === "string" && typeof onSearchChange === "function";
   const openMegaMenu =
     navigation.megaMenuGroups.find((group) => group.id === openMegaMenuId) ?? null;
@@ -368,22 +369,31 @@ export function ShopHeader({
         <div className="mt-4 border-t border-[rgba(12,140,233,0.12)] pt-3">
           <div
             className="relative hidden items-center gap-4 md:flex"
-            onMouseLeave={() => setOpenMegaMenuId(null)}
+            onMouseLeave={() => {
+              setOpenMegaMenuId(null);
+              setHoveredMenuIndex(null);
+            }}
           >
             <span className="hidden text-[11px] font-semibold uppercase tracking-[0.2em] text-[var(--gray-400)] xl:block">
               {locale === "bg" ? "Отдели" : "Departments"}
             </span>
 
             <div className="relative flex min-w-0 flex-1 items-center justify-center gap-1.5">
-              {navigation.mainMenu.map((item) => {
+              {navigation.mainMenu.map((item, index) => {
                 const isActive = isItemActive(item, activeCategorySlug);
 
                 return (
                   <div key={item.id} className="relative">
                     <Link
                       href={resolveNavHref(item)}
-                      onMouseEnter={() => setOpenMegaMenuId(item.megaMenuGroupId ?? null)}
-                      onFocus={() => setOpenMegaMenuId(item.megaMenuGroupId ?? null)}
+                      onMouseEnter={() => {
+                        setOpenMegaMenuId(item.megaMenuGroupId ?? null);
+                        setHoveredMenuIndex(index);
+                      }}
+                      onFocus={() => {
+                        setOpenMegaMenuId(item.megaMenuGroupId ?? null);
+                        setHoveredMenuIndex(index);
+                      }}
                       className={`inline-flex items-center gap-1 rounded-xl border px-4 py-2.5 text-sm font-semibold transition focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--primary)] ${
                         isActive
                           ? "border-[rgba(12,140,233,0.18)] bg-[var(--blue-100)] text-[var(--blue-900)] shadow-[0_12px_28px_-24px_rgba(12,140,233,0.55)]"
@@ -403,6 +413,11 @@ export function ShopHeader({
                 </div>
               ) : null}
             </div>
+
+            <VerticalHeaderMixer
+              itemCount={navigation.mainMenu.length}
+              activeIndex={hoveredMenuIndex}
+            />
 
             {browsingCta ? (
               <Link
@@ -438,6 +453,49 @@ export function ShopHeader({
         </div>
       </div>
     </header>
+  );
+}
+
+function getMixerImageDrift(activeIndex: number | null, itemCount: number) {
+  if (activeIndex === null || itemCount <= 1) {
+    return { x: 0, y: 0 };
+  }
+
+  const progress = activeIndex / (itemCount - 1);
+  const y = (progress - 0.5) * 18;
+  const x = activeIndex % 2 === 0 ? -2 : 2;
+
+  return { x, y };
+}
+
+function VerticalHeaderMixer({
+  itemCount,
+  activeIndex,
+}: {
+  itemCount: number;
+  activeIndex: number | null;
+}) {
+  const drift = getMixerImageDrift(activeIndex, itemCount);
+
+  return (
+    <div aria-hidden="true" className="relative -mb-6 -mt-7 hidden h-[194px] w-[94px] shrink-0 lg:block">
+      <div className="absolute inset-0 overflow-hidden rounded-[14px] border border-[#1b1c20] shadow-[0_22px_34px_-28px_rgba(0,0,0,0.9)]">
+        <Image
+          src="/images/header-mixer-console.png"
+          alt=""
+          width={928}
+          height={768}
+          sizes="94px"
+          className="pointer-events-none absolute left-1/2 top-1/2 h-[255px] w-auto max-w-none select-none"
+          style={{
+            transform: `translate(calc(-50% + ${drift.x}px), calc(-50% + ${drift.y}px)) rotate(90deg) scale(1.2)`,
+            transformOrigin: "center",
+            transition: "transform 320ms cubic-bezier(0.22, 1, 0.36, 1)",
+          }}
+        />
+        <div className="pointer-events-none absolute inset-0 bg-[linear-gradient(180deg,rgba(13,16,22,0.1),rgba(7,8,12,0.42))]" />
+      </div>
+    </div>
   );
 }
 
